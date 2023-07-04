@@ -22,4 +22,4 @@ jobs:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
         dist_dir: public
-        protected_files: 'images/writing/fannish_archaeology/*'
+        protected_files: 'images/*/*/*'
