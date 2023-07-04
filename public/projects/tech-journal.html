@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Salt's Coding Journal</title>
+    <style>
+        .outsideJournal {
+            margin: 0;
+            padding: 5px;
+            background-color: lightgray;
+        }
+
+        .outsideJournal>h1,
+        .insideJournal {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .insideJournal {
+            background: white;
+        }
+
+        article>h2,
+        p {
+            margin: 4px;
+            font-size: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+
+<article>
+    <h1></h1>
+    <p></p>
+</article> 
+
+    -->
+    <section class="outsideJournal">
+        <article class="insideJournal">
+            <h1>6/30/23</h1>
+            <p>Been working on Javascript the past few days. A bit tricky at first, but getting the hang of loops. I
+                also found a useful extension for VS Code, <a
+                    href="https://marketplace.visualstudio.com/items?itemName=stkb.rewrap">Rewrap</a>, which improves
+                the formatting of comments.</p>
+            <p>Discovered <samp>&lt;samp&gt;</samp>, which formats text <samp>like so</samp>, as well as the escapes
+                "&amp;lt" (lesser than) and "&amp;gt;" (greater than), which can produce &lt; and &gt; (and in order to
+                type <i>those</i> as text, you need to type "&amp;amp;" (ampersand), and so on.
+            <p>Making things look a little bit nicer on this page with <samp>&lt;section&gt;</samp> and
+                <samp>&lt;article&gt;</samp>. I may want to make hotkeys for &amp;lt (lesser than) and &amp;gt; but
+                that's a low priority.
+        </article>
+
+        <article class="insideJournal">
+            <h1>6/26/23</h1>
+            <p>Worked on the personal website assignment today. Messing around wth flex boxes a little more, but haven't
+                quite gotten the hang of them yet.</p>
+            <p>Worked on a couple of <i>Black Star</i> items.
+            <p>Bcomnes helped out with <a href="https://github.com/bcomnes/deploy-to-neocities">deploy-to-neocities</a>,
+                and I was able to get the "exit code 254" error in order to encounter a brand-new error:
+                <samp>JSONHTTPERROR: Forbidden</samp>. I'm pretty certain that I'm not making a mistake with the API
+                key, and that the tool is no longer looking for errant JS code that isn't there to be found, so I'm not
+                sure what's going on there.
+            </p>
+            <p><b>Update:</b> Bcomnes said that there was probably just a problem with the API token. Lo and behold,
+                regenerating the API token a couple times worked.
+        </article>
+
+        <article class="insideJournal">
+            <h1>6/23/23</h1>
+            <p>Worked on <a href="https://github.com/bcomnes/deploy-to-neocities">deploy-to-neocities</a> today, which
+                required me to get into Github Actions for the first time. In the fourth stage, "Install deps and
+                build," I encountered a series of npm errors, ending with <samp>Error: Process completed with exit code
+                    254</samp>. I posted about it in the discussion thread but I'll also do some digging on my end this
+                weekend.
+        </article>
+
+        <article class="insideJournal">
+            <h1>6/22/23</h1>
+            <p>Started work on a project called <i>Black Star</i> today.</p>
+            <p>Current problems include:</p>
+            <ul>
+                <li>Sizing the sun correctly. A square might not be so bad but I'd like to actively choose to go with a
+                    square and not just fall back to it.</li>
+                <li>The colors on Andrew Ib and its satellite are wrong. Gotta figure out why.</li>
+                <li><del>There are spaces in the red bar where spaces ought not to be. I probably messed up the
+                        grid.</del> <small>[6/26/23]</small></li>
+                <li><del>Deal with the whitespace on the margins... (much easier if I go with the square alone, but see
+                        above)</del> <small>[6/26/23]</small></li>
+                <ul>
+                    <li><small>[Update 6/26/23]</small> Incomplete fix, needs further work.
+                </ul>
+
+            </ul>
+            <p>Other things to do before it's complete:</p>
+            <ul>
+                <li>Getting the spacing right between the Andrew object cluster.</li>
+                <li>Getting the spacing right between object clusters(near-last task).</li>
+                <li>The black and white strips of binary.</li>
+                <li>The unblue square.</li>
+                <li>Another object cluster (klemperer rosette with orbit trails?) or two.</li>
+            </ul>
+            <p>This is mostly a CSS thing, so I shouldn't spend too much time on it. Ideally, one item every week or
+                two, and only if I'm making good progress on other stuff.</p>
+            <p>Another thing that I'd like to do, maybe later this week, is work on hooking up Neocities to Github. If
+                you can read this, then I got around to doing that.
+        </article>
+    </section>
+</body>
