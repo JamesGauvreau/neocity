@@ -27,4 +27,19 @@ const minceOther = [
     `thyme`, //high in vitamin c
 ]
 
+let testBox = {
+    "testGroup1": [`one`, 'two', `three`],
+    "testGroup2": [`a`, `b`, `c`] 
+    }
+
+console.log(`TB Group 1 = ${testBox.testGroup1[1]} & TB Group 2 = ${testBox.testGroup2[0]}`)
+
+let mathTest = Math.random()
+console.log(mathTest)
+
+const minceGenerator = document.getElementById(`dog`)
+const text = document.createTextNode(minceFat);
+
+minceGenerator.appendChild(text);
+
 // small intestines eaten like noodles
