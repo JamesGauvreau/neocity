@@ -4,13 +4,19 @@ let cash = 10000;
 let cashCommas = cash.toLocaleString(`en-US`);
 const cashPhrase = `You currently have &#8353;${cashCommas} in cash.`;
 
+let weeks = 0;
+const expenses = 500;
+const expensesCommas = expenses.toLocaleString(`en-US`);
+const weeksPhrase = `You have been operating for ${weeks} weeks. Your personal expenses are &#8353;${expensesCommas}.`
 
-    const statParagraph = document.getElementById(`stats`).innerHTML = cashPhrase;
+const statParagraph = document.getElementById(`stats`).innerHTML = `${weeksPhrase} <br> ${cashPhrase}`;
 
 //  TODO    Week Tracker
             // (1) Another event listener that activates upon any button click, then increments Week Counter by 1. (2) <p> in html with Week Total. "You have been operating for [x] weeks", perhaps.
 //  TODO    Weekly Expenses
             // (1) <p> in html with Weekly Expenses listed. (2) Week Tracker event listener also reduces cash. 
+//  TODO    Tracking events
+            // Unique events add a flag, and outcomes go differently if the flag is present. 
 
 //  ::  Options
 
@@ -25,24 +31,52 @@ const options = document.getElementById(`options`).innerHTML = `
         <p>Possibly illegal, certainly dangerous, but with the greatest possibility of profit &mdash; or disaster.</p>
         `
 
+// const detailsButton = document.createElement(`button`)
+//         detailsButton.innerHTML = `See Details`
+//         div.appendChild(detailsButton)
+//         detailsButton.setAttribute(`data-id`,`${player.id}`)
+//         detailsButton.addEventListener(`click`, (event) => {
+//           main.innerHTML=``
+//           const form = document.querySelector(`#new-player-form`)
+//           form.innerHTML=''
+//           const playerId = event.target.dataset.id
+//           renderSinglePlayer(playerId)
+
 function routeSafe() {
-    cash = cash + (1000 * incomeSafe());
+    weeks = weeks + 1;
+    const expenses = 500;
+    const expensesCommas = expenses.toLocaleString(`en-US`);
+    const weeksPhrase = `You have been operating for ${weeks} weeks. Your personal expenses are &#8353;${expensesCommas}.`    
+
+    cash = cash + ((1000 * incomeSafe()) - expenses);
     let cashCommas = cash.toLocaleString(`en-US`);
-    const cashPhrase = `You currently have ${cashCommas} cash.`;
-    document.getElementById(`stats`).innerHTML = cashPhrase;
+    const cashPhrase = `You currently have &#8353;${cashCommas} cash.`;
+
+    // document.getElementById(`stats`).innerHTML = cash;
+    // document.getElementById(`stats`).innerHTML = cashPhrase;
+    document.getElementById(`stats`).innerHTML = `${weeksPhrase} <br> ${cashPhrase}`;
+    // rewrite();
 }
 
+// console.log(weeks)
+
+// function routeSafe() {
+    
+//     weeks = weeks + 1;
+//     console.log(weeks);
+// }
+
 function routeProfits() {
-    cash = cash + (1000 * incomeProfits());
+    cash = cash + (1000 * incomeProfits() - expenses);
     let cashCommas = cash.toLocaleString(`en-US`);
-    const cashPhrase = `You currently have ${cashCommas} cash.`;
+    const cashPhrase = `You currently have &#8353;${cashCommas} cash.`;
     document.getElementById(`stats`).innerHTML = cashPhrase;
 }
 
 function routeAggro() {
-    cash = cash + 100;
+    cash = cash + (1000 * incomeAggro() - expenses);
     let cashCommas = cash.toLocaleString(`en-US`);
-    const cashPhrase = `You currently have ${cashCommas} cash.`;
+    const cashPhrase = `You currently have &#8353;${cashCommas} cash.`;
     document.getElementById(`stats`).innerHTML = cashPhrase;
 }
 
@@ -51,6 +85,11 @@ function routeAggro() {
 function percent(val) {
     return val / 100;
 }
+
+// function rewrite() {
+//     const statParagraph = document.getElementById(`stats`).innerHTML = "";
+//     const statParagraph = document.getElementById(`stats`).innerHTML = cashPhrase;
+// }
 
 function incomeSafe() {
     roll = Math.ceil(Math.random() * 24);
@@ -260,67 +299,67 @@ function incomeAggro() {
     }
     else if (roll === 6) {
         outcome = percent(-75);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> ."`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Caravan upsets local faction, goods seized. Vehicles returned. 75% loss."`;
     }
     else if (roll === 7) {
         outcome = percent(-100);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Grand monster attack! No survivors. Goods taken to a rich lair. 100% loss. Tracks lead to a hoard.`;
     }
     else if (roll === 8) {
         outcome = percent(-25);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Plague kills most of the caravan beasts. 25% loss.`;
     }
     else if (roll === 9) {
         outcome = percent(-25);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Freak snowstorm. Drivers hide goods and corpses in a cave. 25% loss. Corpses reanimate later. Oops.`;
     }
     else if (roll === 10) {
         outcome = percent(-10);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Violent mechanisms killed several members of the caravan. 10% loss due to liabilities.`;
     }
     else if (roll === 11) {
         outcome = percent(-25);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Unusual discovery! Half the crew went mad. 25% loss. Looted odd statues from the site.`;
     }
     else if (roll === 12) {
         outcome = percent(120);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 20% profits and a creepy musical instrument that suggests a deal with a chthonic deity.`;
     }
     else if (roll === 13) {
         outcome = percent(200);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Drivers eat one another. Beasts starve. Trade route collapses. But you got a nice return on your investment: 100% profits.`;
     }
     else if (roll === 14) {
         outcome = percent(130);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 30% profits and an undying servant of gruesome design and odd proportion. They are kind.`;
     }
     else if (roll === 15) {
         outcome = percent(140);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 40% profits and an empty alien casket. The casket has navigation rituals for accessing a buried gateway.`;
     }
     else if (roll === 16) {
         outcome = percent(140);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 40% profits profits, but all the drivers seem to have been...replaced. They look the same, but something about them is different.`;
     }
     else if (roll === 17) {
         outcome = percent(150);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 50% profits. All of the caravan's animals now have eyes that have seen too much. Also, they are now colored red.`;
     }
     else if (roll === 18) {
         outcome = percent(160);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 60% profits and all the crew have acquired an array of biomechanical parts. This is fine. Right?`;
     }
     else if (roll === 19) {
         outcome = percent(170);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 70% profits and a scary sentient vehicle named Qit Quyo. It eats souls for fuel.`;
     }
     else if (roll === 20 || roll === 21 || roll === 22 || roll === 23) {
         outcome = percent(180);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 80% profits and a strange machine that whispers in the dark. It has no name. It has no color. Zu.`;
     }
     else if (roll === 24) {
         outcome = percent(220);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 120% profits and a machine human master named Shoya osi Clavo. They say it is time to restart the second sun.`;
     }
     return outcome;
 }
