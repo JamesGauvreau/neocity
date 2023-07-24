@@ -19,10 +19,10 @@ const options = document.getElementById(`options`).innerHTML = `
         <p>Small returns, but steady, and with even smaller risk.</p>
         <br>
         <button id="routeProfits" onclick="routeProfits()">Profitable Route</button>
-        <p>Better profits and worse risks.</p>
+        <p>Greater profits and greater risks.</p>
         <br>
         <button id="routeAggro" onclick="routeAggro()">Aggressive Route</button>
-        <p>Possibly illegal, certainly dangerous, but with the greatest possibility of profit — or disaster.</p>
+        <p>Possibly illegal, certainly dangerous, but with the greatest possibility of profit &mdash; or disaster.</p>
         `
 
 function routeSafe() {
@@ -165,7 +165,7 @@ function incomeProfits() {
     }
     else if (roll === 5) {
         outcome = percent(-33);
-        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Drivers strike out as independents. Dump cargo at a safe town. Make off with vehicles and skim profits. 33% loss .`;
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Drivers strike out as independents. Dump cargo at a safe town. Make off with vehicles and skim profits. 33% loss.`;
     }
     else if (roll === 6) {
         outcome = percent(-25);
@@ -230,6 +230,97 @@ function incomeProfits() {
     else if (roll === 24) {
         outcome = percent(160);
         document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> 60% profits and a machine human servant named Tassilo od Sharamba. They can unlock an aerolithic palace.`;
+    }
+    return outcome;
+}
+
+function incomeAggro() {
+    roll = Math.ceil(Math.random() * 24);
+    // roll = 0;    // This is used to test specific values.
+    console.log(roll);
+    if (roll === 1) {
+        outcome = percent(-100);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Extra-dimensional incursion swallos the caravan. Everything is gone. 100% loss.`; // Edit
+    }
+    else if (roll === 2) {
+        outcome = percent(-100);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Rival mercer guild bribed the drivers to their side with all the goods. 100% loss.`;
+    }
+    else if (roll === 3) {
+        outcome = percent(-100); // Edit this later. 
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Ghosts possess the caravan and use it as an infection vector to take over a distant settlement. 100% loss.`;
+    }
+    else if (roll === 4) {
+        outcome = percent(-75);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Monster attack! Sole survivor tells of horror and woe. Steeds destroyed, goods scattered round the wreckage. 75% loss.`;
+    }
+    else if (roll === 5) {
+        outcome = percent(-75);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> Bandit attack! Most of the steeds and goods taken. 75% loss.`;
+    }
+    else if (roll === 6) {
+        outcome = percent(-75);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> ."`;
+    }
+    else if (roll === 7) {
+        outcome = percent(-100);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 8) {
+        outcome = percent(-25);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 9) {
+        outcome = percent(-25);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+    }
+    else if (roll === 10) {
+        outcome = percent(-10);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+    }
+    else if (roll === 11) {
+        outcome = percent(-25);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 12) {
+        outcome = percent(120);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 13) {
+        outcome = percent(200);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 14) {
+        outcome = percent(130);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 15) {
+        outcome = percent(140);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 16) {
+        outcome = percent(140);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> `;
+    }
+    else if (roll === 17) {
+        outcome = percent(150);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 18) {
+        outcome = percent(160);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 19) {
+        outcome = percent(170);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 20 || roll === 21 || roll === 22 || roll === 23) {
+        outcome = percent(180);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
+    }
+    else if (roll === 24) {
+        outcome = percent(220);
+        document.getElementById(`outcome`).innerHTML = `<b>Outcome:</b> .`;
     }
     return outcome;
 }
