@@ -44,6 +44,11 @@
     <section class="outsideJournal">
 
         <article class="insideJournal">
+            <h1>7/24/23</h1>
+            <p>Work continues on Ultraviolet Milk Run. Right now, I'm trying to find a way to refer to variables which (1) exist outside a function and (2) are affected by variables whose value was changed in the function. For example, if the value of A is "1" and the value of B is "A + 1," then printing the value of B will initially get "2." If I call on a function which increases A by 1 and then, within that function, print B, then I want to print "3" ((B = A + 1) = (B = 2 + 1) in this case). It's not a big deal to reprint every step, but if there are too many functions or variables involved then it'll get clunky fast. I'll need to figure out an elegant if/else in order to run multiple button clicks through the same route without forgetting the origin, but that should be simpler.' </p>
+        </article> 
+
+        <article class="insideJournal">
             <h1>7/21/23</h1>
             <p>Worked on a class project today. I'll have more to say about it when I find out how I did, but I'm making this note here to remind Future Salt to make a comment.</p>
             <p>Also started work on "Ultraviolet Milk Run," a little Javascript text game running on the Trade Routes table in Luka Rejec's <i>Ultraviolet Grasslands</i>. Figuring out how to modify a preexisting variable whose value had been stated earlier in text, which had to update as well, was a heck and a half to figure out. As usual, I was overthinking it and just needed to run <samp>document.getElementById</samp> again inside the function.</p>
