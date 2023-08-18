@@ -1,8 +1,4 @@
-.p {
-  color: blue;
-}
-
-#workskin .wikipedia {
+ .wikipedia {
   width: 80%;
   margin: 0 auto 30px;
   background: #ffffff;
@@ -19,7 +15,7 @@
   padding-left: 25px;
 }
 
-#workskin .wikipedia .articletitle {
+ .wikipedia .articletitle {
   width: 100%;
   float: left;
   padding: 0;
@@ -28,7 +24,7 @@
   color: #000000;
 }
 
-#workskin .wikipedia .articlebody {
+ .wikipedia .articlebody {
   width: 100%;
   float: left;
   font-size: 16px;
@@ -37,7 +33,7 @@
   color: #000000;
 }
 
-#workskin .wikipedia .left {
+ .wikipedia .left {
   width: 65%;
   float: left;
   padding: 0;
@@ -46,7 +42,7 @@
   color: #000000;
 }
 
-#workskin .leftsection {
+ .leftsection {
   padding: 0;
   margin-bottom: 0;
   font-weight: bold;
@@ -56,7 +52,7 @@
   border-bottom: 1px solid #d4d4d4;
 }
 
-#workskin .wikipedia .leftbody {
+ .wikipedia .leftbody {
   width: 100%;
   float: left;
   font-size: 16px;
@@ -67,7 +63,7 @@
   padding: 0 0;
 }
 
-#workskin .wikipedia .leftsub {
+ .wikipedia .leftsub {
   width: 100%;
   float: left;
   font-weight: bold;
@@ -79,7 +75,7 @@
   padding: 0;
 }
 
-#workskin .wikipedia .right {
+ .wikipedia .right {
   width: 30%;
   float: right;
   padding: 0;
@@ -95,14 +91,14 @@
   border-radius: 2px;
 }
 
-#workskin .wikipedia .rightsub {
+ .wikipedia .rightsub {
   width: 100%;
   margin: 0 auto;
   text-align: center;
   display: table;
 }
 
-#workskin .rightdivider {
+ .rightdivider {
   width: 100%;
   text-align: center;
   display: table;
@@ -113,7 +109,7 @@
   border-bottom: 1px solid #d4d4d4;
 }
 
-#workskin .rightdivider2 {
+ .rightdivider2 {
   width: 100%;
   text-align: center;
   display: table;
@@ -124,7 +120,7 @@
   border-bottom: 1px solid #d4d4d4;
 }
 
-#workskin .wikipedia .rightcolumnleft {
+ .wikipedia .rightcolumnleft {
   width: 45%;
   float: left;
   margin: 0 0 0 5%;
@@ -132,7 +128,7 @@
   font-weight: bold;
 }
 
-#workskin .wikipedia .rightcolumnright {
+ .wikipedia .rightcolumnright {
   width: 45%;
   float: right;
   margin: 0 5% 0 0;
@@ -140,7 +136,7 @@
   font-weight: medium;
 }
 
-#workskin .wikihr {
+ .wikihr {
   color: #d4d4d4;
   width: 100%;
   text-align: left;
