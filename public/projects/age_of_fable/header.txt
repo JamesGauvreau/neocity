@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=2)">
+<meta http-equiv="Site-Enter" content="blendTrans(Duration=2)">
+<link rel="shortcut icon" href="http://www.apolitical.info/webgame/favicon.ico" type="image/vnd.microsoft.icon">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Age of Fable</title>
+<link rel="stylesheet" href="stylesheet.css">
+<script language="JavaScript">
+window.defaultStatus = "Age of Fable"
+</script>
+</head>
+<body link="#8888ff" alink="#8888ff" vlink="#8888ff" text="ffffff" bgcolor="000000">
+<!-- Project Wonderful Ad Box Loader -->
+<!-- Put this after the <body> tag at the top of your page -->
+<script type="text/javascript">
+(function(){function pw_load(){
+if(arguments.callee.z)return;else arguments.callee.z=true;
+var d=document;var s=d.createElement('script');
+var x=d.getElementsByTagName('script')[0];
+s.type='text/javascript';s.async=true;
+s.src='//www.projectwonderful.com/pwa.js';
+x.parentNode.insertBefore(s,x);}
+if (window.attachEvent){
+window.attachEvent('DOMContentLoaded',pw_load);
+window.attachEvent('onload',pw_load);}
+else{
+window.addEventListener('DOMContentLoaded',pw_load,false);
+window.addEventListener('load',pw_load,false);}})();
+</script>
