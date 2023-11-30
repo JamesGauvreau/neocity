@@ -28,7 +28,7 @@
   width: 100%;
   float: left;
   font-size: 16px;
-  text-align: justify;
+  /* text-align: justify; */
   font-family: Arial, sans-serif;
   color: #000000;
 }
@@ -56,7 +56,7 @@
   width: 100%;
   float: left;
   font-size: 16px;
-  text-align: justify;
+  /* text-align: justify; */
   font-family: Arial, sans-serif;
   color: #000000;
   margin: 0 0;
@@ -68,7 +68,7 @@
   float: left;
   font-weight: bold;
   font-size: 18px;
-  text-align: justify;
+  /* text-align: justify; */
   font-family: Arial, sans-serif;
   color: #000000;
   margin: 0;
@@ -152,4 +152,8 @@
 
 .citation {
   text-decoration: none;
+}
+
+.table {
+  text-align: justify;
 }
