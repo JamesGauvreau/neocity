@@ -1,0 +1,13 @@
+
+
+.contactBar {
+  color: white;
+  background-color: #cf0016;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.buttons {
+  float: right;
+}
+
