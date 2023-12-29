@@ -5,9 +5,27 @@
   background-color: #cf0016;
   overflow: hidden;
   font-weight: bold;
+  padding: 10px;
+  font-family: Arial;
+}
+
+.navBar {
+  padding: 10px;
 }
 
 .buttons {
-  float: right;
+  float: right; 
 }
 
+.buttons a {
+  padding: 10px;
+}
+
+.buttons a.active {
+  color: white;
+  background-color: #cf0016;
+  margin: 2em auto;
+  border-radius: 30%/50%;
+  width: 50%;
+  height: 5em;
+}
