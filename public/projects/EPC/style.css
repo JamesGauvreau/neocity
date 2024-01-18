@@ -23,12 +23,22 @@ footer {
 
 .aboutFooter {
   flex: 0 0 50%;
-  background: aqua;
+  background-color: antiquewhite;
+  border: 3px solid black;
+  /* color:white */
+}
+
+.aboutFooter .capsule {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 15%;
 }
 
 .legalFooter {
-  background-color: red;
+  background-color: black;
+  color: white;
   flex: 0 0 50%;
+  justify-content: center;
 }
 
 .small-title {
