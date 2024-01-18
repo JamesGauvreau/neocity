@@ -17,6 +17,20 @@
   /* min-width: 10px; */
 }
 
+footer {
+  display: flex;
+}
+
+.aboutFooter {
+  flex: 0 0 50%;
+  background: aqua;
+}
+
+.legalFooter {
+  background-color: red;
+  flex: 0 0 50%;
+}
+
 .small-title {
   font-weight: bold;
 }
