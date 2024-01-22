@@ -187,18 +187,23 @@ main {
 
 .placeholderImage {
   background-color: #cf0016;
-  height: 20px;
-  width: 20px;
+  height: 5%;
+  width: 5%;
   padding: 50px;
   float: left;
   margin: 10px;
   color: white;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
 }
 
 .placeholderImage p {
-  position: relative;
+  text-align: center;
+  font-size: large;
+  /* position: relative;
   left: -100%;
-  top: -100%;
+  top: -100%; */
 }
 
 /* "Services" styling */
