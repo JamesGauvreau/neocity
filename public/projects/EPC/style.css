@@ -7,6 +7,8 @@
   font-weight: bold;
   padding: 10px;
   font-family: Arial;
+  display: flex;
+  flex: 0 0 50%;
 }
 
 .footerBar {
@@ -28,10 +30,17 @@ footer {
   /* color:white */
 }
 
-.aboutFooter .capsule {
+.capsule {
   padding-left: 5%;
   padding-right: 5%;
   max-width: 15%;
+}
+
+.capsule-right {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 15%;
+  margin-left: auto;
 }
 
 .legalFooter {
@@ -49,22 +58,33 @@ footer {
 
 .navBar {
   padding: 10px;
-  margin-bottom: 10%;
-  clear: left;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  flex: 0 0 50%;
+  align-items: center;
   /* border-color: black; */
 }
 
 .logo {
-  float: left;
-  position: relative;
+  /* float: left;
+  position: relative; */
   top: 1vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* max-width: 15%; */
 }
 
 .buttons {
-  float: right;
+  /* float: right; */
   background-color: black;
-  position: relative;
-  top: 4vh;
+  /* position: relative; */
+  /* top: 4vh; */
+  /* padding-left: 5%; */
+  /* padding-right: 5%; */
+  /* max-width: 15%; */
+  margin-left: auto;
+  margin-right: 5%;
   /* margin-top: 4%; */
   /* min-height: 50px; */
 }
