@@ -143,11 +143,12 @@ footer {
 
 main {
   display: flex;
+  overflow: hidden;
 }
 
 .child,
 .sibling {
-  flex: 0 0 20%;
+  flex: 0 0 20%;overflow: hidden;
 }
 
 .child {
@@ -170,6 +171,8 @@ main {
   /* padding-right: 15%; */
   padding-left: 2%;
   border-left: 3px solid black;
+  overflow: hidden;
+  height: auto;
 }
 
 /* "Products" styling */
