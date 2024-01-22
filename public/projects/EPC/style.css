@@ -59,7 +59,7 @@ footer {
 .navBar {
   padding: 10px;
   margin-top: 1%;
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
   display: flex;
   flex: 0 0 50%;
   align-items: center;
