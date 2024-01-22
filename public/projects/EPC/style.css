@@ -59,8 +59,10 @@ footer {
 .navBar {
   padding: 10px;
   margin-top: 1%;
+  overflow: clip;
   /* margin-bottom: 1%; */
   display: flex;
+  flex-direction: row;
   flex: 0 0 50%;
   align-items: center;
   /* border-color: black; */
@@ -73,6 +75,7 @@ footer {
   padding-left: 5%;
   padding-right: 5%;
   /* max-width: 15%; */
+  flex: 1 0;
 }
 
 .buttons {
@@ -87,6 +90,9 @@ footer {
   margin-right: 5%;
   /* margin-top: 4%; */
   /* min-height: 50px; */
+  /* flex: 0 1 2; */
+  /* justify-self: flex-end; */
+  /* align-self: auto; */
 }
 
 .buttons a {
