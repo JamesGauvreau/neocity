@@ -150,6 +150,7 @@ footer {
 main {
   display: flex;
   overflow: hidden;
+  /* margin-left: 5%; */
 }
 
 .child,
@@ -162,7 +163,8 @@ main {
   flex: 0 0 65%;
   /* max-width: 40%; */
   /* padding-left: 10%; */
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  margin-left: 5%;
   margin-right: 1%;
   margin-bottom: 1%;
 }
