@@ -156,7 +156,7 @@ main {
   /* max-width: 40%; */
   /* padding-left: 10%; */
   margin-left: 10%;
-  /* margin-right: 10%; */
+  margin-right: 1%;
 }
 
 .sibling {
@@ -165,9 +165,11 @@ main {
   height: 1000px;
   /* margin-left: auto; */
   /* padding-left: 10%; */
-  margin-right: 5%;
-  margin-left: 5%;
-  padding-right: 5%;
+  /* margin-right: 5%; */
+  /* margin-left: 10%; */
+  /* padding-right: 15%; */
+  padding-left: 2%;
+  border-left: 3px solid black;
 }
 
 /* "Products" styling */
