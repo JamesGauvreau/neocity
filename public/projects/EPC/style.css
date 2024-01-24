@@ -36,7 +36,7 @@ footer {
 
 .aboutFooter {
   flex: 0 0 50%;
-  background-color: #B7C9E2;
+  background-color: #C6D5E9; /* https://colors.artyclick.com/color-names-dictionary/color-names/light-blue-grey-color */
   border-top: 3px solid black;
   /* color:white */
 }
