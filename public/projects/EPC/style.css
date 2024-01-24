@@ -36,7 +36,7 @@ footer {
 
 .aboutFooter {
   flex: 0 0 50%;
-  background-color: antiquewhite;
+  background-color: #B7C9E2;
   border-top: 3px solid black;
   /* color:white */
 }
