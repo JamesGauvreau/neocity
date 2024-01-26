@@ -36,7 +36,7 @@ footer {
 
 .aboutFooter {
   flex: 0 0 50%;
-  background-color: #C6D5E9; /* https://colors.artyclick.com/color-names-dictionary/color-names/light-blue-grey-color */
+  background-color: azure; /* azure; cadetblue, lightblue; https://colors.artyclick.com/color-names-dictionary/color-names/light-blue-grey-color */
   border-top: 3px solid black;
   /* color:white */
 }
@@ -63,6 +63,16 @@ footer {
 
 .small-title {
   font-weight: bold;
+}
+
+.socialMedia {
+ /* background-color: #cf0016; */
+ /* padding: 1%; */
+}
+
+.socialMedia img {
+  max-height: 24px;
+  max-width: 24px;
 }
 
 /* Universal ==> Navbar */
