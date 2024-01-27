@@ -110,12 +110,13 @@ footer {
   /* padding-right: 5%; */
   /* max-width: 15%; */
   /* margin-right: auto; */
-  margin-right: 10%;
+  /* margin-right: 10%; */
   /* margin-top: 4%; */
   /* min-height: 50px; */
   /* flex: 0 1 2; */
   /* justify-self: flex-end; */
   /* align-self: auto; */
+  margin-right: 5%
 }
 
 .buttons a {
@@ -175,8 +176,8 @@ main {
   /* padding-left: 10%; */
   /* margin-left: 10%; */
   margin-left: 5%;
-  margin-right: 1%;
   margin-bottom: 1%;
+  margin-right: 5%;
 }
 
 .sibling {
@@ -204,6 +205,10 @@ main {
   float: left;
 }
 
+.productSubEntry {
+  
+}
+
 .placeholderImage {
   background-color: wheat;
   height: 5%;
@@ -216,6 +221,12 @@ main {
   justify-content: center;
   align-items: center;
   border: solid 2px black;
+}
+
+.placeholderImage img {
+  /* max-height: 50%; */
+  max-width: 200%;
+  float: left;
 }
 
 .placeholderImage p {
