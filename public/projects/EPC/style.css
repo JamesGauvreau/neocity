@@ -205,16 +205,17 @@ main {
 }
 
 .placeholderImage {
-  background-color: rosybrown;
+  background-color: wheat;
   height: 5%;
   width: 5%;
   padding: 50px;
   float: left;
   margin: 10px;
-  color: white;
+  color: black;
   display: flex;   
   justify-content: center;
   align-items: center;
+  border: solid 2px black;
 }
 
 .placeholderImage p {
