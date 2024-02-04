@@ -22,6 +22,11 @@
 <!-- TODO able to click logo to go back to home page -->
 <!-- TODO "click here for more" on product page, for categories, to see more about particular varieties ; maybe set it up as a grid flexbox with the sub-categories there, and "details" button-->
 
+<!-- Q - Products page -- get rid of explanatory text, just have pictures and names, and let the user click these for more information -->
+<!-- Q - Let the user know that they need to click for more info? -->
+<!-- Q - letting the user select "all flooded" or "all VRLA" will be best done with a database -->
+    <!-- Q - I thought the above was true, but I did some digging and if you only want "all" and "all flooded" and "all VRLA", I think I can set that up without the database -->
+
 <!-- A - photo size: bigger? // don't make photos bigger, but make them clickable for full-size photo -->
 <!-- Q - ask dad about Custom Solutions, About, Resources -->
 <!-- Q - make the "contact us" on "services" a bigger font? -->
@@ -62,30 +67,30 @@
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="services.html">Services</a>
+            <a href="contactus.html">Contact Us</a>
         </div>
     </div>
 
 
     
     <!-- <img src="https://wmbsaltworks.neocities.org/images/archives/other/EPC_lightning.jpeg"> -->
-    <div class="placeholderImage" style="margin: auto; margin-top: 2%; margin-bottom: 2%; width: 99%; padding: 10px; height: 250px; display: flex; justify-content: center;
+    <!-- <div class="placeholderImage" style="margin: auto; margin-top: 2%; margin-bottom: 2%; width: 99%; padding: 10px; height: 250px; display: flex; justify-content: center;
         align-items: center;">
-        <!--   margin: auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  width: 80%;
-  padding: 10px; -->
-        <p style="font-size: xx-large;">Placeholder Image</p>
-    </div>
+          
+        
+    </div> -->
+    <!-- <p style="font-size: xx-large;">Placeholder Images (Revolving)</p> -->
     <!-- <div style="display: flex;"> -->
-        <div style="margin-left: 5%; margin-right: 10%; width: 70%">
-
-            <h1>When Being Online Counts</h1>
-            
-        </div>
-
+<div class="bigImage">
+    <img class="imageFlank" src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+    <img src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+    <img class="imageFlank" src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+    <!-- <p>Test</p> -->
+</div>
     <main>
         <div class="child">
+            <h1>When Being Online Counts</h1>
+
             <p>Emergency Power Corporation has been answering the call of Building Upgrading and Servicing clients in
                 the Data Center, Telecommunications, and Utility sites across North America for over 30 years. Companies such as
                 Verizon, AT&T, Charter Communications, Comcast have placed their trust in EPC to install their DC power and
@@ -94,7 +99,8 @@
             </p>            </div>
         </div>
         <div class="sibling" style="border: 0px;">
-            <p class="small-title">This is for reviews</p>
+            <p class="searchBar">[Search bar]</p>
+            <p class="small-title">This is for our best reviews</p>
             <p><i>We can place a couple of reviews from customers over here on the right. </i>
                 <p class="small-title">This is for a second review</p>
                 <p><i>Here's space for a second review (or just one if it's long)</i></p>
@@ -154,8 +160,7 @@
         </div>
     </footer>
     <footer class="legalFooter">
-        <p>Copyright © 2023 Emergency Power Corporation&emsp;|&emsp;All Rights Reserved&emsp;|&emsp;Contact
-            Us
+        <p>Copyright © <script>document.write(new Date().getFullYear())</script> Emergency Power Corporation&emsp;|&emsp;All Rights Reserved&emsp;|&emsp;<a href="contactus.html">Contact Us</a>
         </p>
     </footer>
 
