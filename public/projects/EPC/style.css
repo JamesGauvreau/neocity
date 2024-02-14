@@ -11,7 +11,7 @@ body {
 
 .contactBar {
   color: white;
-  background-color: #cf0016;
+  background-color: #0115b0;
   overflow: hidden;
   font-weight: bold;
   padding: 20px;
@@ -86,7 +86,7 @@ footer {
 }
 
 .legalFooter {
-  background-color: #040720;
+  background-color: #B09C01;
   color: white;
   flex: 0 0 50%;
   justify-content: center;
@@ -169,7 +169,7 @@ footer {
 }
 
 .buttons a:active, a:hover {
-  background-color: #040720;
+  background-color: #0115b0;
   color: white;
 }
 
@@ -191,6 +191,9 @@ footer {
   max-height: 10%;
   justify-content: center;  
   align-items: center;
+  border-top: solid 2px #040720;
+  border-bottom: solid 2px #040720;
+  background-color: #040720;
 }
 
 .bigImage img {
@@ -216,8 +219,9 @@ footer {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  opacity: 50%;
 }
 
 .bigImage .imageFlank:hover {
@@ -230,8 +234,9 @@ footer {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+  -webkit-filter: sepia(0%);
+  filter: sepia(0%);
+  opacity: 100%;
 }
 
 .bigImage .imageFlank:active {
@@ -244,8 +249,7 @@ footer {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  -webkit-filter: sepia(100%);
-  filter: sepia(100%);
+
 }
 
 .logoBar {
@@ -322,7 +326,7 @@ main {
 }
 
 .searchBar {
-  background-color: darkblue;
+  background-color: #0115b0;
   color: white;
   text-align: center;
   padding-top: 5px;
@@ -414,7 +418,7 @@ border: solid 2px black;
 .grid-body {
   padding-top: 0%;
   padding-bottom: 5%;
-  border-bottom: solid 5px black;
+  /* border-bottom: solid 5px black; */
   margin-bottom: 5%;
   padding-left: 5%;
 }
