@@ -25,7 +25,7 @@
 <!-- Q - Products page -- get rid of explanatory text, just have pictures and names, and let the user click these for more information -->
 <!-- Q - Let the user know that they need to click for more info? -->
 <!-- Q - letting the user select "all flooded" or "all VRLA" will be best done with a database -->
-    <!-- Q - I thought the above was true, but I did some digging and if you only want "all" and "all flooded" and "all VRLA", I think I can set that up without the database -->
+<!-- Q - I thought the above was true, but I did some digging and if you only want "all" and "all flooded" and "all VRLA", I think I can set that up without the database -->
 <!-- Q - send updates every other day? every day? and include questions with updates -->
 
 <!-- A - photo size: bigger? // don't make photos bigger, but make them clickable for full-size photo -->
@@ -67,14 +67,23 @@
         <div class="buttons">
             <a class="active" href="default.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
+            <div class="dropdown">
+                <button class="dropButton">
+                    Products
+                    <!-- <a href="products.html">Products</a> -->
+                </button>
+                <div class="dropContent">
+                    <a href="products/Flooded.html">Flooded Batteries</a>
+                    <a href="products/VRLA.html">VRLA Batteries</a>
+                </div>
+            </div>
             <a href="services.html">Services</a>
             <a href="contactus.html">Contact Us</a>
         </div>
     </div>
 
 
-    
+
     <!-- <img src="https://wmbsaltworks.neocities.org/images/archives/other/EPC_lightning.jpeg"> -->
     <!-- <div class="placeholderImage" style="margin: auto; margin-top: 2%; margin-bottom: 2%; width: 99%; padding: 10px; height: 250px; display: flex; justify-content: center;
         align-items: center;">
@@ -83,30 +92,37 @@
     </div> -->
     <!-- <p style="font-size: xx-large;">Placeholder Images (Revolving)</p> -->
     <!-- <div style="display: flex;"> -->
-<div class="bigImage">
-    <img class="imageFlank" src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
-    <img src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
-    <img class="imageFlank" src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
-    <!-- <p>Test</p> -->
-</div>
+    <div class="bigImage">
+        <img class="imageFlank"
+            src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+        <img
+            src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+        <img class="imageFlank"
+            src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
+        <!-- <p>Test</p> -->
+    </div>
     <main>
         <div class="child">
             <h1>When Being Online Counts</h1>
 
             <p>Emergency Power Corporation has been answering the call of Building Upgrading and Servicing clients in
-                the Data Center, Telecommunications, and Utility sites across North America for over 30 years. Companies such as
-                Verizon, AT&T, Charter Communications, Comcast have placed their trust in EPC to install their DC power and
-                racking systems. These companies, as well as numerous others, have utilized the services of EPC on a repeated
+                the Data Center, Telecommunications, and Utility sites across North America for over 30 years. Companies
+                such as
+                Verizon, AT&T, Charter Communications, Comcast have placed their trust in EPC to install their DC power
+                and
+                racking systems. These companies, as well as numerous others, have utilized the services of EPC on a
+                repeated
                 basis, which demonstrates our dedication and commitment to achieving and satisfying clients.
-            </p>            </div>
+            </p>
+        </div>
         </div>
         <div class="sibling" style="border: 0px;">
             <p class="searchBar">[Search bar]</p>
             <p class="small-title">This is for our best reviews</p>
             <p><i>We can place a couple of reviews from customers over here on the right. </i>
-                <p class="small-title">This is for a second review</p>
-                <p><i>Here's space for a second review (or just one if it's long)</i></p>
-            </div>
+            <p class="small-title">This is for a second review</p>
+            <p><i>Here's space for a second review (or just one if it's long)</i></p>
+        </div>
     </main>
 
     <div class="logoBar">
@@ -117,7 +133,7 @@
         &emsp;&emsp;<img src="https://battery.partners/timthumb.php?src=/uploads/powersonic-lithium.jpg&w=400">
         &emsp;&emsp;<img
             src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/0_8qr2jmww/def_height/2700/def_width/2700/version/100012/type/1">
-            &emsp;&emsp;<img src="https://www.diversitec.com/wp-content/uploads/2017/05/ELTEK_logo_cmyk_preview.jpg">
+        &emsp;&emsp;<img src="https://www.diversitec.com/wp-content/uploads/2017/05/ELTEK_logo_cmyk_preview.jpg">
     </div>
     <div class="logoBar">
         <img src="https://www.hindlepowerinc.com/Themes/Hindle2023/Assets/images/hindle-logo.svg">
@@ -125,7 +141,7 @@
         &emsp;&emsp;<img src="https://www.eaton.com/content/dam/eaton/global/logos/eaton-logo-mobile.png">
         &emsp;&emsp;<img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Vertiv_logo.svg/2560px-Vertiv_logo.svg.png">
-        
+
 
     </div>
 
@@ -143,26 +159,30 @@
                 Redford, Michigan 48240<br>
                 Phone: (313) 535-1434<br>
                 Fax: (313) 535-1569<br>
-                Email:             <a href="dummy.html">sales@emergencypowercorp.com</a><br>
+                Email: <a href="dummy.html">sales@emergencypowercorp.com</a><br>
 
 
-                <a href="dummy.html"><div class="socialMedia">
-                <img
-                src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124ac15112aad5_twitter%20small.svg"></a>
-                <a href="dummy.html">            <img
-                src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a389912aad8_linkedin%20small.svg"></a>
-                <a href="dummy.html">            <img
-                src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a51bf12aae9_facebook%20small.svg"></a>
+                <a href="dummy.html">
+                    <div class="socialMedia">
+                        <img
+                            src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124ac15112aad5_twitter%20small.svg">
+                </a>
+                <a href="dummy.html"> <img
+                        src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a389912aad8_linkedin%20small.svg"></a>
+                <a href="dummy.html"> <img
+                        src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a51bf12aae9_facebook%20small.svg"></a>
                 <!-- <img
                     src="https://cdn2.iconfinder.com/data/icons/social-media-2102/100/social_media_circled_network-06-256.png">
                 <img src="https://cdn2.iconfinder.com/data/icons/social-media-2102/100/social_media_network-03-512.png">
                 <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-facebook_-512.png"> -->
-            </div>
-            </p>
+        </div>
+        </p>
         </div>
     </footer>
     <footer class="legalFooter">
-        <p>Copyright © <script>document.write(new Date().getFullYear())</script> Emergency Power Corporation&emsp;|&emsp;All Rights Reserved&emsp;|&emsp;<a href="contactus.html">Contact Us</a>
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script> Emergency Power Corporation&emsp;|&emsp;All Rights
+            Reserved&emsp;|&emsp;<a href="contactus.html">Contact Us</a>
         </p>
     </footer>
 
