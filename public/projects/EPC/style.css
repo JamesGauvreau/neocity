@@ -581,3 +581,28 @@ border-bottom-right-radius: 25px;
   .product-quick-facts {
     float: right; 
   }
+
+  .pill-button a {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    text-wrap: balance;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;  
+    max-width: 40%;
+    margin-right: 3.5%; 
+    /* max-width: auto;   */
+    vertical-align: top;
+    border: solid 2px black;
+    overflow: hidden;
+  }
+
+  .pill-button a:hover {
+    background-color: #cf0016;
+    color: white;
+  }
