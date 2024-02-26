@@ -100,6 +100,34 @@
     </div> -->
     <!-- <p style="font-size: xx-large;">Placeholder Images (Revolving)</p> -->
     <!-- <div style="display: flex;"> -->
+        <div class="slideshow-container bigImage">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
     <div class="bigImage">
         <img class="imageFlank"
             src="https://media.istockphoto.com/id/1453859222/photo/view-of-modern-photovoltaic-solar-panels-to-charge-battery-rows-of-sustainable-energy-solar.jpg?s=2048x2048&w=is&k=20&c=BifpqbJ7QByYHlUULQ2Y41G69w51WF4Di375exuDZ7w=">
@@ -125,7 +153,10 @@
         </div>
         </div>
         <div class="sibling" style="border: 0px;">
-            <p class="searchBar">[Search bar]</p>
+            <p class="searchBar"><h2>Search Bar</h2><br>
+            <script async src="https://cse.google.com/cse.js?cx=203e417a5e07949a2">
+            </script>
+            <div class="gcse-search"></div></p>
             <p class="small-title">This is for our best reviews</p>
             <p><i>We can place a couple of reviews from customers over here on the right. </i>
             <p class="small-title">This is for a second review</p>
@@ -194,5 +225,25 @@
         </p>
     </footer> -->
     <footer class="legalFooter" id="legalFooterJS"></footer>
-
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
 </body>
