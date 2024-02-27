@@ -1,0 +1,25 @@
+/* Location Grid Styling */
+
+.city-grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    align-items: center; 
+}
+
+.city-grid-container p {
+    text-align: left;
+    margin-right: 5%;
+}
+
+.city-grid-container h3 {
+    text-align: center;
+}
+
+.city-grid-container img {
+    width: 40vh; 
+    /* border: 1px solid black; */
+    margin: 15px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
