@@ -1,0 +1,93 @@
+.services-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .services-flex-item {
+  margin: 1%;
+    position: relative;
+    text-align: center;
+  }
+  
+  .services-flex-image {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 25%;
+  margin: 1%;
+  overflow: hidden;
+  filter: gr
+  }
+  
+  .services-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+  }
+
+  .box-overlay {
+    /* background-color: lightblue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 80%; 
+    border-radius: 25%;
+    /* color: black; */
+    /* margin-bottom: 30%; */
+  }
+
+  /* .box-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    width: 100%;
+  } */
+
+.services-title {
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    /* overflow: hidden; */
+}
+
+  .box-underlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    /* width: 100%; */
+    overflow: hidden;
+  }
+
+  .box-overlay:hover {
+    background-color: black;
+  }
+
+  .box-overlay img:hover {
+-webkit-filter: sepia(100%);
+filter: sepia(100%);
+}
+
+  .box-text-container div {
+    color: black;
+    font-weight: bold;
+  }
+
+  .box-overlay:hover .box-underlay-text {
+    color: white;
+  }
+
+  /* .box-overlay:hover .box-underlay-text {
+    background-color: transparent;
+    color: white;
+  } */
+
+/* https://wmbsaltworks.neocities.org/images/archives/other/EPC/services/servicesBatteryMaintenance.jpg */
+/* https://wmbsaltworks.neocities.org/images/archives/other/EPC/services/servicesBatteryMonitoring.jpg */

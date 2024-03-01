@@ -1,7 +1,8 @@
 const legalFoosterJS = document.getElementById("legalFooterJS");
 const footerElement = document.createElement("footer");
+const currentDate = document.write(new Date().getFullYear());
 footerElement.innerHTML = `
-        <p> Copyright © 2024 Emergency Power Corporation 
+        Copyright © 2024 Emergency Power Corporation 
         &emsp;|&emsp;
         All Rights Reserved 
         &emsp;|&emsp;
@@ -9,3 +10,6 @@ footerElement.innerHTML = `
         </p>`;
 
 legalFooterJS.append(footerElement);
+
+
+// <script>document.write(new Date().getFullYear())</script>
