@@ -12,11 +12,10 @@
   .services-flex-image {
   width: 250px;
   height: 250px;
-  border: 2px solid black;
+  border: 2px solid gray;
   border-radius: 25%;
   margin: 1%;
   overflow: hidden;
-  filter: gr
   }
   
   .services-centered {
@@ -67,7 +66,7 @@
   }
 
   .box-overlay:hover {
-    background-color: black;
+    background-color: gray;
   }
 
   .box-overlay img:hover {

@@ -23,3 +23,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.socmedia {
+    width: 50px;
+}
+
+.socmedia:hover {
+    background-color: transparent;
+}
+
+.location {
+    border-radius: 25%;
+}
