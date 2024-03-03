@@ -666,3 +666,7 @@ border: solid 2px black;
   width: 50%;
 }
 
+.cast {
+  max-width: 150px; 
+  max-height: 150px;
+}
