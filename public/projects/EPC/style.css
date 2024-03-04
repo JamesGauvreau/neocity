@@ -154,10 +154,10 @@ footer {
   font-weight: bold;
 }
 
-.socialMedia {
-  /* background-color: #cf0016; */
-  /* padding: 1%; */
-}
+/* .socialMedia {
+  background-color: #cf0016;
+  padding: 1%;
+} */
 
 .socialMedia img {
   max-height: 24px;
@@ -230,7 +230,7 @@ footer {
 
 .buttons a:active,
 a:hover {
-  background-color: #0115b0;
+  /* background-color: #0115b0; */
   color: white;
 }
 
@@ -326,8 +326,8 @@ main {
   float: left;
 }
 
-.productSubEntry {
-}
+/* .productSubEntry {
+} */
 
 .placeholderImage {
   background-color: wheat;
