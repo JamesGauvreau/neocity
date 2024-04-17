@@ -9,6 +9,7 @@
 
 #cssportal-grid {
     margin: 5px;
+    margin-top: 2%; 
 }
 
 #div1 {
@@ -27,11 +28,16 @@
 }
 
 #div3 {
-	grid-area: 2 / 10 / 4 / 4;
+	grid-area: 2 / 7 / 4 / 4;
     /* margin-right: 5px; */
     /* text-align: justify; */
 	/* background-color: rgba(31,24,217, 0.5); */
+}
+
+#div3 div {
     box-shadow: 3px 3px 2px 0px rgba(128, 0, 0, 1);
+    padding-bottom: 5px;
+    padding-right: 5px;
 }
 
 #div4 {
