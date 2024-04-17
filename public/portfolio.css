@@ -9,7 +9,8 @@
 
 #cssportal-grid {
     margin: 5px;
-    margin-top: 2%; 
+position: relative;
+top: 25px;
 }
 
 #div1 {
