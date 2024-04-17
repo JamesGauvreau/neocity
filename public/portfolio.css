@@ -21,17 +21,17 @@
 }
 
 #div2 img {
-    /* display: block; */
-    max-width: 45%;
-    margin: 1%;
-    /* align-self: center; */
+    min-width: 150px;
+    width: 45%;
+    margin-right: 15px;
 }
 
 #div3 {
 	grid-area: 2 / 10 / 4 / 4;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     /* text-align: justify; */
 	/* background-color: rgba(31,24,217, 0.5); */
+    box-shadow: 3px 3px 2px 0px rgba(128, 0, 0, 1);
 }
 
 #div4 {
@@ -40,8 +40,7 @@
 }
 
 #div4 img {
-    /* display: block; */
-    max-width: 45%;
-    margin: 1%;
-    /* align-self: center; */
+    min-width: 150px;
+    width: 45%;
+    margin-right: 15px;
 }
