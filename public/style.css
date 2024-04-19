@@ -78,7 +78,7 @@
 #menu ul.sub-menus{
 	height: auto;
 	overflow: hidden;
-	width: 170px;
+	width: 290px; 
 	background: #000000;
 	position: absolute;
 	z-index: 99;
