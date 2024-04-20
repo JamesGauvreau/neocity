@@ -1,3 +1,22 @@
+body {
+    /* margin: 0; */ 
+		/* ~margin:0~ was removed because I thought the menu looked nicer that way, but it should be reactivated if the menu is not rounded. */
+		/* If the ~margin:0~ is reactivated then make sure to pay attention to what is happening with ~main~ */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+/* position: absolute;
+top: 0; */
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
 /* Menu */
 
 #menu {
