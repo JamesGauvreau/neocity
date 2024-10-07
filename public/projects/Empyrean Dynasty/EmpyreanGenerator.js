@@ -1,6 +1,6 @@
 // Expertises
 
-const adjective = [
+const expertiseAdj = [
     'Active', 'Aerodyne', 'Amorphous',
     'Anaerobic', 'Anti-', 'Anti-matter',
     'antimatter', 'Applied', 'Astro-',
@@ -116,7 +116,7 @@ const adjective = [
 'Xeno-',
 ]
 
-const noun = [
+const expertiseNoun = [
     '-preservation',
 '-theater',
 'acclimation',
@@ -258,3 +258,10 @@ const noun = [
 'xasers',
 'zipways',
 ]
+
+let expertiseRan = Math.random();
+let expertiseRan2 = Math.floor(expertiseRan);
+
+console.log(expertiseRan);
+
+const expertiseGenerator = document.getElementById('expertise');
