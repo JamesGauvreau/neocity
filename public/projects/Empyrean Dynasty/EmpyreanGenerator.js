@@ -262,6 +262,6 @@ const expertiseNoun = [
 let expertiseRan = Math.random();
 let expertiseRan2 = Math.floor(expertiseRan);
 
-console.log(expertiseRan);
+console.log(expertiseRan); 
 
 const expertiseGenerator = document.getElementById('expertise');
