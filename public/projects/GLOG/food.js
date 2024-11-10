@@ -1,3 +1,6 @@
+// readily available at all hours, dawn to dusk and dusk to dawn, including but
+// not limited to...
+
 // fish in every variety, sweetmeats and sweatbreads, eighty-eight types of
 // sandwiches
 
