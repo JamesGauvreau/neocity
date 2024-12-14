@@ -19,16 +19,24 @@
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
 
-let kindList = [
-    'Bugbear', 'Packling', 'Snerson', 'Human'
-]
-
 function rollDiceInternal(number) {
     return Math.floor(Math.random() * number);
 }
 
-function rollDiceExternal(number) {
+function rollDice(number) {
     return Math.floor(Math.random() * number);
+}
+
+let kindList = [
+    'Bugbear', 'Packling', 'Snerson', 'Human'
+]
+
+let diceKind = rollDice(20);
+
+console.log('diceKind: ' + diceKind);
+
+function genKind() {
+
 }
 
 console.log('test');
