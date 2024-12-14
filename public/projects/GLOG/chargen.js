@@ -19,6 +19,8 @@
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
 
+console.log('test')
+
 // EQUIPMENT
 // Roll starting funds
 // Roll random kit: A or B
