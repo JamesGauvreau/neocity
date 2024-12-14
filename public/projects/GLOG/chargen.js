@@ -24,7 +24,7 @@ function rollDiceInternal(number) {
 }
 
 function rollDice(number) {
-    return Math.floor(Math.random() * number);
+    return 1+ Math.floor(Math.random() * number);
 }
 
 let kindList = [
@@ -36,8 +36,14 @@ let diceKind = rollDice(20);
 console.log('diceKind: ' + diceKind);
 
 function genKind() {
-
+    if (diceKind == 1) {
+        return 'bugbear'
+    } else {
+        return 'human'
+    }
 }
+
+console.log('genKind: ' + genKind())
 
 console.log('test');
 console.log(rollDiceInternal(16)); 
