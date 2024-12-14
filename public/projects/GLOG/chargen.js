@@ -19,13 +19,38 @@
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
 
-function rollDice() {
-    return 1 + Math.floor(Math.random() * 6);
+let kindList = [
+    'Bugbear', 'Packling', 'Snerson', 'Human'
+]
+
+function rollDiceInternal(number) {
+    return Math.floor(Math.random() * number);
 }
 
+function rollDiceExternal(number) {
+    return Math.floor(Math.random() * number);
+}
 
 console.log('test');
-console.log(rollDice()); 
+console.log(rollDiceInternal(16)); 
+
+let testKind = kindList[rollDiceInternal(4)];
+
+console.log(testKind);
+
+// let mutations;
+
+function mutantTracker() {
+    if (testKind === 'Human') {
+        mutations = 'Yes'
+    } else {
+        mutations = 'No'
+    }
+}
+
+mutantTracker();
+
+console.log(mutations);
 
 // EQUIPMENT
 // Roll starting funds
