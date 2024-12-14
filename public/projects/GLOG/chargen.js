@@ -29,8 +29,6 @@ let kindList = [
 
 let diceKind = rollDice(20); // Rolls 1d20 to determine Kind. 
 
-
-
 function genKind() {    // Evaluates diceKind to determine Kind. 
     if (diceKind == 1) {
         return 'Bugbear'
@@ -74,26 +72,7 @@ console.log('genKind: ' + genKind());
 console.log('diceHuman: ' + diceHuman);
 console.log('genHumanType: ' + genHumanType());
 
-console.log('test');
-console.log(rollDiceInternal(16)); 
-
-let testKind = kindList[rollDiceInternal(4)];
-
-console.log(testKind);
-
 // let mutations;
-
-function mutantTracker() {
-    if (testKind === 'Human') {
-        mutations = 'Yes'
-    } else {
-        mutations = 'No'
-    }
-}
-
-mutantTracker();
-
-console.log(mutations);
 
 // EQUIPMENT
 // Roll starting funds
