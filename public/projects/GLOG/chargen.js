@@ -19,7 +19,13 @@
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
 
-console.log('test')
+function rollDice() {
+    return 1 + Math.floor(Math.random() * 6);
+}
+
+
+console.log('test');
+console.log(rollDice()); 
 
 // EQUIPMENT
 // Roll starting funds
