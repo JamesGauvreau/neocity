@@ -1,7 +1,3 @@
-// KIND Roll 1d20: 1 each per Bugbear, Packling, or Snerson. Rest are human,
-// roll 1d4: if 1, no mutations; if 2, pregen mutant; else, random mutant, roll
-// 1d4: if 1, 2 mutations; else, 1 mutation.
-
 // CALLING
 // Roll 1d8: If wizard, roll 1d8 again.
 
@@ -31,19 +27,52 @@ let kindList = [
     'Bugbear', 'Packling', 'Snerson', 'Human'
 ]
 
-let diceKind = rollDice(20);
+let diceKind = rollDice(20); // Rolls 1d20 to determine Kind. 
 
-console.log('diceKind: ' + diceKind);
 
-function genKind() {
+
+function genKind() {    // Evaluates diceKind to determine Kind. 
     if (diceKind == 1) {
-        return 'bugbear'
-    } else {
-        return 'human'
+        return 'Bugbear'
+    } else if (diceKind == 2) {
+        return 'Packling'
+    }
+    else if (diceKind == 3) {
+        return 'Snerson'
+    }
+    else {
+        return 'Human'
     }
 }
 
-console.log('genKind: ' + genKind())
+let diceHuman = rollDice(4); // Rolls 1d4 to determine whether a human is mutated. 
+
+function genHumanType() {
+    if (diceHuman == 1) {
+        return 'humanNorm';
+    } else if (diceHuman == 2) {
+        return 'humanMutCommon';
+    } else {
+        return 'humanMutRare';
+    }
+}
+
+let diceMutant = rollDice(4); // Rolls 1d4 to determine whether a mutant human has 1 or 2 mutations.
+
+function genHumanMutRareMuts() {
+    if (diceMutant == 1) {
+        return '2 mutations';
+    } else {
+        return '1 mutation'
+    }
+}
+
+genHumanType()
+
+console.log('diceKind: ' + diceKind);
+console.log('genKind: ' + genKind());
+console.log('diceHuman: ' + diceHuman);
+console.log('genHumanType: ' + genHumanType());
 
 console.log('test');
 console.log(rollDiceInternal(16)); 
