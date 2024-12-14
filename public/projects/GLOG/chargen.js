@@ -1,8 +1,12 @@
-// CALLING
-// Roll 1d8: If wizard, roll 1d8 again.
-
-// CLASS
-// Roll as normal.
+// TODO
+// 1. Ability scores
+// 2. Derived scores
+// 3. Mutant types of humans 
+// 4. Mutations for humans 
+// 5. Skills
+// 6. Spells 
+// 7. Make everything work on a page
+// 8. Clean code
 
 // ABILITY SCORES Roll each, then check against Kind (e.g. if Kind = "Bugbear")
 // and re-roll, take highest, of one score.
