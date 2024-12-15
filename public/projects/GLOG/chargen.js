@@ -183,7 +183,7 @@ function genAbilities() {
             let divisionKind = sumKind / 2;
             let rounddownKind = Math.floor(divisionKind);
             let final = Math.max(rounddown, rounddownKind);
-            scoreDexterity = (rounddown + ' ' + rounddownKind + ' ' + final);
+            scoreDexterity = (final);
             return [scoreDexterity];  
             }
             else {
@@ -216,7 +216,7 @@ function genAbilities() {
             let divisionKind = sumKind / 2;
             let rounddownKind = Math.floor(divisionKind);
             let final = Math.max(rounddown, rounddownKind);
-            scoreIntelligence = (rounddown + ' ' + rounddownKind + ' ' + final);
+            scoreIntelligence = (final);
             return [scoreIntelligence];  
             }
             else {
@@ -249,7 +249,7 @@ function genAbilities() {
             let divisionKind = sumKind / 2;
             let rounddownKind = Math.floor(divisionKind);
             let final = Math.max(rounddown, rounddownKind);
-            scoreWisdom = (rounddown + ' ' + rounddownKind + ' ' + final);
+            scoreWisdom = (final);
             return [scoreWisdom];  
             }
             else {
@@ -282,7 +282,7 @@ function genAbilities() {
             let divisionKind = sumKind / 2;
             let rounddownKind = Math.floor(divisionKind);
             let final = Math.max(rounddown, rounddownKind);
-            scoreCharisma = (rounddown + ' ' + rounddownKind + ' ' + final);
+            scoreCharisma = (final);
             return [scoreCharisma];  
             }
             else {
@@ -314,6 +314,11 @@ console.log('Dexterity: ' + scoreDexterity);
 console.log('Intelligence: ' + scoreIntelligence);
 console.log('Wisdom: ' + scoreWisdom);
 console.log('Charisma: ' + scoreCharisma);
+
+let Flesh = scoreStrength;
+let Grit = Math.max(scoreDexterity, scoreIntelligence, scoreWisdom, scoreCharisma);
+
+console.log('Flesh: ' + Flesh + '. Grit: ' + Grit);
 
 function genClass() {
     if (diceClass <= 2) {
