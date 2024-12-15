@@ -364,10 +364,6 @@ let QuickDrawSlots = Math.floor(scoreDexterity);
 let SkillSlots = scoreIntelligence + scoreWisdom;
 let Save = scoreCharisma;
 
-const textAbilities = (document.getElementById(
-  "abilities"
-).innerHTML = `Strength: ${scoreStrength}. Dexterity: ${scoreDexterity}. Intelligence: ${scoreIntelligence}. Wisdom: ${scoreWisdom}. Charisma: ${scoreCharisma}`);
-
 console.log(
   "Flesh: " +
     Flesh +
@@ -448,6 +444,10 @@ console.log(
 const textAbilities = (document.getElementById(
   "abilities"
 ).innerHTML = `Strength: ${scoreStrength}. Dexterity: ${scoreDexterity}. Intelligence: ${scoreIntelligence}. Wisdom: ${scoreWisdom}. Charisma: ${scoreCharisma}`);
+
+const textDerived = (document.getElementById(
+  "derived"
+).innerHTML = `Flesh: ${Flesh}. Grit: ${Grit}. Hit Bonus: +${HitBonus}. Speed: ${Speed}. Stealth: ${Stealth}. Initiative: ${Initiative}. Carry Slots: ${CarrySlots}. Quick Draw: ${QuickDrawSlots}. Skill Slots: ${SkillSlots}. Save: ${Save}.`);
 
 // let mutations;
 
