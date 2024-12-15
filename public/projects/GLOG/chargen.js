@@ -49,8 +49,6 @@ function genKind() {
 
 let rosterKind = genKind();
 
-console.log("rosterKind: " + rosterKind);
-
 function genHumanType() {
   if (diceHuman == 1) {
     return "humanNorm";
@@ -332,18 +330,6 @@ function genAbilities() {
 }
 
 genAbilities();
-console.log(
-  "STR: " +
-    scoreStrength +
-    ". DEX: " +
-    scoreDexterity +
-    ". INT: " +
-    scoreIntelligence +
-    ". WIS: " +
-    scoreWisdom +
-    ". CHA: " +
-    scoreCharisma
-);
 
 // DERIVED SCORES
 
@@ -426,8 +412,6 @@ genClass();
 //     }
 // };
 
-console.log("diceKind: " + diceKind);
-console.log("genKind: " + genKind());
 console.log("diceHuman: " + diceHuman);
 console.log("genHumanType: " + genHumanType());
 console.log("diceCalling: " + diceCalling);
@@ -440,6 +424,8 @@ console.log(
     ", " +
     rosterCash
 );
+
+const textKind = (document.getElementById("Kind").innerHTML = `Kind: ${rosterKind}`)
 
 const textAbilities = (document.getElementById(
   "abilities"
