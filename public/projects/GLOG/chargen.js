@@ -1,5 +1,4 @@
 // TODO
-// 1. Ability scores
 // 2. Derived scores
 // 3. Mutant types of humans 
 // 4. Mutations for humans 
@@ -7,9 +6,6 @@
 // 6. Spells 
 // 7. Make everything work on a page
 // 8. Clean code
-
-// ABILITY SCORES Roll each, then check against Kind (e.g. if Kind = "Bugbear")
-// and re-roll, take highest, of one score.
 
 // DERIVED SCORES
 // As normal.
@@ -30,6 +26,8 @@ function rollDice(number) {
 let kindList = [
     'Bugbear', 'Packling', 'Snerson', 'Human'
 ]
+
+
 
 let diceKind = rollDice(20); // 1d20 to determine Kind. 
 let diceHuman = rollDice(4); // 1d4 to determine whether a human is mutated.
@@ -54,6 +52,10 @@ function genKind() {    // Evaluates diceKind to determine Kind.
         return 'Human'
     }
 }
+
+let rosterKind = genKind();
+
+console.log('rosterKind: ' + rosterKind);
 
 function genHumanType() {
     if (diceHuman == 1) {
@@ -130,6 +132,196 @@ genCalling();
 
 let rosterClass = 0;
 let rosterCash = 0;
+
+function genAbilities() {
+    function genSTR() {
+        function rollTwice(){
+            if (rosterKind == 'Human') {
+            let roll1 = rollDice(6);
+            let roll2 = rollDice(6);
+            let roll3 = rollDice(6);
+            let sum = roll1 + roll2 + roll3;
+            let division = sum / 2;
+            let rounddown = Math.floor(division);
+            let roll1Kind = rollDice(6);
+            let roll2Kind = rollDice(6);
+            let roll3Kind = rollDice(6);
+            let sumKind = roll1Kind + roll2Kind + roll3Kind;
+            let divisionKind = sumKind / 2;
+            let rounddownKind = Math.floor(divisionKind);
+            let final = Math.max(rounddown, rounddownKind);
+            scoreStrength = (rounddown + ' ' + rounddownKind + ' ' + final);
+            return [scoreStrength];  
+            }
+            else {
+                let roll1 = rollDice(6);
+                let roll2 = rollDice(6);
+                let roll3 = rollDice(6);
+                let sum = roll1 + roll2 + roll3;
+                let division = sum / 2;
+                let rounddown = Math.floor(division);
+                scoreStrength = (rounddown);
+                return scoreStrength;  
+            }
+        }
+        rollTwice();
+        return [scoreStrength];
+    }
+    function genDEX() {
+        function rollTwice(){
+            if (rosterKind == 'Bugbear') {
+            let roll1 = rollDice(6);
+            let roll2 = rollDice(6);
+            let roll3 = rollDice(6);
+            let sum = roll1 + roll2 + roll3;
+            let division = sum / 2;
+            let rounddown = Math.floor(division);
+            let roll1Kind = rollDice(6);
+            let roll2Kind = rollDice(6);
+            let roll3Kind = rollDice(6);
+            let sumKind = roll1Kind + roll2Kind + roll3Kind;
+            let divisionKind = sumKind / 2;
+            let rounddownKind = Math.floor(divisionKind);
+            let final = Math.max(rounddown, rounddownKind);
+            scoreDexterity = (rounddown + ' ' + rounddownKind + ' ' + final);
+            return [scoreDexterity];  
+            }
+            else {
+                let roll1 = rollDice(6);
+                let roll2 = rollDice(6);
+                let roll3 = rollDice(6);
+                let sum = roll1 + roll2 + roll3;
+                let division = sum / 2;
+                let rounddown = Math.floor(division);
+                scoreDexterity = (rounddown);
+                return scoreDexterity;  
+            }
+        }
+        rollTwice();
+        return [scoreDexterity];
+    }
+    function genINT() {
+        function rollTwice(){
+            if (rosterKind == 'Packling') {
+            let roll1 = rollDice(6);
+            let roll2 = rollDice(6);
+            let roll3 = rollDice(6);
+            let sum = roll1 + roll2 + roll3;
+            let division = sum / 2;
+            let rounddown = Math.floor(division);
+            let roll1Kind = rollDice(6);
+            let roll2Kind = rollDice(6);
+            let roll3Kind = rollDice(6);
+            let sumKind = roll1Kind + roll2Kind + roll3Kind;
+            let divisionKind = sumKind / 2;
+            let rounddownKind = Math.floor(divisionKind);
+            let final = Math.max(rounddown, rounddownKind);
+            scoreIntelligence = (rounddown + ' ' + rounddownKind + ' ' + final);
+            return [scoreIntelligence];  
+            }
+            else {
+                let roll1 = rollDice(6);
+                let roll2 = rollDice(6);
+                let roll3 = rollDice(6);
+                let sum = roll1 + roll2 + roll3;
+                let division = sum / 2;
+                let rounddown = Math.floor(division);
+                scoreIntelligence = (rounddown);
+                return scoreIntelligence;  
+            }
+        }
+        rollTwice();
+        return [scoreIntelligence];
+    }
+    function genWIS() {
+        function rollTwice(){
+            if (rosterKind == 'Snerson') {
+            let roll1 = rollDice(6);
+            let roll2 = rollDice(6);
+            let roll3 = rollDice(6);
+            let sum = roll1 + roll2 + roll3;
+            let division = sum / 2;
+            let rounddown = Math.floor(division);
+            let roll1Kind = rollDice(6);
+            let roll2Kind = rollDice(6);
+            let roll3Kind = rollDice(6);
+            let sumKind = roll1Kind + roll2Kind + roll3Kind;
+            let divisionKind = sumKind / 2;
+            let rounddownKind = Math.floor(divisionKind);
+            let final = Math.max(rounddown, rounddownKind);
+            scoreWisdom = (rounddown + ' ' + rounddownKind + ' ' + final);
+            return [scoreWisdom];  
+            }
+            else {
+                let roll1 = rollDice(6);
+                let roll2 = rollDice(6);
+                let roll3 = rollDice(6);
+                let sum = roll1 + roll2 + roll3;
+                let division = sum / 2;
+                let rounddown = Math.floor(division);
+                scoreWisdom = (rounddown);
+                return scoreWisdom;  
+            }
+        }
+        rollTwice();
+        return [scoreWisdom];
+    }
+    function genCHA() {
+        function rollTwice(){
+            if (rosterKind == 'Elf') {
+            let roll1 = rollDice(6);
+            let roll2 = rollDice(6);
+            let roll3 = rollDice(6);
+            let sum = roll1 + roll2 + roll3;
+            let division = sum / 2;
+            let rounddown = Math.floor(division);
+            let roll1Kind = rollDice(6);
+            let roll2Kind = rollDice(6);
+            let roll3Kind = rollDice(6);
+            let sumKind = roll1Kind + roll2Kind + roll3Kind;
+            let divisionKind = sumKind / 2;
+            let rounddownKind = Math.floor(divisionKind);
+            let final = Math.max(rounddown, rounddownKind);
+            scoreCharisma = (rounddown + ' ' + rounddownKind + ' ' + final);
+            return [scoreCharisma];  
+            }
+            else {
+                let roll1 = rollDice(6);
+                let roll2 = rollDice(6);
+                let roll3 = rollDice(6);
+                let sum = roll1 + roll2 + roll3;
+                let division = sum / 2;
+                let rounddown = Math.floor(division);
+                scoreCharisma = (rounddown);
+                return scoreCharisma;  
+            }
+        }
+        rollTwice();
+        return [scoreCharisma];
+    }
+    genSTR();
+    genDEX();
+    genINT();
+    genWIS();
+    genCHA();
+    return [scoreStrength, scoreDexterity, scoreIntelligence, scoreWisdom, scoreCharisma];
+}
+
+function genTest() {
+        function genTestTwo() {
+        testOne = 2;
+        return testOne;
+    }
+    genTestTwo();
+    return testOne;
+}
+
+genAbilities();
+console.log('Strength: ' + scoreStrength);
+console.log('Dexterity: ' + scoreDexterity);
+console.log('Intelligence: ' + scoreIntelligence);
+console.log('Wisdom: ' + scoreWisdom);
+console.log('Charisma: ' + scoreCharisma);
 
 function genClass() {
     if (diceClass <= 2) {
