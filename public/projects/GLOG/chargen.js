@@ -307,14 +307,6 @@ function genAbilities() {
     return [scoreStrength, scoreDexterity, scoreIntelligence, scoreWisdom, scoreCharisma];
 }
 
-function genTest() {
-        function genTestTwo() {
-        testOne = 2;
-        return testOne;
-    }
-    genTestTwo();
-    return testOne;
-}
 
 genAbilities();
 console.log('Strength: ' + scoreStrength);
