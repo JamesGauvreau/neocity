@@ -150,7 +150,7 @@ function genAbilities() {
             let divisionKind = sumKind / 2;
             let rounddownKind = Math.floor(divisionKind);
             let final = Math.max(rounddown, rounddownKind);
-            scoreStrength = (rounddown + ' ' + rounddownKind + ' ' + final);
+            scoreStrength = (final);
             return [scoreStrength];  
             }
             else {
@@ -309,16 +309,23 @@ function genAbilities() {
 
 
 genAbilities();
-console.log('Strength: ' + scoreStrength);
-console.log('Dexterity: ' + scoreDexterity);
-console.log('Intelligence: ' + scoreIntelligence);
-console.log('Wisdom: ' + scoreWisdom);
-console.log('Charisma: ' + scoreCharisma);
+console.log('STR: ' + scoreStrength + '. DEX: ' + scoreDexterity + '. INT: ' + scoreIntelligence + '. WIS: ' + scoreWisdom + '. CHA: ' + scoreCharisma);
+
+// DERIVED SCORES
 
 let Flesh = scoreStrength;
 let Grit = Math.max(scoreDexterity, scoreIntelligence, scoreWisdom, scoreCharisma);
+let HitBonus = Math.floor(scoreDexterity / 2);
+let Defense = scoreDexterity + scoreWisdom;
+let Speed = Math.floor((scoreStrength + scoreDexterity) / 2);
+let Stealth = scoreDexterity;
+let Initiative = scoreWisdom;
+let CarrySlots = scoreStrength + scoreIntelligence;
+let QuickDrawSlots = Math.floor(scoreDexterity);
+let SkillSlots = scoreIntelligence + scoreWisdom;
+let Save = scoreCharisma;
 
-console.log('Flesh: ' + Flesh + '. Grit: ' + Grit);
+console.log('Flesh: ' + Flesh + '. Grit: ' + Grit + '. Hit Bonus: +' + HitBonus + '. Defense: ' + Defense + '. Speed: ' + Speed);
 
 function genClass() {
     if (diceClass <= 2) {
