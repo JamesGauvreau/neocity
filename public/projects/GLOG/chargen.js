@@ -6,10 +6,6 @@
 // 7. Make everything work on a page
 // 8. Clean code
 
-// DERIVED SCORES
-// As normal.
-// Pick Grit from highest non-Flesh score.
-
 // SKILLS
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
@@ -350,19 +346,6 @@ let QuickDrawSlots = Math.floor(scoreDexterity);
 let SkillSlots = scoreIntelligence + scoreWisdom;
 let Save = scoreCharisma;
 
-console.log(
-  "Flesh: " +
-    Flesh +
-    ". Grit: " +
-    Grit +
-    ". Hit Bonus: +" +
-    HitBonus +
-    ". Defense: " +
-    Defense +
-    ". Speed: " +
-    Speed
-);
-
 function Mutations() {
   if (rosterKind !== "Human") {
     let rosterMutations = "N/A";
@@ -403,14 +386,6 @@ function genClass() {
 }
 
 genClass();
-
-// function genEquipment() { // Not working properly.
-//     if (genCalling == 'Alloy Wizard' || genCalling == 'Book Wizard' || genCalling == 'Flesh Wizard' || genCalling == 'Illusion Wizard' || genCalling == 'Kinetic Wizard' || genCalling == 'Passion Wizard' || genCalling == 'Space Wizard' || genCalling == 'Warding Wizard') {
-//         return 'Wizard Equipment'
-//     } else {
-//         return 'Non-Wizard Equipment'
-//     }
-// };
 
 console.log("diceHuman: " + diceHuman);
 console.log("genHumanType: " + genHumanType());
