@@ -1,5 +1,4 @@
 // TODO
-// 2. Derived scores
 // 3. Mutant types of humans 
 // 4. Mutations for humans 
 // 5. Skills
@@ -326,6 +325,20 @@ let SkillSlots = scoreIntelligence + scoreWisdom;
 let Save = scoreCharisma;
 
 console.log('Flesh: ' + Flesh + '. Grit: ' + Grit + '. Hit Bonus: +' + HitBonus + '. Defense: ' + Defense + '. Speed: ' + Speed);
+
+function Mutations() {
+    if (rosterKind !== 'Human') {
+        let rosterMutations = 'N/A';
+        return rosterMutations;
+    } else {
+        let rosterMutations = 'Human Mutant';
+        return rosterMutations;
+    }
+}
+
+let rosterMutations = Mutations();
+
+console.log('Mutation Roster: ' + rosterMutations);
 
 function genClass() {
     if (diceClass <= 2) {
