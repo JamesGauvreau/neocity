@@ -18,8 +18,6 @@ function rollDice(number) {
   return 1 + Math.floor(Math.random() * number);
 }
 
-let kindList = ["Bugbear", "Packling", "Snerson", "Human"];
-
 let diceKind = rollDice(20); // 1d20 to determine Kind.
 let diceHuman = rollDice(4); // 1d4 to determine whether a human is mutated.
 let diceMutant = rollDice(4); // 1d4 to determine whether a mutant human has 1 or 2 mutations.
@@ -28,7 +26,20 @@ let diceWizard = rollDice(8); //
 let diceClass = rollDice(8); // 1d8 to determine Class.
 let diceEquipment = rollDice(2); // 1d2 to determine Equipment Kit.
 
+let kindList = ["Bugbear", "Packling", "Snerson", "Human"];
+
+let rosterKind = genKind();
+let rosterCalling = 0;
+let rosterClass = 0;
+let rosterMutations = Mutations();
 let rosterEquipment = 0;
+let rosterCash = 0;
+
+genCalling();
+genClass();
+genAbilities();
+
+// KIND
 
 function genKind() {
   // Evaluates diceKind to determine Kind.
@@ -39,11 +50,27 @@ function genKind() {
   } else if (diceKind == 3) {
     return "Snerson";
   } else {
-    return "Human";
+    if (diceHuman == 1) {
+      return "Human";
+    }
+    else if (diceHuman == 2) {
+      return "Human MutCommon"
+    }
+    else {
+      return "Human MutRare";
+    }
+    // function testHuman() {
+    //   if (diceHuman == 1) {
+    //     return rosterKind = 'Normal Human'
+    //   } else {
+    //     return rosterKind = 'Mutant Human'
+    //   } 
+
+    // }
+    // testHuman()
+    // return rosterKind;
   }
 }
-
-let rosterKind = genKind();
 
 function genHumanType() {
   if (diceHuman == 1) {
@@ -63,7 +90,19 @@ function genHumanMutRareMuts() {
   }
 }
 
-rosterCalling = 0;
+// MUTATIONS
+
+function Mutations() {
+  if (rosterKind !== "Human") {
+    let rosterMutations = "N/A";
+    return rosterMutations;
+  } else {
+    let rosterMutations = "Human Mutant";
+    return rosterMutations;
+  }
+}
+
+// CALLINGS
 
 function genCalling() {
   if (diceCalling == 8) {
@@ -145,10 +184,35 @@ function genCalling() {
   }
 }
 
-genCalling();
 
-let rosterClass = 0;
-let rosterCash = 0;
+// CLASS
+
+function genClass() {
+  if (diceClass <= 2) {
+    rosterClass = "Poor";
+    let cash1 = rollDice(12);
+    let cash2 = rollDice(12);
+    let sum = cash1 + cash2;
+    rosterCash = sum + " copper pieces";
+    return [rosterClass, rosterCash];
+  } else if (diceClass >= 6) {
+    rosterClass = "Middle Class";
+    let cash1 = rollDice(8);
+    let cash2 = rollDice(8);
+    let sum = cash1 + cash2;
+    rosterCash = sum + " silver pieces";
+    return [rosterClass, rosterCash];
+  } else {
+    rosterClass = "Lower Class";
+    let cash1 = rollDice(4);
+    let cash2 = rollDice(4);
+    let sum = cash1 + cash2;
+    rosterCash = sum + " gold pieces";
+    return [rosterClass, rosterCash];
+  }
+}
+
+// ABILITY SCORES
 
 function genAbilities() {
   function genSTR() {
@@ -325,8 +389,6 @@ function genAbilities() {
   ];
 }
 
-genAbilities();
-
 // DERIVED SCORES
 
 let Flesh = scoreStrength;
@@ -346,55 +408,14 @@ let QuickDrawSlots = Math.floor(scoreDexterity);
 let SkillSlots = scoreIntelligence + scoreWisdom;
 let Save = scoreCharisma;
 
-function Mutations() {
-  if (rosterKind !== "Human") {
-    let rosterMutations = "N/A";
-    return rosterMutations;
-  } else {
-    let rosterMutations = "Human Mutant";
-    return rosterMutations;
-  }
-}
-
-let rosterMutations = Mutations();
-
-console.log("Mutation Roster: " + rosterMutations);
-
-function genClass() {
-  if (diceClass <= 2) {
-    rosterClass = "Poor";
-    let cash1 = rollDice(12);
-    let cash2 = rollDice(12);
-    let sum = cash1 + cash2;
-    rosterCash = sum + " copper pieces";
-    return [rosterClass, rosterCash];
-  } else if (diceClass >= 6) {
-    rosterClass = "Middle Class";
-    let cash1 = rollDice(8);
-    let cash2 = rollDice(8);
-    let sum = cash1 + cash2;
-    rosterCash = sum + " silver pieces";
-    return [rosterClass, rosterCash];
-  } else {
-    rosterClass = "Lower Class";
-    let cash1 = rollDice(4);
-    let cash2 = rollDice(4);
-    let sum = cash1 + cash2;
-    rosterCash = sum + " gold pieces";
-    return [rosterClass, rosterCash];
-  }
-}
-
-genClass();
-
 console.log("diceHuman: " + diceHuman);
 console.log("genHumanType: " + genHumanType());
 
-const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}`)
+const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}.`)
 
-const textCalling = (document.getElementById("calling").innerHTML = `Calling: ${rosterCalling}`)
+const textCalling = (document.getElementById("calling").innerHTML = `Calling: ${rosterCalling}.`)
 
-const textClass = (document.getElementById("class").innerHTML = `Class: ${rosterClass}`)
+const textClass = (document.getElementById("class").innerHTML = `Class: ${rosterClass}.`)
 
 const textAbilities = (document.getElementById(
   "abilities"
@@ -405,12 +426,5 @@ const textDerived = (document.getElementById(
 ).innerHTML = `Flesh: ${Flesh}. Grit: ${Grit}. Hit Bonus: +${HitBonus}. Speed: ${Speed}. Stealth: ${Stealth}. Initiative: ${Initiative}. Carry Slots: ${CarrySlots}. Quick Draw: ${QuickDrawSlots}. Skill Slots: ${SkillSlots}. Save: ${Save}.`);
 
 const textEquipment = (document.getElementById("equipment").innerHTML = `Equipment: ${rosterEquipment}, ${rosterCash}.`)
-
-// let mutations;
-
-// EQUIPMENT
-// Roll starting funds
-// Roll random kit: A or B
-// Add penny knife
 
 // for dice: https://rocambille.github.io/en/2019/07/30/how-to-roll-a-dice-in-javascript/
