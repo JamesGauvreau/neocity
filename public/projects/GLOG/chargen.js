@@ -83,24 +83,6 @@ function genKind() {
   }
 }
 
-function genHumanType() {
-  if (diceHuman == 1) {
-    return "humanNorm";
-  } else if (diceHuman == 2) {
-    return "humanMutCommon";
-  } else {
-    return "humanMutRare";
-  }
-}
-
-function genHumanMutRareMuts() {
-  if (diceMutant == 1) {
-    return "2 mutations";
-  } else {
-    return "1 mutation";
-  }
-}
-
 // MUTATIONS
 
 function Mutations() {
@@ -418,9 +400,6 @@ let CarrySlots = scoreStrength + scoreIntelligence;
 let QuickDrawSlots = Math.floor(scoreDexterity);
 let SkillSlots = scoreIntelligence + scoreWisdom;
 let Save = scoreCharisma;
-
-console.log("diceHuman: " + diceHuman);
-console.log("genHumanType: " + genHumanType());
 
 const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}.`)
 
