@@ -389,16 +389,6 @@ genClass();
 
 console.log("diceHuman: " + diceHuman);
 console.log("genHumanType: " + genHumanType());
-console.log("diceCalling: " + diceCalling);
-console.log("genClass: " + rosterClass);
-console.log(
-  "genCalling: " +
-    rosterCalling +
-    " | genEquipment: " +
-    rosterEquipment +
-    ", " +
-    rosterCash
-);
 
 const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}`)
 
