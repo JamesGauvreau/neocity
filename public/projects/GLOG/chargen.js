@@ -463,6 +463,43 @@ function scoreKind() {
   }
 }
 
+// SKILLS
+
+// Gourmand
+// 1: Chef de Grande Cuisine, Champion Eater, Field Cook, Picky Alcoholic, Pirate, Undertaker
+
+// Hound
+// 1: Alienist, Consulting Criminal, Detective Constable, Newsy, Priest, Rumor Mill, Soldier, Writer
+// 2: Any Augury, or any of the following – Codes & Ciphers, History of Crime, Poisons, Purportedly Useless Trivia, Sensational Literature
+
+// Intruder
+// 1: Acrobat, Contract Killer, Newsy, People Watcher, Steeplejack, Spy
+
+// Philosopher 
+// 1: Compulsive Gambler, Law Student, Pirate, Poet, Priest, Tutor
+// 2: x2 — Ancient Aliens, Banking, Cetacean Studies, Circles, Color Theory,
+// Dead Languages, Elemental Politics, Heretical Astronomy, Hestrian History,
+// History of History, Invisible Arts, Military Geology, Occult Botany, Old
+// Imperial Law, Necrotic Engineering, Nominal Demonology, Political Science of
+// Hell, Practical Theology, Theoretical Biology, Uncivil Engineering
+
+// Scoundrel
+// 1: Cardsharp, Compulsive Gambler, Dockhand, Pickpocket, Rumor Mill, Sailor, Spy, Valet
+// 2: Any Language, or Etiquette, Intimidation, Tax Fraud, Theology
+
+// Sharptalent
+// 1: Bruiser, Constable, Contract Killer, Duelist, Pirate, Soldier, Unorthodox Pugilist
+
+// Surgeon
+// 1: Back-alley Fixer, Dentist, Practiced Mortician, Rumor Mill, Sailor, Soldier, Stylist, Vivisectionist
+
+// Wizard
+// 1: Literary Imperial (Language)
+// 2: Any 2 spells
+// 3: Any Augury, Cantrip, or Method
+
+// document.getElementById
+
 const textKind = (document.getElementById(
   "kind"
 ).innerHTML = `<b>Kind:</b> ${rosterKind}.`);
