@@ -66,7 +66,6 @@ function genKind() {
         return "Human (Orc)";
       }
     }
-
     else {
       diceMutRare = rollDice(8);
       if (diceMutRare >= 6) {
