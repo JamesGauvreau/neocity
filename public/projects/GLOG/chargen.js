@@ -31,6 +31,7 @@ let rosterClass = 0;
 let rosterMutations = Mutations();
 let rosterEquipment = 0;
 let rosterCash = 0;
+let rosterSkills = 0;
 
 genCalling();
 genClass();
@@ -141,7 +142,15 @@ function genCalling() {
   } else {
     function genNonWizard() {
       if (diceCalling == 1) {
-        return (rosterCalling = "Gourmet");
+        // function skillsGourmet() {
+        //   diceSkills = rollDice(6);
+        //   skillsBlock1 = ["Chef de Grande Cuisine", "Champion Eater", "Field Cook", "Picky Alcoholic", "Pirate", "Undertaker"];
+        //   return skillsBlock1(diceSkills);
+        // };
+        // skillsGourmet();
+        rosterCalling = "Gourmet";
+        // rosterSkills = skillsGourmet;
+        return (rosterCalling, rosterSkills);
       } else if (diceCalling == 2) {
         return (rosterCalling = "Hound");
       } else if (diceCalling == 3) {
@@ -163,8 +172,9 @@ function genCalling() {
         return (rosterEquipment = "Kit B");
       }
     }
+    genNonWizard()
     return [
-      (rosterCalling = genNonWizard()),
+      (rosterCalling),
       (rosterEquipment = genEquipment() + ", penny knife"),
     ];
   }
@@ -523,6 +533,8 @@ const textDerived = (document.getElementById(
 const textSpecial = (document.getElementById(
   "special"
 ).innerHTML = `<b>Kind-specific Stat:</b> ${rosterScoreKind}`);
+
+const textSkills = (document.getElementById("skills").innerHTML = `<b>Skills:</b> ${rosterSkills}`);
 
 const textEquipment = (document.getElementById(
   "equipment"
