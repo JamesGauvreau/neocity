@@ -400,7 +400,7 @@ console.log(
     rosterCash
 );
 
-const textKind = (document.getElementById("Kind").innerHTML = `Kind: ${rosterKind}`)
+const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}`)
 
 const textAbilities = (document.getElementById(
   "abilities"
@@ -409,6 +409,8 @@ const textAbilities = (document.getElementById(
 const textDerived = (document.getElementById(
   "derived"
 ).innerHTML = `Flesh: ${Flesh}. Grit: ${Grit}. Hit Bonus: +${HitBonus}. Speed: ${Speed}. Stealth: ${Stealth}. Initiative: ${Initiative}. Carry Slots: ${CarrySlots}. Quick Draw: ${QuickDrawSlots}. Skill Slots: ${SkillSlots}. Save: ${Save}.`);
+
+const textEquipment = (document.getElementById("equipment").innerHTML = `Equipment: ${rosterEquipment}, ${rosterCash}.`)
 
 // let mutations;
 
