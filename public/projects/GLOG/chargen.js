@@ -402,6 +402,10 @@ console.log(
 
 const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}`)
 
+const textCalling = (document.getElementById("calling").innerHTML = `Calling: ${rosterCalling}`)
+
+const textClass = (document.getElementById("class").innerHTML = `Class: ${rosterClass}`)
+
 const textAbilities = (document.getElementById(
   "abilities"
 ).innerHTML = `Strength: ${scoreStrength}. Dexterity: ${scoreDexterity}. Intelligence: ${scoreIntelligence}. Wisdom: ${scoreWisdom}. Charisma: ${scoreCharisma}`);
