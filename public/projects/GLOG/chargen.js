@@ -54,21 +54,32 @@ function genKind() {
       return "Human";
     }
     else if (diceHuman == 2) {
-      return "Human MutCommon"
+      diceMutCommon = rollDice(4);
+      if (diceMutCommon == 1) {
+        return "Human (Crabhead)";
+      } else if (diceMutCommon == 2) {
+        return "Human (Dwarf)";
+      } else if (diceMutCommon == 3) {
+        return "Human (Gangle)";
+      }
+      else {
+        return "Human (Orc)";
+      }
     }
-    else {
-      return "Human MutRare";
-    }
-    // function testHuman() {
-    //   if (diceHuman == 1) {
-    //     return rosterKind = 'Normal Human'
-    //   } else {
-    //     return rosterKind = 'Mutant Human'
-    //   } 
 
-    // }
-    // testHuman()
-    // return rosterKind;
+    else {
+      diceMutRare = rollDice(8);
+      if (diceMutRare >= 6) {
+        diceMuts1 = rollDice(100);
+      diceMuts2 = rollDice(100);
+      textMutant = "Human (Mutations: " + diceMuts1 + ", " + diceMuts2 + ")";
+      return textMutant;
+      } else {
+      diceMuts1 = rollDice(100);
+      textMutant = "Human (Mutations: " + diceMuts1 + ")";
+      return textMutant;
+      }
+    }
   }
 }
 
