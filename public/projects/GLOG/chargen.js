@@ -382,7 +382,7 @@ let Grit = Math.max(
   scoreIntelligence,
   scoreWisdom,
   scoreCharisma
-);
+) - 4;
 let HitBonus = Math.floor(scoreDexterity / 2);
 let Defense = packlingDefense();
 let Speed = Math.floor((scoreStrength + scoreDexterity) / 2);
