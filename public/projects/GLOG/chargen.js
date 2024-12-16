@@ -7,6 +7,8 @@
 // Roll randomly based on Calling.
 // Remove lastmost skills if necessary.
 
+// Practice pulling values from nested arrays. 
+
 function rollDiceInternal(number) {
   return Math.floor(Math.random() * number);
 }
