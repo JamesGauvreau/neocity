@@ -15,7 +15,7 @@ function rollDice(number) {
   return 1 + Math.floor(Math.random() * number);
 }
 
-let diceKind = 2; // 1d20 to determine Kind.
+let diceKind = rollDice(20); // 1d20 to determine Kind.
 let diceHuman = rollDice(4); // 1d4 to determine whether a human is mutated.
 let diceMutant = rollDice(4); // 1d4 to determine whether a mutant human has 1 or 2 mutations.
 let diceCalling = rollDice(8); // 1d8 to determine Calling.
@@ -389,7 +389,7 @@ let Speed = Math.floor((scoreStrength + scoreDexterity) / 2);
 let Stealth = packlingStealth();
 let Initiative = packlingInitiative();
 let CarrySlots = packlingCarrySlots();
-let QuickDrawSlots = Math.floor(scoreDexterity);
+let QuickDrawSlots = checkQuickDrawSlots();
 let SkillSlots = packlingSkillSlots();
 let Save = scoreCharisma;
 let rosterScoreKind = scoreKind();
@@ -400,9 +400,8 @@ function packlingDefense() {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
     return scoreDexterity + scoreWisdom + Bodies;
   } else {
-    scoreDexterity + scoreWisdom;
+    return scoreDexterity + scoreWisdom;
   }
-  return;
 }
 
 function packlingInitiative() {
@@ -410,9 +409,8 @@ function packlingInitiative() {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
     return scoreWisdom + Bodies;
   } else {
-    scoreWisdom;
+    return scoreWisdom;
   }
-  return;
 }
 
 function packlingCarrySlots() {
@@ -420,9 +418,17 @@ function packlingCarrySlots() {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
     return scoreStrength + scoreIntelligence + Bodies;
   } else {
-    scoreStrength + scoreIntelligence;
+    return scoreStrength + scoreIntelligence;
   }
-  return;
+}
+
+function checkQuickDrawSlots() {
+  baseQuickDraw = Math.floor(scoreDexterity / 2);
+  if (baseQuickDraw > CarrySlots) {
+    return CarrySlots;
+  } else {
+    return Math.floor(scoreDexterity / 2);
+  }
 }
 
 function packlingSkillSlots() {
@@ -430,33 +436,29 @@ function packlingSkillSlots() {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
     return scoreIntelligence + scoreWisdom + Bodies;
   } else {
-    scoreIntelligence + scoreWisdom;
+    return scoreIntelligence + scoreWisdom;
   }
-  return;
 }
 
 function packlingStealth() {
   if (rosterKind == "Packling") {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
-    Reduced = Math.floor(scoreDexterity - (Bodies / 2));
+    Reduced = Math.floor(scoreDexterity - Bodies / 2);
     return Reduced;
   } else {
-    scoreDexterity;
+    return scoreDexterity;
   }
-  return;
 }
 
 function scoreKind() {
   if (rosterKind == "Bugbear") {
-    return "Trappings. Exact value depends on worn clothing."
+    return "Trappings. Exact value depends on worn clothing.";
   } else if (rosterKind == "Packling") {
     Bodies = Math.min(scoreIntelligence, scoreCharisma);
     return "Bodies " + Bodies;
-  }
-  else if (rosterKind == "Snerson") {
+  } else if (rosterKind == "Snerson") {
     return "Limbs " + scoreWisdom;
-  }
-  else {
+  } else {
     return "None (Human)";
   }
 }
