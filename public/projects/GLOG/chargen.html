@@ -10,18 +10,24 @@
 <body>
 
 </body>
-    <h1>Doom Wizard City: Character Generator</h1>
-    <p><i><small>Under construction</small></i></p>
-    <p>This generator does not currently assign skills. It also does not confirm that Quick Draw slots do not exceed Carry slots. If a character has mutations, cross-reference <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGwgyBoKV7hsbD3C6RdmO9z6gihTZnVox7UT_jrdofZg5IdTfA4SK5LjwSUkjKVN8vXjwdO_fDNPTC/pubhtml">1d100 Mutations</a>.
-    <p id="kind"></p>
-    <p id="calling"></p>
-    <p id="class"></p>
-    <p id="abilities"></p>
-    <p id="derived"></p>
-    <p id="equipment"><p>
-        <button type="submit" onClick="refreshPage()">New Character</button>
+<h1>Doom Wizard City: Character Generator</h1>
+<p><i><small>Under construction</small></i></p>
+<p>This generator does not currently assign skills. It also does not confirm that Quick Draw slots do not exceed Carry
+    slots. If a character has mutations, cross-reference <a
+        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSGwgyBoKV7hsbD3C6RdmO9z6gihTZnVox7UT_jrdofZg5IdTfA4SK5LjwSUkjKVN8vXjwdO_fDNPTC/pubhtml">1d100
+        Mutations</a>. Packling stats will not be calculated correctly. 
+<p id="kind"></p>
+<p id="calling"></p>
+<p id="class"></p>
+<p id="abilities"></p>
+<p id="derived"></p>
+<p id="special"></p>
+<p id="equipment">
+<p>
+    <button type="submit" onClick="refreshPage()">New Character</button>
 
-        <script>function refreshPage(){
+    <script>function refreshPage() {
             window.location.reload();
         }</script>
+
 </html>

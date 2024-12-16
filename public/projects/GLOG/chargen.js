@@ -1,9 +1,6 @@
 // TODO
-// 3. Mutant types of humans
-// 4. Mutations for humans
 // 5. Skills
 // 6. Spells
-// 7. Make everything work on a page
 // 8. Clean code
 
 // SKILLS
@@ -18,7 +15,7 @@ function rollDice(number) {
   return 1 + Math.floor(Math.random() * number);
 }
 
-let diceKind = rollDice(20); // 1d20 to determine Kind.
+let diceKind = 2; // 1d20 to determine Kind.
 let diceHuman = rollDice(4); // 1d4 to determine whether a human is mutated.
 let diceMutant = rollDice(4); // 1d4 to determine whether a mutant human has 1 or 2 mutations.
 let diceCalling = rollDice(8); // 1d8 to determine Calling.
@@ -52,8 +49,7 @@ function genKind() {
   } else {
     if (diceHuman == 1) {
       return "Human";
-    }
-    else if (diceHuman == 2) {
+    } else if (diceHuman == 2) {
       diceMutCommon = rollDice(4);
       if (diceMutCommon == 1) {
         return "Human (Crabhead)";
@@ -61,22 +57,20 @@ function genKind() {
         return "Human (Dwarf)";
       } else if (diceMutCommon == 3) {
         return "Human (Gangle)";
-      }
-      else {
+      } else {
         return "Human (Orc)";
       }
-    }
-    else {
+    } else {
       diceMutRare = rollDice(8);
       if (diceMutRare >= 6) {
         diceMuts1 = rollDice(100);
-      diceMuts2 = rollDice(100);
-      textMutant = "Human (Mutations: " + diceMuts1 + ", " + diceMuts2 + ")";
-      return textMutant;
+        diceMuts2 = rollDice(100);
+        textMutant = "Human (Mutations: " + diceMuts1 + ", " + diceMuts2 + ")";
+        return textMutant;
       } else {
-      diceMuts1 = rollDice(100);
-      textMutant = "Human (Mutations: " + diceMuts1 + ")";
-      return textMutant;
+        diceMuts1 = rollDice(100);
+        textMutant = "Human (Mutations: " + diceMuts1 + ")";
+        return textMutant;
       }
     }
   }
@@ -175,7 +169,6 @@ function genCalling() {
     ];
   }
 }
-
 
 // CLASS
 
@@ -391,29 +384,109 @@ let Grit = Math.max(
   scoreCharisma
 );
 let HitBonus = Math.floor(scoreDexterity / 2);
-let Defense = scoreDexterity + scoreWisdom;
+let Defense = packlingDefense();
 let Speed = Math.floor((scoreStrength + scoreDexterity) / 2);
-let Stealth = scoreDexterity;
-let Initiative = scoreWisdom;
-let CarrySlots = scoreStrength + scoreIntelligence;
+let Stealth = packlingStealth();
+let Initiative = packlingInitiative();
+let CarrySlots = packlingCarrySlots();
 let QuickDrawSlots = Math.floor(scoreDexterity);
-let SkillSlots = scoreIntelligence + scoreWisdom;
+let SkillSlots = packlingSkillSlots();
 let Save = scoreCharisma;
+let rosterScoreKind = scoreKind();
+let bodiesScore = Math.min(scoreIntelligence, scoreCharisma);
 
-const textKind = (document.getElementById("kind").innerHTML = `Kind: ${rosterKind}.`)
+function packlingDefense() {
+  if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    return scoreDexterity + scoreWisdom + Bodies;
+  } else {
+    scoreDexterity + scoreWisdom;
+  }
+  return;
+}
 
-const textCalling = (document.getElementById("calling").innerHTML = `Calling: ${rosterCalling}.`)
+function packlingInitiative() {
+  if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    return scoreWisdom + Bodies;
+  } else {
+    scoreWisdom;
+  }
+  return;
+}
 
-const textClass = (document.getElementById("class").innerHTML = `Class: ${rosterClass}.`)
+function packlingCarrySlots() {
+  if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    return scoreStrength + scoreIntelligence + Bodies;
+  } else {
+    scoreStrength + scoreIntelligence;
+  }
+  return;
+}
+
+function packlingSkillSlots() {
+  if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    return scoreIntelligence + scoreWisdom + Bodies;
+  } else {
+    scoreIntelligence + scoreWisdom;
+  }
+  return;
+}
+
+function packlingStealth() {
+  if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    Reduced = Math.floor(scoreDexterity - (Bodies / 2));
+    return Reduced;
+  } else {
+    scoreDexterity;
+  }
+  return;
+}
+
+function scoreKind() {
+  if (rosterKind == "Bugbear") {
+    return "Trappings. Exact value depends on worn clothing."
+  } else if (rosterKind == "Packling") {
+    Bodies = Math.min(scoreIntelligence, scoreCharisma);
+    return "Bodies " + Bodies;
+  }
+  else if (rosterKind == "Snerson") {
+    return "Limbs " + scoreWisdom;
+  }
+  else {
+    return "None (Human)";
+  }
+}
+
+const textKind = (document.getElementById(
+  "kind"
+).innerHTML = `<b>Kind:</b> ${rosterKind}.`);
+
+const textCalling = (document.getElementById(
+  "calling"
+).innerHTML = `<b>Calling:</b> ${rosterCalling}.`);
+
+const textClass = (document.getElementById(
+  "class"
+).innerHTML = `<b>Class:</b> ${rosterClass}.`);
 
 const textAbilities = (document.getElementById(
   "abilities"
-).innerHTML = `Strength: ${scoreStrength}. Dexterity: ${scoreDexterity}. Intelligence: ${scoreIntelligence}. Wisdom: ${scoreWisdom}. Charisma: ${scoreCharisma}`);
+).innerHTML = `<b>Ability Scores:</b> Strength ${scoreStrength}. Dexterity ${scoreDexterity}. Intelligence ${scoreIntelligence}. Wisdom ${scoreWisdom}. Charisma ${scoreCharisma}`);
 
 const textDerived = (document.getElementById(
   "derived"
-).innerHTML = `Flesh: ${Flesh}. Grit: ${Grit}. Hit Bonus: +${HitBonus}. Speed: ${Speed}. Stealth: ${Stealth}. Initiative: ${Initiative}. Carry Slots: ${CarrySlots}. Quick Draw: ${QuickDrawSlots}. Skill Slots: ${SkillSlots}. Save: ${Save}.`);
+).innerHTML = `<b>Derived Scores:</b> Flesh: ${Flesh}. Grit: ${Grit}. Hit Bonus: +${HitBonus}. Defense: ${Defense}. Speed: ${Speed}. Stealth: ${Stealth}. Initiative: ${Initiative}. Carry Slots: ${CarrySlots}. Quick Draw: ${QuickDrawSlots}. Skill Slots: ${SkillSlots}. Save: ${Save}.`);
 
-const textEquipment = (document.getElementById("equipment").innerHTML = `Equipment: ${rosterEquipment}, ${rosterCash}.`)
+const textSpecial = (document.getElementById(
+  "special"
+).innerHTML = `<b>Kind-specific Stat:</b> ${rosterScoreKind}`);
+
+const textEquipment = (document.getElementById(
+  "equipment"
+).innerHTML = `<b>Equipment:</b> ${rosterEquipment}, ${rosterCash}.`);
 
 // for dice: https://rocambille.github.io/en/2019/07/30/how-to-roll-a-dice-in-javascript/
