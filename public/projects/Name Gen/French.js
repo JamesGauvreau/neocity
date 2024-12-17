@@ -1,5 +1,15 @@
 //  ::  Names
 
+// TODO
+// - Calendar of saints
+// - Revolutionary: Days of the Republican Calendar
+// - Revolutionary: Months of the Republican Year
+// - Chance for first names to be hyphenated.
+// - Chance for diminutives: Masculine: -et, -on, -ot, -ou; as well as Middle
+//   French: -el, -in, -eau in place of -ou
+// - Diminutives: Feminine: -ette, -elle; Middle French: -on, -ine
+// Diminutives may require a special rule.
+
 let firstName = `John`;
 let lastName = `Smith`;
 
