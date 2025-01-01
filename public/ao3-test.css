@@ -8,10 +8,28 @@ h1 {
     border-bottom: 0.25em double #333;
 }
 
-h2, h3, h4 {
+h2 {
     font-weight: 500;
     padding: 0.125em;
     text-decoration-line: underline;
     text-decoration-style: double;
+    border-bottom: 0;
+    text-underline-offset: 2px;
 }
 
+h3, h4 {
+    font-weight: 500;
+    padding: 0.125em;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    border-bottom: 0;
+    text-underline-offset: 3px;
+}
+
+/* .chapter.preface.group .title */
+
+/* .summary.module .heading */
+
+.summary.module .heading {
+    color: red;
+}
