@@ -1,0 +1,13 @@
+a {
+    color: teal;
+  }
+
+h1 {
+    text-decoration-line: underline;
+    text-decoration-style: double;    
+}
+
+h2 {
+    border-bottom: 1px red solid;
+    border-bottom-style: double;
+}
