@@ -1,0 +1,177 @@
+/* 
+Known Issues: 
++ No comments or commented divisions, which badly affects organization.
++ Headers need to be regularized, but without affecting the summary and notes. 
++ The link coloration affects my username link. 
+
+*/
+
+table {
+    width: 100%;
+  }
+  
+  td,
+  th {
+    text-align: center;
+    border: 3px solid black;
+  }
+  
+  .mono {
+    font-family: courier new, courier;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .pink {
+    color: pink;
+  }
+  
+  .caps {
+    font-variant: small-caps;
+  }
+  
+  a {
+    color: teal;
+  }
+  
+  h1 {
+    font-weight: 500;
+    padding: 0.125em;
+    border-bottom: 0.25em double #333;
+  }
+  
+  h2 {
+    font-weight: 500;
+    padding: 0.125em;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    border-bottom: 0;
+    text-underline-offset: 2px;
+  }
+  
+  h3,
+  h4 {
+    font-weight: 500;
+    padding: 0.125em;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    border-bottom: 0;
+    text-underline-offset: 3px;
+  }
+  
+  .chapter.preface.group .title {
+    visibility: hidden;
+    line-height: 0;
+  }
+
+  .preface h3 {
+    font-weight: 500;
+    padding: 0.125em;
+    border-bottom: 1px solid;
+    background: transparent;
+    text-decoration: none;
+  }
+  
+  .img {
+    padding: 1em;
+  }
+  
+  #chapter-1 .chapter.preface.group .title::after {
+    content: "Table of Contents";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-2 .chapter.preface.group .title::after {
+    content: "Part 1: Recommended Resources & Changelog";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-3 .chapter.preface.group .title::after {
+    content: "Part 2: Writing: General Tips";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-4 .chapter.preface.group .title::after {
+    content: "Part 3: Writing: Harry Potter Fic Tips";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-5 .chapter.preface.group .title::after {
+    content: "Part 4: Writing: AO3 Meta";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-6 .chapter.preface.group .title::after {
+    content: "Part 5: Common Mistakes";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-7 .chapter.preface.group .title::after {
+    content: "Part 6: Britpicking";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-8 .chapter.preface.group .title::after {
+    content: "Part 7: Thorny Questions";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-9 .chapter.preface.group .title::after {
+    content: "Part 8: Education and Life at Hogwarts";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-10 .chapter.preface.group .title::after {
+    content: "Part 9: Law and Disorder";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-11 .chapter.preface.group .title::after {
+    content: "Part 10: Wizardnomics";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-12 .chapter.preface.group .title::after {
+    content: "Part 11: Countries and Nations";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-13 .chapter.preface.group .title::after {
+    content: "Nominal Appendix: Names for French Characters";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
+  
+  #chapter-14 .chapter.preface.group .title::after {
+    content: "Nominal Appendix: Names for Non-human and Part-human Characters";
+    visibility: visible;
+    line-height: 1em;
+    display: block;
+  }
