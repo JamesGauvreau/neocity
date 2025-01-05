@@ -16,3 +16,14 @@
 //      given language, then it contains the standard name
 
 //
+
+const givenEnglish = [
+    ["Alice", "Bob", "Charlie"],
+    2, 
+    3,
+]
+
+const pullName = givenEnglish[0];
+
+console.log(givenEnglish[0]);
+console.log(pullName[0]);
