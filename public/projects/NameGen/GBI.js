@@ -48,11 +48,16 @@ const givenEnglishMasc = [
 
 const pullName = givenEnglishMasc[0];
 
-function rollDiceInternal() {
-    return Math.floor(Math.random() * 20);
+function randomNumber(number) {
+    return Math.floor(Math.random() * number);
   }
+
+function randomName() {
+    const nameSet = givenEnglishMasc[randomNumber(20)];
+    const nameExact = nameSet[randomNumber(4)];
+    return nameExact;
+}
 
 console.log(givenEnglishMasc[0]);
 console.log(pullName[0]);
-console.log(rollDiceInternal());
-console.log(rollDiceInternal());
+console.log(randomName());
