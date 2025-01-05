@@ -17,13 +17,42 @@
 
 //
 
-const givenEnglish = [
-    ["Alice", "Bob", "Charlie"],
-    2, 
-    3,
+// Simple version first
+// 0    Standard
+// 1    Formal / Latin
+// 2    Diminutive
+// 3    Variant
+
+const givenEnglishMasc = [
+    ["Arthur","Artur","Art","Arthure"],
+    ["Augustine","Augustinus","August","Austin"],
+    ["Charles","Carolus","Charlie","Charells"],
+    ["Edmund","Eadmundus","Ned","Edmond"],
+    ["Eugene","Eugenius","Gene","Eugein"],
+    ["Francis","Franciscus","Fran","Frawnces"],
+    ["Frederick","Fredericus","Fred","Frederick"],
+    ["George","Georgius","Georgie","Gorge"],
+    ["Henry","Henricus","Hawkin","Hendry"],
+    ["Hugh","Hugone","Hughelot","Howe"],
+    ["James","Jacobus","Jaycock","Jacob"],
+    ["John","Jannus","Jacke","St John"],
+    ["Laurence","Laurentius","Lawrie","Lawrens"],
+    ["Nicholas","Nicholaum","Nick","Nyclis"],
+    ["Peter","Petrus","Pell","Pierce"],
+    ["Richard","Ricardus","Richer","Cardine"],
+    ["Robert","Rodbertus","Robin","Roberdes"],
+    ["Roger","Rogerus","Dodge","Rodger"],
+    ["Thomas","Tomas","Thome","Tommis"],
+    ["William","Willelmus","Wilke","Gilliam"],
 ]
 
-const pullName = givenEnglish[0];
+const pullName = givenEnglishMasc[0];
 
-console.log(givenEnglish[0]);
+function rollDiceInternal() {
+    return Math.floor(Math.random() * 20);
+  }
+
+console.log(givenEnglishMasc[0]);
 console.log(pullName[0]);
+console.log(rollDiceInternal());
+console.log(rollDiceInternal());
