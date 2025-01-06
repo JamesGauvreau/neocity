@@ -10,10 +10,15 @@
 // - Diminutives: Feminine: -ette, -elle; Middle French: -on, -ine
 // Diminutives may require a special rule.
 
+function randomNumber(number) {
+  return Math.floor(Math.random() * number);
+}
+
 let firstName = `John`;
 let lastName = `Smith`;
 
-document.getElementById(`generator`).innerHTML = `${firstName} ${lastName}`;
+// document.getElementById(`generator`).innerHTML = `${firstName} ${lastName}`;
+
 
 // https://tackoverflow.com/questions/54708626/random-name-generator-works
 
@@ -25,35 +30,54 @@ document.getElementById(`generator`).innerHTML = `${firstName} ${lastName}`;
 
 // ## Surnames, Complex
 
+
+
 const surnameStem = [
-  "Bois",
-  "Cadavre",
-  "Chouette",
-  "Corbeau",
-  "Croix",
-  "Eau",
-  "Forgeron",
-  "Fée",
-  "Fils",
-  "Fille",
-  "Flamme",
-  "Foi",
-  "Grange",
-  "Houx",
-  "Lieu",
-  "Loup",
-  "Maitre",
-  "Mont",
-  "Pigeon",
-  "Pyjon",
-  "Rue",
-  "Soleil",
+  "bois",
+  "cadavre",
+  "chouette",
+  "corbeau",
+  "croix",
+  "eau",
+  "forgeron",
+  "fée",
+  "fils",
+  "fille",
+  "flamme",
+  "foi",
+  "frange",
+  "houx",
+  "lieu",
+  "loup",
+  "maitre",
+  "mont",
+  "pigeon",
+  "pyjon",
+  "rue",
+  "soleil",
 ];
 
 const surnameSuffix = ["Beau", "Bell", "Bon", "Des", "Mal"];
+const surnameComplex = ["da", "du", "la", "le"]
+
+function surnameBuilder() {
+  numberCheck = randomNumber(3);
+  if (numberCheck > 1) {
+    return "If"
+  } else {
+    rollSuffix = randomNumber(5);
+    rollStem = randomNumber(20);
+    suffix = surnameSuffix[rollSuffix] + surnameStem[rollStem];
+    return suffix;
+  }
+}
+
+console.log(surnameBuilder());
 
 const surnameSuffixSpecial = [
   // These may be du Bois, Dubois; de L'eau, Deleau; le Cadavre, Lecadavre; la
   // Chouette, Lachouette; de la Croix, Delacroix; etc. A special rule will be
   // necessary to handle such cases.]
 ];
+
+const produceNameGiven = 0;
