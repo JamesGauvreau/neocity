@@ -30,7 +30,43 @@ let lastName = `Smith`;
 
 // ## Surnames, Complex
 
+const surnameVingt = [
+  "Anouilh",
+  "Augur",
+  "Badeaux",
+  "Bastarache",
+  "Bataillier",
+  "Baudelaire",
+  "Durand",
+  "Erbier",
+  "Hasteeur",
+  "Janvier",
+  "Langlois",
+  "Larousse",
+  "Maignen",
+  "Ossier",
+  "Parcheminier",
+  "Salé",
+  "Terreur",
+  "Toussaint",
+  "Vautour",
+  "Voland",
+]
 
+const surnameMois = [
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Decembre",
+]
 
 const surnameStem = [
   "bois",
