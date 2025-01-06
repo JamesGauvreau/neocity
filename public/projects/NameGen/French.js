@@ -93,13 +93,15 @@ const surnameStem = [
   "soleil",
 ];
 
-const surnameSuffix = ["Beau", "Bell", "Bon", "Des", "Mal"];
+const surnameSuffix = ["Beau", "Belle", "Bon", "Des", "Mal"];
 const surnameComplex = ["da", "du", "la", "le"]
 
 function surnameBuilder() {
   numberCheck = randomNumber(3);
   if (numberCheck > 1) {
-    return "If"
+    rollVingt = randomNumber(20);
+    surname = surnameVingt[rollVingt];
+    return surname;
   } else {
     rollSuffix = randomNumber(5);
     rollStem = randomNumber(20);
