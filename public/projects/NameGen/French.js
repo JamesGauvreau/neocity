@@ -97,8 +97,8 @@ const surnameSuffix = ["Beau", "Belle", "Bon", "Des", "Mal"];
 const surnameComplex = ["da", "du", "la", "le"]
 
 function surnameBuilder() {
-  numberCheck = randomNumber(3);
-  if (numberCheck > 1) {
+  numberCheck = randomNumber(2);
+  if (numberCheck === 0) {
     rollVingt = randomNumber(20);
     surname = surnameVingt[rollVingt];
     return surname;
