@@ -54,10 +54,25 @@ function randomNumber(number) {
 
 function randomName() {
     const nameSet = givenEnglishMasc[randomNumber(20)];
-    const nameExact = nameSet[randomNumber(4)];
-    return nameExact;
+    const nameExtract = nameSet[randomNumber(4)];
+    return nameExtract;
 }
 
 console.log(givenEnglishMasc[0]);
 console.log(pullName[0]);
 console.log(randomName());
+
+function formalName() {
+    const nameSet = givenEnglishMasc[randomNumber(20)];
+    const nameExtract = nameSet[1];
+    return nameExtract;
+}
+
+function nickName() {
+    const nameSet = givenEnglishMasc[randomNumber(20)];
+    const nameExtract = nameSet[2];
+    return nameExtract;
+}
+
+console.log("Formal Name: " + formalName());
+console.log("Diminutive Name: " + nickName());
