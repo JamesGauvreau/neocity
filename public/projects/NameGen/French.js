@@ -76,23 +76,33 @@ function prenomTypeBuilder() {
   }
 }
 
-console.log(givenName[0]);
-
 function prenomDisarray() {
   rollPrenom = randomNumber(21);
   selectPrenom = givenName[rollPrenom];
   return selectPrenom;
 }
 
-function prenomChooser() {
-  rollGender = randomNumber(2);
-  if {}
-};
-
+const prenomType = prenomTypeBuilder();
 const prenomArray = prenomDisarray();
 
-console.log(prenomArray);
-console.log(prenomDisarray([1]));
+function prenomChooser() {
+  rollGender = randomNumber(2);
+  if (rollGender === 0) {
+    if (prenomType === "Standard") {
+    return prenomArray[0]
+    } else {
+      return prenomArray[1]
+    }
+  } else {
+    if (prenomType === "Standard") {
+    return prenomArray[2];
+    } else {
+      return prenomArray[3];
+    }
+  }
+};
+
+console.log(prenomChooser())
 
 // function prenomBuilder() {
 //   gender = randomNumber(2);
