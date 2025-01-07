@@ -67,10 +67,14 @@ const givenName = [
 
 function prenomTypeBuilder() {
   rollPrenom = randomNumber(10);
-  if (rollPrenom >= 8) {
+  if (rollPrenom === 9) {
     const typePrenom = "Special";
     return typePrenom;
-  } else {
+  } else if (rollPrenom <= 2) {
+    const typePrenom = "Hyphenated"
+    return typePrenom;
+  }
+  else {
     const typePrenom = "Standard";
     return typePrenom;
   }
@@ -85,7 +89,26 @@ function prenomDisarray() {
 const prenomType = prenomTypeBuilder();
 const prenomArray = prenomDisarray();
 
-function prenomChooser() {
+// function hyphenBuilder() {
+//   rollGender = randomNumber(2);
+//   if (rollGender === 0) {
+//     if (prenomType === "Standard") {
+//     return prenomArray[0]
+//     } else {
+//       return prenomArray[1]
+//     }
+//   } else {
+//     if (prenomType === "Standard") {
+//     return prenomArray[2];
+//     } else {
+//       return prenomArray[3];
+//     }
+//   }
+// };
+
+// const prenomHyphen = hyphenBuilder();
+
+function prenomBuilder() {
   rollGender = randomNumber(2);
   if (rollGender === 0) {
     if (prenomType === "Standard") {
@@ -102,15 +125,7 @@ function prenomChooser() {
   }
 };
 
-console.log(prenomChooser())
-
-// function prenomBuilder() {
-//   gender = randomNumber(2);
-//   rollPrenom = randomNumber(21);
-//   if (gender === 0 && )
-// }
-
-console.log(prenomTypeBuilder());
+console.log(prenomBuilder())
 
 const surnameVingt = [
   "Anouilh",
@@ -193,6 +208,7 @@ function surnameBuilder() {
 }
 
 console.log(surnameBuilder());
+console.log(prenomBuilder() + " " + surnameBuilder());
 
 const surnameSuffixSpecial = [
   // These may be du Bois, Dubois; de L'eau, Deleau; le Cadavre, Lecadavre; la
