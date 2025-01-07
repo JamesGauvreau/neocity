@@ -19,16 +19,88 @@ let lastName = `Smith`;
 
 // document.getElementById(`generator`).innerHTML = `${firstName} ${lastName}`;
 
-
 // https://tackoverflow.com/questions/54708626/random-name-generator-works
 
 // ## First Names, Masculine
 
-// ## First Names, Feminine 
+// ## First Names, Feminine
 
 // ## Surnames, Simple
 
 // ## Surnames, Complex
+
+//  Determine gender
+//  M || F
+//  First Names:
+//  1 Default
+//  2 Hyphenation
+//  3 Diminutive
+// modern: -et, -on, -ot, -ou
+// old: -eau, -et, -on, -ot, -el, -in
+
+// Lucianus/Luciana, Marcellus/Marcella, Renatus/Renata
+
+const givenName = [
+  // 21 names
+  ["Albin", "Albinon", "Albine"],
+  ["André", "Dédé", "Andrée", "Andrette"],
+  ["Corentin", "Coco", "Corentine", "Coco"],
+  ["Dominique", "Dodo", "Dominique"],
+  ["Estienne", "Estève", "Estienette", "Tiennette"],
+  ["Stéphane", "Stef", "Stéphanie", "Steffi"],
+  ["Germain", "Germot", "Germaine", "Germainelle"],
+  ["Georges", "Georgot", "Georgine", "Georginette"],
+  ["Gérard", "Gerot", "Gérarde", "Gerardine"],
+  ["Jacques", "Jacquet", "Jacqueline", "Jacotte"],
+  ["Jehan", "Jeannot", "Jehanne", "Jehannette"],
+  ["Joseph", "Jojo", "Josèphe", "Josélaine"],
+  ["Louis", "Loulou", "Louise", "Louisette"],
+  ["Lucien", "Lulu", "Lucienne", "Lucette"],
+  ["Marc", "Marcel", "Marcelle", "Marcelline"],
+  ["Nicolas", "Nico", "Nicole", "Nico"],
+  ["Pierre", "Pierrot", "Perrette"],
+  ["René", "Renét", "Renée", "Renétte"],
+  ["Thomas", "Toto", "Thomasse", "Thomine"],
+  ["Vespre", "Vesprot", "Vespree", "Vesprette"],
+  ["Yves", "Yvon", "Yvette", "Yvonne"],
+];
+
+function prenomTypeBuilder() {
+  rollPrenom = randomNumber(10);
+  if (rollPrenom >= 8) {
+    const typePrenom = "Special";
+    return typePrenom;
+  } else {
+    const typePrenom = "Standard";
+    return typePrenom;
+  }
+}
+
+console.log(givenName[0]);
+
+function prenomDisarray() {
+  rollPrenom = randomNumber(21);
+  selectPrenom = givenName[rollPrenom];
+  return selectPrenom;
+}
+
+function prenomChooser() {
+  rollGender = randomNumber(2);
+  if {}
+};
+
+const prenomArray = prenomDisarray();
+
+console.log(prenomArray);
+console.log(prenomDisarray([1]));
+
+// function prenomBuilder() {
+//   gender = randomNumber(2);
+//   rollPrenom = randomNumber(21);
+//   if (gender === 0 && )
+// }
+
+console.log(prenomTypeBuilder());
 
 const surnameVingt = [
   "Anouilh",
@@ -51,7 +123,7 @@ const surnameVingt = [
   "Toussaint",
   "Vautour",
   "Voland",
-]
+];
 
 const surnameMois = [
   "Janvier",
@@ -66,7 +138,7 @@ const surnameMois = [
   "Octobre",
   "Novembre",
   "Decembre",
-]
+];
 
 const surnameStem = [
   "bois",
@@ -94,7 +166,7 @@ const surnameStem = [
 ];
 
 const surnameSuffix = ["Beau", "Belle", "Bon", "Des", "Mal"];
-const surnameComplex = ["da", "du", "la", "le"]
+const surnameComplex = ["da", "du", "la", "le"];
 
 function surnameBuilder() {
   numberCheck = randomNumber(2);
