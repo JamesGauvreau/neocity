@@ -1,13 +1,3 @@
-// Expertises
-
-// const testConst = "dog-";
-
-// const testReg = RegExp("-");
-
-// console.log(testReg.test(testConst));
-
-// const expertiseGenerator = document.getElementById("expertise");
-
 const expertiseAdj = [
   "Adaptive",
   "Aggressive",
@@ -505,6 +495,127 @@ const resourceNoun = [
   "ectotherms",
 ];
 
+const periodicAbbrv = [
+  "Ac",
+  "Al",
+  "Am",
+  "Sb",
+  "Ar",
+  "As",
+  "At",
+  "Ba",
+  "Bk",
+  "Be",
+  "Bi",
+  "Bh",
+  "B",
+  "Br",
+  "Cd",
+  "Ca",
+  "Cf",
+  "C",
+  "Ce",
+  "Cs",
+  "Cl",
+  "Cr",
+  "Co",
+  "Cn",
+  "Cu",
+  "Cm",
+  "Ds",
+  "Db",
+  "Dy",
+  "Es",
+  "Er",
+  "Eu",
+  "Fm",
+  "Fl",
+  "F",
+  "Fr",
+  "Gd",
+  "Ga",
+  "Ge",
+  "Au",
+  "Hf",
+  "Hs",
+  "He",
+  "Ho",
+  "H",
+  "In",
+  "I",
+  "Ir",
+  "Fe",
+  "Kr",
+  "La",
+  "Lr",
+  "Pb",
+  "Li",
+  "Lv",
+  "Lu",
+  "Mg",
+  "Mn",
+  "Mt",
+  "Md",
+  "Hg",
+  "Mo",
+  "Mc",
+  "Nd",
+  "Ne",
+  "Np",
+  "Ni",
+  "Nh",
+  "Nb",
+  "N",
+  "No",
+  "Og",
+  "Os",
+  "O",
+  "Pd",
+  "P",
+  "Pt",
+  "Pu",
+  "Po",
+  "K",
+  "Pr",
+  "Pm",
+  "Pa",
+  "Ra",
+  "Rn",
+  "Re",
+  "Rh",
+  "Rg",
+  "Rb",
+  "Ru",
+  "Rf",
+  "Sm",
+  "Sc",
+  "Sg",
+  "Se",
+  "Si",
+  "Ag",
+  "Na",
+  "Sr",
+  "S",
+  "Ta",
+  "Tc",
+  "Te",
+  "Ts",
+  "Tb",
+  "Tl",
+  "Th",
+  "Tm",
+  "Sn",
+  "Ti",
+  "W",
+  "U",
+  "V",
+  "Xe",
+  "Yb",
+  "Y",
+  "Zn",
+  "Zr",
+];
+
 function randomNumber(number) {
   return Math.floor(Math.random() * number);
 }
@@ -534,10 +645,24 @@ function expertBuild() {
   }
 }
 
+function expertAdjBuild() {
+  adjNumber = randomNumber(expertNumber);
+  adjType = expertiseAdj[adjNumber];
+  adjCapitalize = adjType[0].toUpperCase() + adjType.slice(1);
+  return adjCapitalize;
+}
+
+function expertNounBuild() {
+  nounNumber = randomNumber(expertNumber);
+  nounIsolate = expertiseNoun[nounNumber];
+  nounCapitalize = nounIsolate[0].toLowerCase() + nounIsolate.slice(1);
+  return nounCapitalize;
+}
+
 function environmentBuild() {
   adjNumber = randomNumber(environmentNumber);
   adjType = environmentAdj[adjNumber];
-  adjCapitalize = adjType[0].toUpperCase() + adjType.slice(1);
+  adjCapitalize = adjType[0].toLowerCase() + adjType.slice(1);
   nounNumber = randomNumber(environmentNumber);
   nounIsolate = environmentNoun[nounNumber];
   nounCapitalize = nounIsolate[0].toLowerCase() + nounIsolate.slice(1);
@@ -558,7 +683,7 @@ function environmentBuild() {
 function resourceBuild() {
   adjNumber = randomNumber(resourceNumber);
   adjType = resourceAdj[adjNumber];
-  adjCapitalize = adjType[0].toUpperCase() + adjType.slice(1);
+  adjCapitalize = adjType[0].toLowerCase() + adjType.slice(1);
   nounNumber = randomNumber(resourceNumber);
   nounIsolate = resourceNoun[nounNumber];
   nounCapitalize = nounIsolate[0].toLowerCase() + nounIsolate.slice(1);
@@ -568,3 +693,24 @@ function resourceBuild() {
 console.log(expertBuild());
 console.log(environmentBuild());
 console.log(resourceBuild());
+
+const expertise = expertBuild();
+const expertiseOnlyAdj = expertAdjBuild();
+const expertiseOnlyNoun = expertNounBuild();
+
+const periodicRoller = randomNumber(118);
+const periodicLetter = periodicAbbrv[periodicRoller].toUpperCase();
+const periodicNumberA = randomNumber(10);
+const periodicNumberB = randomNumber(10);
+const planetaryDesignation = periodicLetter + "-" + periodicNumberA + periodicNumberB;
+
+const environment01 = environmentBuild();
+const environment02 = environmentBuild();
+const resource = resourceBuild();
+
+const textExpertise = (document.getElementById("expertise").innerHTML = `<b>Full Expertise:</b> ${expertise}.<p><b>Expert Adjective:</b> ${expertiseOnlyAdj} [noun].<p><b>Expert Noun:</b> [adjective] ${expertiseOnlyNoun}.`);
+
+const textEnvironment = (document.getElementById(
+  "environment"
+).innerHTML = `${planetaryDesignation} is known for its ${environment01} and ${environment02}. It may be valuable for its ${resource}.`);
+
