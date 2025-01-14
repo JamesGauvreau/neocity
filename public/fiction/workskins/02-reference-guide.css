@@ -71,16 +71,18 @@ h4 {
   text-decoration: none;
 }
 
-.chapter.preface.byline a,
-a:link,
-a:visited:hover {
+/* Still need to fix color of byline in Reference Guide */
+
+/* a.byline,
+a:link.byline,
+a:visited.byline {
   color: #111;
   text-decoration-line: none;
   text-decoration-style: none;
   border-bottom: 0px;
-}
+} */
 
-.chapter.preface .byline h3 {
+h3.byline {
   color: #111;
   text-decoration: none;
   text-decoration-line: none;
@@ -96,6 +98,13 @@ a:visited:hover {
   clear: right;
   text-decoration: none;
 }
+
+/* a h3 {
+  color: black;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  border-bottom: 0px;
+} */
 
 .img {
   padding: 1em;

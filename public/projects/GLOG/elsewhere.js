@@ -1,3 +1,6 @@
+// TODO
+// Create elsewhere rifts. 
+
 function d10() {
   return Math.floor(Math.random() * 10);
 }
@@ -99,4 +102,28 @@ function elsewhereCreature() {
   movesRoll = d10();
   attacksRoll = d10();
   drawnRoll = d10();
+  quality1 = sizeHDarmor[sizeRoll];
+  quality2 = colourTexture[colourRoll];
+  quality3 = soundsLike[soundsRoll];
+  quality4 = movesLike[movesRoll];
+  function elsewhereAttack() {
+    if (attacksRoll === 9) {
+        roll1 = d10();
+        roll2 = d10();
+        attack1 = attacksBy[roll1];
+        attack2 = attacksBy[roll2];
+        attackQuality = attack1 + " and " + attack2;
+        return attackQuality;
+    } else {
+        attackQuality = attacksBy[attacksRoll];
+        return attackQuality;
+    }
+  };
+  quality5 = elsewhereAttack();
+  quality6 = drawnTowards[drawnRoll];
+  return [quality1,quality2,quality3,quality4,quality5,quality6]
 }
+
+const creatureGenerator = elsewhereCreature();
+
+console.log(creatureGenerator[4])
