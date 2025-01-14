@@ -125,7 +125,7 @@ h3.byline {
 }
 
 #chapter-2 .chapter.preface.group .title::after {
-  content: "Part 1: Recommended Resources & Changelog";
+  content: "Part 1: Changelog, Recommended Resources";
   visibility: visible;
   line-height: 1em;
   display: block;
