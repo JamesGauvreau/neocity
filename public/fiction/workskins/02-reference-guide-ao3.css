@@ -125,21 +125,21 @@ h3.byline {
 }
 
 #chapter-2 .chapter.preface.group .title::after {
-  content: "Part 1: Reading (and Commenting)";
+  content: "Part 1: Changelog, Recommended Resources";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
 #chapter-3 .chapter.preface.group .title::after {
-  content: "Part 2: Writing (and Formatting)";
+  content: "Part 2: Writing: General Tips";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
 #chapter-4 .chapter.preface.group .title::after {
-  content: "Part 3: Posting on AO3";
+  content: "Part 3: Writing: Harry Potter Fic Tips";
   visibility: visible;
   line-height: 1em;
   display: block;
@@ -196,6 +196,20 @@ h3.byline {
 
 #chapter-12 .chapter.preface.group .title::after {
   content: "Part 11: Countries and Nations";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-13 .chapter.preface.group .title::after {
+  content: "Nominal Appendix: Names for French Characters";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-14 .chapter.preface.group .title::after {
+  content: "Nominal Appendix: Names for Non-human and Part-human Characters";
   visibility: visible;
   line-height: 1em;
   display: block;
