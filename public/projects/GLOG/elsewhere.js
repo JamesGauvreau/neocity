@@ -1,5 +1,5 @@
 // TODO
-// Create elsewhere rifts. 
+// Create elsewhere rifts.
 
 function d10() {
   return Math.floor(Math.random() * 10);
@@ -83,17 +83,83 @@ const drawnTowards = [
   "Eye contact, attention, thought, analysis",
 ];
 
-const whatYouSee = ["", "", "", "", "", "", "", "", "", ""];
+const whatYouSee = [
+  "Blinding aurora of colour and dancing crystals. Impossible to gauge distance",
+  "A dark void lit by blue-white stars",
+  "Dim view into a series of connected stone bubbles. Dim glowing red veins",
+  "Looking down into a forest of white ferns and spindly orchid-like trees",
+  "Irregular grid of green-blue hedges extends to the moonlit horizon",
+  "Dense tangle of impossibly large ruined buildings. Columns, streets",
+  "Stacked ceramic bowls the size of counties. Mercury lakes and waterfalls",
+  "Lightless depression filled with smooth spheres, sliding and clattering",
+  "Murky air is actually a liquid. Shimmers like oil. Floating chunks of rock",
+  "A vast plain of white sand, broken by jagged black towers like dry trees",
+];
 
-const atmosphere = ["", "", "", "", "", "", "", "", "", ""];
+const atmosphere = [
+  "Dense but barely breathable. Asphyxiation in 3d6 minutes",
+  "None. Painful death in 1d4 rounds",
+  "Breathable but very warm and dry. Like walking into a foundry",
+  "Breathable but full of spores or small creatures. May cause lung-rot",
+  "Breathable but slightly lemon-scented. Cloying. Makes people sneeze",
+  "Thin but breathable. Smells of burnt metal, ozone, and rotting milk",
+  "Thick but breathable. Full of metallic fumes. Induces madness and disorientation",
+  "Thick but breathable High moisture. Smells of burning rubber",
+  "Water full of salt and iodine",
+  "Thin but breathable. Smells of salt and chalk",
+];
 
-const gravityWeather = ["", "", "", "", "", "", "", "", "", ""];
+const gravityWeather = [
+  "No gravity. Storms of sharp crystals oscillate up and down",
+  "No gravity. Harsh unfiltered sunlight",
+  "4× normal gravity. Possible to crawl, nearly impossible to stand or walk",
+  "Slightly more than normal gravity. Constant rain of black hydrocarbons",
+  "Normal gravity. Warm wind, wisps of high dark grey clouds",
+  "Slightly less than normal gravity. Cold mildly acid rain",
+  "2×normal gravity, exhausting to move or jump. Distant lightning storms",
+  "Slightly less than normal gravity. Pockets with no gravity. Swirls of ash",
+  "Normal but shifts directions every 1d6 minutes",
+  "¾ normal gravity. Cold gusts of wind, streaks of dust.",
+];
 
-const movingThings = ["", "", "", "", "", "", "", "", "", ""];
+const movingThings = [
+  "Entire region seems to shift and boil constantly like a stirred stew-pot",
+  "Motes of dust and flakes of rock",
+  "Drips of molten stone. Wire-thin lava rivers move like snakes",
+  "Wounded Elsewhere Creature (1/2 HP) drifts and tumbles",
+  "1d6 Elsewhere Creatures cavorting",
+  "1d6 Elsewhere Creatures, at least 10× larger than normal, but in the distance",
+  "1 Elsewhere Creature nearby, bathing or covering itself in some sort of fluid",
+  "Terrain can crack open to reveal 2d6 Elsewhere Creatures",
+  "Streams of bubbles or vacuumpockets",
+  "1 Elsewhere Creature on a mindless patrol route",
+];
 
-const hazards = ["", "", "", "", "", "", "", "", "", ""];
+const hazards = [
+  "Sizzling thin plates of glass cut through flesh but not bone",
+  "Painfully intense radiation causes nausea, blisters, and cancer",
+  "Rolling burps of toxic and/or corrosive gas at ankle-height spewed from vents",
+  "Fern-like bone growths colonize any unwashed wounds, grow rapidly",
+  "Some surface are unexpectedly soft and sticky, can trap weapons, limbs",
+  "Alarming groaning and rattling",
+  "Ambushed by 2d6 rapidly moving Elsewhere Creatures after 2 minutes",
+  "Intermittent high-pitched shriek drives mortal creature to their knees with pain",
+  "Currents of wind, water, or invisible force move to separate explorers",
+  "Hidden cracks and fissures",
+];
 
-const loot = ["", "", "", "", "", "", "", "", "", ""];
+const loot = [
+  "Vorpal fragments seek blood and flesh",
+  "None",
+  "Gemstones as light as feathers, reflecting the sun of a distant world",
+  "Blood-sap heals wounds, cures diseases",
+  "Soft orbs full of impossibly powerful acid",
+  "Fist-sized blue rocks that are always incredibly cold",
+  "Condensed fronds of rare metals (gold, silver, possibly platinum, orichalcum)",
+  "Coiled silver snail shells repeat anything spoken into them",
+  "Rare twisted stone rods greatly enhance damaging spells and destructive magic",
+  "Black faintly warm stone that slowly sublimates into a hallucinogenic gas",
+];
 
 function elsewhereCreature() {
   sizeRoll = d10();
@@ -108,22 +174,45 @@ function elsewhereCreature() {
   quality4 = movesLike[movesRoll];
   function elsewhereAttack() {
     if (attacksRoll === 9) {
-        roll1 = d10();
-        roll2 = d10();
-        attack1 = attacksBy[roll1];
-        attack2 = attacksBy[roll2];
-        attackQuality = attack1 + " and " + attack2;
-        return attackQuality;
+      roll1 = d10();
+      roll2 = d10();
+      attack1 = attacksBy[roll1];
+      attack2 = attacksBy[roll2];
+      attackQuality = attack1 + " and " + attack2;
+      return attackQuality;
     } else {
-        attackQuality = attacksBy[attacksRoll];
-        return attackQuality;
+      attackQuality = attacksBy[attacksRoll];
+      return attackQuality;
     }
-  };
+  }
   quality5 = elsewhereAttack();
   quality6 = drawnTowards[drawnRoll];
-  return [quality1,quality2,quality3,quality4,quality5,quality6]
+  const testfunction = (document.getElementById(
+    "elsewhereCreature"
+  ).innerHTML = `<b>Size:</b> ${quality1}.<br><b>Colour and texture:</b> ${quality2}.<br><b>Sounds like:</b> ${quality3}.<br><b>Moves like:</b> ${quality4}.<br><b>Attacks with:</b> ${quality5}.<br><b>Drawn toward:</b> ${quality6}.`);
+  return [testfunction];
 }
 
-const creatureGenerator = elsewhereCreature();
+function elsewhereRift() {
+  seeRoll = d10();
+  atmosRoll = d10();
+  gravityRoll = d10();
+  movingRoll = d10();
+  hazardsRoll = d10();
+  lootRoll = d10();
+  quality1 = whatYouSee[seeRoll];
+  quality2 = atmosphere[atmosRoll];
+  quality3 = gravityWeather[gravityRoll];
+  quality4 = movingThings[movingRoll];
+  quality5 = hazards[hazardsRoll];
+  quality6 = loot[lootRoll];
+  const testfunction = (document.getElementById(
+    "elsewhereRift"
+  ).innerHTML = `<b>What you see:</b> ${quality1}.<br><b>Atmosphere:</b> ${quality2}.<br><b>Gravity and weather:</b> ${quality3}.<br><b>Moving things:</b> ${quality4}.<br><b>Hazards:</b> ${quality5}.<br><b>Loot:</b> ${quality6}.`);
+  return [testfunction];
+}
 
-console.log(creatureGenerator[4])
+// <b></b>
+
+const creatureGenerator = elsewhereCreature();
+const riftGenerator = elsewhereRift();
