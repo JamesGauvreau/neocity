@@ -1,6 +1,6 @@
 // Empty, for now.
 
-const prenomNormal = ["Bogrod", "Gornuk", "Nalrod", "Ragnok", ""];
+const prenomNormal = ["Bogrod", "Gornuk", "Nalrod", "Ragnok"];
 
 const prenomNorse1syll = [
   "An",
@@ -15,6 +15,8 @@ const prenomNorse1syll = [
   "Vit",
   "Zind",
 ];
+
+// Alguff,G Brodrig,P Burgock,G Eargit,G Nagnok,G Ranrok,G Ricbert,F
 
 const prenomNorse2syll = [
   "Dagvin",
@@ -84,13 +86,10 @@ function randomNumber(number) {
   return Math.floor(Math.random() * number);
 }
 
-const lengthSurnameVerb = surnameVerb.length;
-const lengthSurnameNoun = surnameNoun.length;
-
 function goblinNamer() {
-  const genPrenom = "Placeholder";
-  const genSurnameVerb = surnameVerb[randomNumber(lengthSurnameVerb)];
-  const genSurnameNoun = surnameNoun[randomNumber(lengthSurnameNoun)].toLowerCase();
+  const genPrenom = prenomNormal[randomNumber(prenomNormal.length)];
+  const genSurnameVerb = surnameVerb[randomNumber(surnameVerb.length)];
+  const genSurnameNoun = surnameNoun[randomNumber(surnameNoun.length)].toLowerCase();
   const genSurname = genSurnameVerb + genSurnameNoun;
   return "Your goblin's name is " + genPrenom + " " + genSurname;
 }
