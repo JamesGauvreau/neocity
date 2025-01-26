@@ -80,7 +80,7 @@ function kindTest() {
 
 const writeNPC = (document.getElementById(
   "NPC"
-).innerHTML = `<h2>Char #1</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)}.<br><h2>Char #2</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)}.<br><h2>Char #3</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)}.<br><h2>Char #4</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)}.<br>`);
+).innerHTML = `<h2>Char #1</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)} || ${randomNumber(20)}.<br><h2>Char #2</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)} || ${randomNumber(20)}.<br><h2>Char #3</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)} || ${randomNumber(20)}.<br><h2>Char #4</h1> <b>Kind:</b> ${kindTest()}<br><b>\#\:</b> ${randomNumber(100)}, ${randomNumber(100)} || ${randomNumber(20)}.<br>`);
 
 // const textEquipment = (document.getElementById(
 //     "equipment"
