@@ -78,12 +78,6 @@ function kindTest() {
   }
 }
 
-console.log(kindTest());
-console.log(kindTest());
-console.log(kindTest());
-console.log(kindTest());
-console.log(kindTest());
-
 const writeNPC = document.getElementById("NPC").innerHTML = `<b>#1 Kind:</b> ${kindTest()}.<br><b>#2 Kind:</b> ${kindTest()}.<br><b>#3 Kind:</b> ${kindTest()}.<br><b>#4 Kind:</b> ${kindTest()}.<br><b>#5 Kind:</b> ${kindTest()}.<br>`
 
 // const textEquipment = (document.getElementById(
