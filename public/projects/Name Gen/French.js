@@ -65,28 +65,29 @@ const givenName = [
 function prenomGen() {
   givenNameArray = givenName[randomNumber(givenName.length)];
   checkMF = randomNumber(10); // # 0 – 9
-  if(checkMF % 2 === 0) { // Piggybacks off "checkMF" as much as possible.
-    if(checkMF === 6) {
-      return givenNameArray[3]
-    } else if (checkMF === 8){
+  if (checkMF % 2 === 0) {
+    // Piggybacks off "checkMF" as much as possible.
+    if (checkMF === 6) {
+      return givenNameArray[3];
+    } else if (checkMF === 8) {
       secondArray = givenName[randomNumber(givenName.length)];
-      return givenNameArray[2] + "-" + secondArray[2]
+      return givenNameArray[2] + "-" + secondArray[2];
     } else {
-      return givenNameArray[2]
+      return givenNameArray[2];
     }
   } else {
-    if(checkMF === 7) {
-      return givenNameArray[1]
+    if (checkMF === 7) {
+      return givenNameArray[1];
     } else if (checkMF === 9) {
       secondArray = givenName[randomNumber(givenName.length)];
-      return givenNameArray[0] + "-" + secondArray[0]
+      return givenNameArray[0] + "-" + secondArray[0];
     } else {
-      return givenNameArray[0]
+      return givenNameArray[0];
     }
   }
 }
 
-console.log(prenomGen())
+console.log(prenomGen());
 
 const surnameVingt = [
   "Anouilh",
@@ -156,39 +157,50 @@ const surnameComplex = ["da", "du", "la", "le"];
 
 function surnameBuilder() {
   // numberCheck = randomNumber(4);
-  numberCheck = 3
+  numberCheck = 3;
   if (numberCheck === 0) {
     surname = surnameVingt[randomNumber(surnameVingt.length)];
     return surname;
-  } else if(numberCheck === 1) {
+  } else if (numberCheck === 1) {
     surname = surnameVingt[randomNumber(surnameMois.length)];
     return surname;
   } else {
     // suffix = surnameSuffix[randomNumber(surnameSuffix.length)];
-    suffix = surnameSuffix[1];
+    suffix = surnameSuffix[0];
     // stem = surnameStem[randomNumber(surnameStem.length)];
-    stem = surnameStem[13];
-    if(suffix === 0){
-    if(stem === "bois" || "houx" || "lieu") {
-      return "Du" + stem;
-    } else if(stem === "leau") {
-      return "De" + stem;
-    } else if(stem === "croix" || "foi" || "rue") {
-      return "Dela" + stem + "x";
-    } else if(stem === "cadavre" || "corbeau" || "forgeron" || "fée" || "fils" || "loup" || "maitre" || "mont" || "pigeon" || "pyjon" || "soleil") {
-      return "Le" + stem; 
-    } else if(stem === "chouette" || "fille" || "flamme" || "grange") {
-      return "La" + stem;
+    stem = surnameStem[3];
+    if (suffix === 0) {
+      if (stem === "bois" || "houx" || "lieu") {
+        // return "Du" + stem; Unsure why it's always stopping at this If. When the || are removed and only "bois" is available, it skips down to "dela"
+        return "ERROR" + " " + stem;
+      } else if (stem === "leau") {
+        return "De" + stem;
+      } else if (stem === "croix" || "foi" || "rue") {
+        return "Dela" + stem + "x";
+      } else if (
+        stem === "cadavre" ||
+        "corbeau" ||
+        "forgeron" ||
+        "fée" ||
+        "fils" ||
+        "loup" ||
+        "maitre" ||
+        "mont" ||
+        "pigeon" ||
+        "pyjon" ||
+        "soleil"
+      ) {
+        return "Le" + stem;
+      } else if (stem == "chouette" || "fille" || "flamme" || "grange") {
+        return "La" + stem;
+      } else {
+        return "ERROR";
+      }
+    } else if (suffix === 1) {
+      // as above, but a compound w/o space
+    } else {
+      return suffix + stem;
     }
-    else {
-      return suffix + " " + stem;
-    }
-  } else if(suffix === 1) {
-    // as above, but a compound w/o space
-  }
-  else {
-    return suffix + stem;
-  }
   }
 }
 
