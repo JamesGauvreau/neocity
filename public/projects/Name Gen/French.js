@@ -14,9 +14,6 @@ function randomNumber(number) {
   return Math.floor(Math.random() * number);
 }
 
-let firstName = `John`;
-let lastName = `Smith`;
-
 // document.getElementById(`generator`).innerHTML = `${firstName} ${lastName}`;
 
 // https://tackoverflow.com/questions/54708626/random-name-generator-works
@@ -42,10 +39,10 @@ let lastName = `Smith`;
 
 const givenName = [
   // 21 names
-  ["Albin", "Albinon", "Albine"],
+  ["Albin", "Albinon", "Albine", "Albinette"],
   ["André", "Dédé", "Andrée", "Andrette"],
   ["Corentin", "Coco", "Corentine", "Coco"],
-  ["Dominique", "Dodo", "Dominique"],
+  ["Dominique", "Dodo", "Dominique", "Dodo"],
   ["Estienne", "Estève", "Estienette", "Tiennette"],
   ["Stéphane", "Stef", "Stéphanie", "Steffi"],
   ["Germain", "Germot", "Germaine", "Germainelle"],
@@ -58,74 +55,38 @@ const givenName = [
   ["Lucien", "Lulu", "Lucienne", "Lucette"],
   ["Marc", "Marcel", "Marcelle", "Marcelline"],
   ["Nicolas", "Nico", "Nicole", "Nico"],
-  ["Pierre", "Pierrot", "Perrette"],
+  ["Pierre", "Pierrot", "Perrette", "Perrelle"],
   ["René", "Renét", "Renée", "Renétte"],
   ["Thomas", "Toto", "Thomasse", "Thomine"],
   ["Vespre", "Vesprot", "Vespree", "Vesprette"],
   ["Yves", "Yvon", "Yvette", "Yvonne"],
 ];
 
-function prenomTypeBuilder() {
-  rollPrenom = randomNumber(10);
-  if (rollPrenom === 9) {
-    const typePrenom = "Special";
-    return typePrenom;
-  } else if (rollPrenom <= 2) {
-    const typePrenom = "Hyphenated"
-    return typePrenom;
-  }
-  else {
-    const typePrenom = "Standard";
-    return typePrenom;
-  }
-}
-
-function prenomDisarray() {
-  rollPrenom = randomNumber(21);
-  selectPrenom = givenName[rollPrenom];
-  return selectPrenom;
-}
-
-const prenomType = prenomTypeBuilder();
-const prenomArray = prenomDisarray();
-
-// function hyphenBuilder() {
-//   rollGender = randomNumber(2);
-//   if (rollGender === 0) {
-//     if (prenomType === "Standard") {
-//     return prenomArray[0]
-//     } else {
-//       return prenomArray[1]
-//     }
-//   } else {
-//     if (prenomType === "Standard") {
-//     return prenomArray[2];
-//     } else {
-//       return prenomArray[3];
-//     }
-//   }
-// };
-
-// const prenomHyphen = hyphenBuilder();
-
-function prenomBuilder() {
-  rollGender = randomNumber(2);
-  if (rollGender === 0) {
-    if (prenomType === "Standard") {
-    return prenomArray[0]
+function prenomGen() {
+  givenNameArray = givenName[randomNumber(givenName.length)];
+  checkMF = randomNumber(10); // # 0 – 9
+  if(checkMF % 2 === 0) { // Piggybacks off "checkMF" as much as possible.
+    if(checkMF === 6) {
+      return givenNameArray[3]
+    } else if (checkMF === 8){
+      secondArray = givenName[randomNumber(givenName.length)];
+      return givenNameArray[2] + "-" + secondArray[2]
     } else {
-      return prenomArray[1]
+      return givenNameArray[2]
     }
   } else {
-    if (prenomType === "Standard") {
-    return prenomArray[2];
+    if(checkMF === 7) {
+      return givenNameArray[1]
+    } else if (checkMF === 9) {
+      secondArray = givenName[randomNumber(givenName.length)];
+      return givenNameArray[0] + "-" + secondArray[0]
     } else {
-      return prenomArray[3];
+      return givenNameArray[0]
     }
   }
-};
+}
 
-console.log(prenomBuilder())
+console.log(prenomGen())
 
 const surnameVingt = [
   "Anouilh",
@@ -178,7 +139,7 @@ const surnameStem = [
   "fille",
   "flamme",
   "foi",
-  "frange",
+  "grange",
   "houx",
   "lieu",
   "loup",
@@ -190,25 +151,56 @@ const surnameStem = [
   "soleil",
 ];
 
-const surnameSuffix = ["Beau", "Belle", "Bon", "Des", "Mal"];
+const surnameSuffix = [0, 1, "Beau", "Belle", "Bon", "Des", "Mal"];
 const surnameComplex = ["da", "du", "la", "le"];
 
 function surnameBuilder() {
-  numberCheck = randomNumber(2);
+  // numberCheck = randomNumber(4);
+  numberCheck = 3
   if (numberCheck === 0) {
-    rollVingt = randomNumber(20);
-    surname = surnameVingt[rollVingt];
+    surname = surnameVingt[randomNumber(surnameVingt.length)];
+    return surname;
+  } else if(numberCheck === 1) {
+    surname = surnameVingt[randomNumber(surnameMois.length)];
     return surname;
   } else {
-    rollSuffix = randomNumber(5);
-    rollStem = randomNumber(20);
-    suffix = surnameSuffix[rollSuffix] + surnameStem[rollStem];
-    return suffix;
+    // suffix = surnameSuffix[randomNumber(surnameSuffix.length)];
+    suffix = surnameSuffix[1];
+    // stem = surnameStem[randomNumber(surnameStem.length)];
+    stem = surnameStem[13];
+    if(suffix === 0){
+    if(stem === "bois" || "houx" || "lieu") {
+      return "Du" + stem;
+    } else if(stem === "leau") {
+      return "De" + stem;
+    } else if(stem === "croix" || "foi" || "rue") {
+      return "Dela" + stem + "x";
+    } else if(stem === "cadavre" || "corbeau" || "forgeron" || "fée" || "fils" || "loup" || "maitre" || "mont" || "pigeon" || "pyjon" || "soleil") {
+      return "Le" + stem; 
+    } else if(stem === "chouette" || "fille" || "flamme" || "grange") {
+      return "La" + stem;
+    }
+    else {
+      return suffix + " " + stem;
+    }
+  } else if(suffix === 1) {
+    // as above, but a compound w/o space
+  }
+  else {
+    return suffix + stem;
+  }
   }
 }
 
-console.log(surnameBuilder());
-console.log(prenomBuilder() + " " + surnameBuilder());
+// "chouette","fille","flamme","grange",
+
+function fullNameBuilder() {
+  return prenomGen() + " " + surnameBuilder();
+}
+
+console.log("1: " + fullNameBuilder());
+console.log("2: " + fullNameBuilder());
+console.log("3: " + fullNameBuilder());
 
 const surnameSuffixSpecial = [
   // These may be du Bois, Dubois; de L'eau, Deleau; le Cadavre, Lecadavre; la
