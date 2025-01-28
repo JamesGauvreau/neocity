@@ -12,6 +12,7 @@ const kindArray = [
   "Human (Gangle)",
   "Human (Mantaur)",
   "Human (Orc)",
+  "Human (Unusual Mutant)",
 ];
 
 function kindTest() {
