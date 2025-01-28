@@ -171,7 +171,10 @@ function surnameBuilder() {
     stem = surnameStem[3];
     if (suffix === 0) {
       if (stem === "bois" || "houx" || "lieu") {
-        // return "Du" + stem; Unsure why it's always stopping at this If. When the || are removed and only "bois" is available, it skips down to "dela"
+        // return "Du" + stem; Unsure why it's always stopping at this If. When
+        // the || are removed and only "bois" is available, it skips down to
+        // "dela". Consider putting this stretch of code away and rebuilding for
+        // the compound version.
         return "ERROR" + " " + stem;
       } else if (stem === "leau") {
         return "De" + stem;
