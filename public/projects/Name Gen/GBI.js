@@ -23,6 +23,19 @@
 // 2    Diminutive
 // 3    Variant
 
+// SCHEME
+// Each name consists of:
+// 0    Formal / Latin, Masculine
+// 1    Standard Name, Masculine
+// 2    Spelling Variant of Standard Name, Masculine
+// 3    Alternate Version of Standard Name, Masculine
+// 4    [Diminutive Array], Masculine
+// 5    Formal / Latin, Feminine
+// 6    Standard Name, Feminine
+// 7    Spelling Variant of Standard Name, Feminine
+// 8    Alternate Version of Standard Name, Feminine
+// 9    [Diminutive Array], Feminine
+
 const givenEnglishMasc = [
     ["Arthur","Artur","Art","Arthure"],
     ["Augustine","Augustinus","August","Austin"],
