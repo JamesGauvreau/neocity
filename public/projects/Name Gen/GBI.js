@@ -15,7 +15,7 @@
 // 10   Language-specific group: If there is no language-specific variant for a
 //      given language, then it contains the standard name
 
-//
+// 
 
 // Simple version first
 // 0    Standard
