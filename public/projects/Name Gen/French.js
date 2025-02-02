@@ -155,6 +155,8 @@ const surnameStem = [
 const surnameSuffix = [0, 1, "Beau", "Belle", "Bon", "Des", "Mal"];
 const surnameComplex = ["da", "du", "la", "le"];
 
+// TODO: Run through all names to confirm that everything works as expected.
+
 function surnameBuilder() {
   // numberCheck = randomNumber(4);
   numberCheck = 3;
@@ -166,32 +168,29 @@ function surnameBuilder() {
     return surname;
   } else {
     // suffix = surnameSuffix[randomNumber(surnameSuffix.length)];
-    suffix = surnameSuffix[0];
+    suffix = surnameSuffix[1];
     // stem = surnameStem[randomNumber(surnameStem.length)];
-    stem = surnameStem[3];
+    stem = surnameStem[0];
     if (suffix === 0) {
-      if (stem === "bois" || "houx" || "lieu") {
-        // return "Du" + stem; Unsure why it's always stopping at this If. When
-        // the || are removed and only "bois" is available, it skips down to
-        // "dela". Consider putting this stretch of code away and rebuilding for
-        // the compound version.
-        return "ERROR" + " " + stem;
+      if (stem === "bois" || stem === "houx" || stem === "lieu") {
+        // Don't forget that || separates distinct arguments
+        return "Du" + stem;
       } else if (stem === "leau") {
         return "De" + stem;
-      } else if (stem === "croix" || "foi" || "rue") {
+      } else if (stem === "croix" || stem === "foi" || stem === "rue") {
         return "Dela" + stem + "x";
       } else if (
         stem === "cadavre" ||
-        "corbeau" ||
-        "forgeron" ||
-        "fée" ||
-        "fils" ||
-        "loup" ||
-        "maitre" ||
-        "mont" ||
-        "pigeon" ||
-        "pyjon" ||
-        "soleil"
+        stem === "corbeau" ||
+        stem === "forgeron" ||
+        stem === "fée" ||
+        stem === "fils" ||
+        stem === "loup" ||
+        stem === "maitre" ||
+        stem === "mont" ||
+        stem === "pigeon" ||
+        stem === "pyjon" ||
+        stem === "soleil"
       ) {
         return "Le" + stem;
       } else if (stem == "chouette" || "fille" || "flamme" || "grange") {
@@ -200,6 +199,33 @@ function surnameBuilder() {
         return "ERROR";
       }
     } else if (suffix === 1) {
+      stemNew = stem.charAt(0).toUpperCase() + stem.slice(1);
+      if (stem === "bois" || stem === "houx" || stem === "lieu") {
+        // Don't forget that || separates distinct arguments
+        return "Du" + " " + stemNew;
+      } else if (stem === "leau") {
+        return "De" + stemNew;
+      } else if (stem === "croix" || stem === "foi" || stem === "rue") {
+        return "Dela" + " " + stemNew + "x";
+      } else if (
+        stem === "cadavre" ||
+        stem === "corbeau" ||
+        stem === "forgeron" ||
+        stem === "fée" ||
+        stem === "fils" ||
+        stem === "loup" ||
+        stem === "maitre" ||
+        stem === "mont" ||
+        stem === "pigeon" ||
+        stem === "pyjon" ||
+        stem === "soleil"
+      ) {
+        return "Le" + " " + stemNew;
+      } else if (stem == "chouette" || "fille" || "flamme" || "grange") {
+        return "La" + " " + stemNew;
+      } else {
+        return "ERROR";
+      }
       // as above, but a compound w/o space
     } else {
       return suffix + stem;
