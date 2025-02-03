@@ -158,8 +158,8 @@ const surnameComplex = ["da", "du", "la", "le"];
 // TODO: Run through all names to confirm that everything works as expected.
 
 function surnameBuilder() {
-  // numberCheck = randomNumber(4);
-  numberCheck = 3;
+  numberCheck = randomNumber(4);
+  // numberCheck = 3;
   if (numberCheck === 0) {
     surname = surnameVingt[randomNumber(surnameVingt.length)];
     return surname;
@@ -167,18 +167,22 @@ function surnameBuilder() {
     surname = surnameVingt[randomNumber(surnameMois.length)];
     return surname;
   } else {
-    // suffix = surnameSuffix[randomNumber(surnameSuffix.length)];
-    suffix = surnameSuffix[1];
-    // stem = surnameStem[randomNumber(surnameStem.length)];
-    stem = surnameStem[0];
+    suffix = surnameSuffix[randomNumber(surnameSuffix.length)];
+    // suffix = surnameSuffix[1];
+    stem = surnameStem[randomNumber(surnameStem.length)];
+    // stem = surnameStem[21];
     if (suffix === 0) {
       if (stem === "bois" || stem === "houx" || stem === "lieu") {
         // Don't forget that || separates distinct arguments
         return "Du" + stem;
-      } else if (stem === "leau") {
-        return "De" + stem;
-      } else if (stem === "croix" || stem === "foi" || stem === "rue") {
+      } else if (stem === "eau") {
+        return "De" + "l" + stem;
+      } else if (stem === "croix") {
+        return "Dela" + stem;
+      } else if (stem === "foi") {
         return "Dela" + stem + "x";
+      } else if (stem === "rue") {
+        return "Dela" + stem;
       } else if (
         stem === "cadavre" ||
         stem === "corbeau" ||
@@ -202,11 +206,15 @@ function surnameBuilder() {
       stemNew = stem.charAt(0).toUpperCase() + stem.slice(1);
       if (stem === "bois" || stem === "houx" || stem === "lieu") {
         // Don't forget that || separates distinct arguments
-        return "Du" + " " + stemNew;
-      } else if (stem === "leau") {
-        return "De" + stemNew;
-      } else if (stem === "croix" || stem === "foi" || stem === "rue") {
-        return "Dela" + " " + stemNew + "x";
+        return "du " + stemNew;
+      } else if (stem === "eau") {
+        return "de " + "L'" + stemNew;
+      } else if (stem === "croix") {
+        return "de la " + stemNew;
+      } else if (stem === "foi") {
+        return "de la " + stemNew + "x";
+      } else if (stem === "rue") {
+        return "de la " + stemNew;
       } else if (
         stem === "cadavre" ||
         stem === "corbeau" ||
@@ -220,9 +228,9 @@ function surnameBuilder() {
         stem === "pyjon" ||
         stem === "soleil"
       ) {
-        return "Le" + " " + stemNew;
+        return "le " + stemNew;
       } else if (stem == "chouette" || "fille" || "flamme" || "grange") {
-        return "La" + " " + stemNew;
+        return "la " + stemNew;
       } else {
         return "ERROR";
       }
@@ -242,11 +250,5 @@ function fullNameBuilder() {
 console.log("1: " + fullNameBuilder());
 console.log("2: " + fullNameBuilder());
 console.log("3: " + fullNameBuilder());
-
-const surnameSuffixSpecial = [
-  // These may be du Bois, Dubois; de L'eau, Deleau; le Cadavre, Lecadavre; la
-  // Chouette, Lachouette; de la Croix, Delacroix; etc. A special rule will be
-  // necessary to handle such cases.]
-];
 
 const produceNameGiven = 0;
