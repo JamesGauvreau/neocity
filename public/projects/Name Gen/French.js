@@ -65,17 +65,37 @@ const givenName = [
 function prenomGen() {
   givenNameArray = givenName[randomNumber(givenName.length)];
   checkMF = randomNumber(10); // # 0 – 9
+  checkUnusual = randomNumber(3);
+  secondArray = givenName[randomNumber(givenName.length)];
   if (checkMF % 2 === 0) {
     // Piggybacks off "checkMF" as much as possible.
-    if (checkMF === 6) {
-      return givenNameArray[3];
-    } else if (checkMF === 8) {
-      secondArray = givenName[randomNumber(givenName.length)];
-      return givenNameArray[2] + "-" + secondArray[2];
+    if (checkUnusual === 0) {
+      if (checkMF === 8) {
+        return givenNameArray[3];
+      } else if (checkMF === 6 || checkMF === 4) {
+        return givenNameArray[2] + "-" + secondArray[2];
+      } else if (checkMF === 2) {
+        return givenNameArray[2] + "-" + secondArray[0];
+      } else {
+        return givenNameArray[2] + " " + secondArray[2];
+      }
     } else {
       return givenNameArray[2];
     }
   } else {
+    if (checkUnusual === 0) {
+      if (checkMF === 9) {
+        return givenNameArray[1];
+      } else if (checkMF === 7) {
+        return givenNameArray[0] + "-" + secondArray[0];
+      } else if (checkMF === 5) {
+        return givenNameArray[0] + "-Marie";
+      } else if (checkMF === 3) {
+        return givenNameArray[0] + "-" + secondArray[2];
+      } else {
+        return givenNameArray[0] + " " + secondArray[0];
+      }
+    }
     if (checkMF === 7) {
       return givenNameArray[1];
     } else if (checkMF === 9) {
@@ -154,8 +174,6 @@ const surnameStem = [
 
 const surnameSuffix = [0, 1, "Beau", "Belle", "Bon", "Des", "Mal"];
 const surnameComplex = ["da", "du", "la", "le"];
-
-// TODO: Run through all names to confirm that everything works as expected.
 
 function surnameBuilder() {
   numberCheck = randomNumber(4);
