@@ -262,11 +262,9 @@ function surnameBuilder() {
 // "chouette","fille","flamme","grange",
 
 function fullNameBuilder() {
-  return prenomGen() + " " + surnameBuilder();
+  return (document.getElementById(
+    "genFrenchName"
+  ).innerHTML = `<b>French Name:</b> ${prenomGen() + " " + surnameBuilder()}.`);
 }
 
-console.log("1: " + fullNameBuilder());
-console.log("2: " + fullNameBuilder());
-console.log("3: " + fullNameBuilder());
-
-const produceNameGiven = 0;
+fullNameBuilder();
