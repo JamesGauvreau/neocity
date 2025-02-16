@@ -48,6 +48,17 @@
         </article>
 
         <article class="insideJournal">
+            <h1>2/15/25</h1>
+            <p>After migrating computers, had an issue pulling down the Neocities repo, but another repo worked just fine. I had previously worked in Ubuntu, but VS Code is supposed to function for Windows, so it couldn't simply be that I was running on the wrong OS.</p>
+            <p>Error messages included <samp>Unable to read file: ENOENT: no such file or directory</samp> and <samp>Clone succeeded, but checkout failed.</samp> Some of these messages were explicable, like the one that told me that I wasn't working in a git repo. Others, less so.</p>
+            <p>The output at least identified one file that was causing a problem. Some Googling suggested that the problem had to do with file size, which...was odd, but I downloaded a few other things and tried some configurations meant to alleviate this. No dice.</p>
+            <p>Going back to the file identified in the output, I decided to shorten the name and see what happened. It worked! There was a new file identified as a problem, but that was alright, I was going to keep going at this. After I edited the second file name, everything was fine and I cloned my repo.</p>
+            <p>Then, trying to rename the two problem files, I was told that I was typing an invalid name.</p>
+            <p>It turns out that I <i>was</i> running on the wrong OS, as it turns out. Linux allows colons in file names, but Windows doesn't. Shortening the file names fixed the problem completely by accident: not because the file names were somehow too long but because they had colons in them.</P>
+                <p>Upshot: I need to be aware of the subtle differences between operating systems, because something that works fine in one situation may completely fall apart in another because of a single character.</p>
+        </article>
+
+        <article class="insideJournal">
             <h1>9/02/24</h1>
             <p>Finally sort of solved an issue I'd been having with deploy-to-neocities: either <samp>uses:</samp> needed to say <samp>actions/checkout@v4</samp> (and not @2 or even @3) and/or I needed to get rid of the zone identifiers in my images folder.</p>
         </article>
