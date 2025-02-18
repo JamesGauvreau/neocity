@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Salt's Coding Journal</title>
+    <style>
+        .outsideJournal {
+            margin: 0;
+            padding: 5px;
+            background-color: lightgray;
+        }
+
+        .outsideJournal>h1,
+        h2,
+        .insideJournal {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .insideJournal {
+            background: white;
+        }
+
+        h1 {
+            margin: 8pt;
+        }
+
+        p {
+            margin: 8pt;
+            font-size: 90%;
+        }
+
+        .indent {
+            margin-left: 5%;
+        }
+
+        .black {
+            background-color: black;
+            color: white;
+            padding: 2%;
+        }
+
+        .color1 {
+            color: #2a88c0;
+        }
+
+        .color2 {
+            color: #f22c3d;
+        }
+
+        .color3 {
+            color: #df3079;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+
+<article class="insideJournal">
+    <h1></h1>
+    <p></p>
+</article> 
+
+    -->
+
+    <section class="outsideJournal">
+
+        <article class="insideJournal" style="background-color: black;">
+            <h2 style="color: white;">Salt's Tech Journal</h2>
+        </article>
+
+        <article class="insideJournal">
+            <h1></h1>
+            <p></p>
+        </article>
+
+        <article class="insideJournal">
+            <h1>2025.02.17</h1>
+            <p>I decided to work with ChatGPT to see how well it could handle pseudocode (or, from a different
+                perspective, to see how interpretable my pseudocode was). I provided the following prompt:</p>
+            <div class="indent">
+                <p>I have a set of test scores and need to write a function that will find the average of any set of
+                    test scores. Please write a function, called "getAverage", that can take an arbitrary number of
+                    scores, contained in a single array, and find the average score. </p>
+                <p>The function must fit the following pseudocode: </p>
+                <ol>
+                    <li>Inside the function getAverage, let totalScores = array.length</li>
+                    <li>Let sum = 0.</li>
+                    <li>Add the first item in the array to sum. </li>
+                    <li>Remove the first item in the array. </li>
+                    <li>Check the length of the array. </li>
+                    <li>If array length > 0, return to step 4. </li>
+                    <li>Else, let averageScore = sum / totalScores</li>
+                    <li>Return as the result of getAverage</li>
+                </ol>
+            </div>
+            <p>ChatGPT returned the following:</p>
+            <div class="indent black">
+                <code><span class="color1">function</span> <span class="color2">getAverage</span>(array) {<br>
+                    <div class="indent">                    <span class="color1">let</span> totalScores = array.length; // Step 1 <br>
+                    <span class="color1">let</span> sum = <span class="color3">0</span>; // Step 2 <br>
+                <br>
+                    // Step 3-6: Loop through the array, adding the first item to sum and removing it<br>
+                    <span class="color1">while</span> (array.length > <span class="color3">0</span>) { <br>
+                        <span class="indent">sum += array[<span class="color3">0</span>];  // Add the first item to sum</span> <br>
+                        <span class="indent">array.<span class="color2">shift</span>();     // Remove the first item in the array </span><br>
+                    } <br>
+                <br>
+                    // Step 7: Calculate the average score <br>
+                    <span class="color1">let</span> averageScore = sum / totalScores; <br>
+                <br>
+                    // Step 8: Return the result <br>
+                    <span class="color1">return</span> averageScore; <br></div>
+                } <br>
+                <br>
+                // Example usage: <br>
+                <span class="color1">let</span> testScores = [<span class="color3">90</span>, <span class="color3">80</span>, <span class="color3">70</span>, <span class="color3">85</span>, <span class="color3">95</span>]; <br>
+                <span class="color3">console</span>.<span class="color2">log</span>(<span class="color2">getAverage</span>(testScores));  // Output: 84<br>
+                </code>
+            </div>
+            <p>I'll pick this apart later. If I'm going to use ChatGPT, I want to make sure that it gives me code that I don't understand (or at least code that I do not go on to understand), and also it did not take exactly the same approach that I would have taken, and I want to understand why. For now, though, it's late, and I need to do a few other things before I go to bed.</p>
+        </article>
+
+    </section>
+</body>
