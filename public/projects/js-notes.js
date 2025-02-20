@@ -35,3 +35,7 @@ console.log(bottlecapper("green bottle", "white cap"))
 // function bottlecapper(bottle, cap) {
 //     return bottle + cap;
 // }
+
+// In document.querySelector, "document" represents the entire HTML document. If querySelector looks for CSS, you need to precede with # (i.e. #Button1).
+
+// If you try to reassign a const, JS will throw an error. 
