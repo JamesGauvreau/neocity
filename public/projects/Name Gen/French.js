@@ -268,3 +268,5 @@ function fullNameBuilder() {
 }
 
 fullNameBuilder();
+
+FrenchButton.onclick = fullNameBuilder;
