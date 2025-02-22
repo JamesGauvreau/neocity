@@ -216,3 +216,11 @@ function elsewhereRift() {
 
 const creatureGenerator = elsewhereCreature();
 const riftGenerator = elsewhereRift();
+
+function elsewhereBoth() {
+  elsewhereCreature();
+  elsewhereRift();
+}
+
+// elsewhereButton.onclick = elsewhereCreature;
+elsewhereButton.onclick = elsewhereBoth;
