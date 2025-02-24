@@ -93,8 +93,10 @@ const givenName = [
 function prenomGen() {
   givenNameArray = givenName[randomNumber(givenName.length)];
   console.log("givenNameArray: " + givenNameArray)
+
   checkGender = getSelectedRadioButton();
   console.log("checkGender: " + checkGender);
+
   function callGender() {
     if (getSelectedRadioButton() == "feminineFrench") {
       femArray = [0, 2, 4, 6, 8];
@@ -106,12 +108,20 @@ function prenomGen() {
       return randomNumber(10);
     }
   };
+
   checkMF = callGender();
   console.log("checkMF: " + checkMF);
+
   // randomNumber(10); // # 0 – 9
   checkUnusual = randomNumber(4);
   console.log("checkUnusual: " + checkUnusual)
-  secondArray = givenName[randomNumber(givenName.length)];
+
+  let secondArray;
+  do {
+    secondArray = givenName[randomNumber(givenName.length)];
+  } while (secondArray === givenNameArray); // Continue regenerating if secondArray matches givenNameArray
+  console.log("secondArray (after check): " + secondArray);
+  
   if (checkMF % 2 === 0) {
     // Piggybacks off "checkMF" as much as possible.
     if (checkUnusual === 0) {
