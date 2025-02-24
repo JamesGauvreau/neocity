@@ -37,6 +37,34 @@ function randomNumber(number) {
 
 // Lucianus/Luciana, Marcellus/Marcella, Renatus/Renata
 
+function getSelectedRadioButton() {
+  // Get all radio buttons with the name "prenomenFrench"
+  var radios = document.getElementsByName('prenomenFrench');
+
+  // Loop through the radio buttons and find the selected one
+  for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+          // Return the ID of the selected radio button
+          return radios[i].id;
+      }
+  }
+  // Return null if no radio button is selected (though this shouldn't happen with your current setup)
+  return null;
+}
+
+// Trigger when a radio button is selected
+document.querySelectorAll('input[name="prenomenFrench"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+      // Get the selected radio button ID from the function
+      var selectedRadioId = getSelectedRadioButton();
+
+      // You can use the result (selectedRadioId) as needed
+      console.log(selectedRadioId);
+  });
+});
+
+console.log(getSelectedRadioButton());
+
 const givenName = [
   // 21 names
   ["Albin", "Albinon", "Albine", "Albinette"],
@@ -64,7 +92,23 @@ const givenName = [
 
 function prenomGen() {
   givenNameArray = givenName[randomNumber(givenName.length)];
-  checkMF = randomNumber(10); // # 0 – 9
+  console.log("givenNameArray: " + givenNameArray)
+  checkGender = getSelectedRadioButton();
+  console.log("checkGender: " + checkGender);
+  function callGender() {
+    if (getSelectedRadioButton() == "feminineFrench") {
+      femArray = [0,2,4,6,8];
+      return femArray[randomNumber(femArray.length)]
+    } else if (getSelectedRadioButton() == "masculineFrench") {
+      mascArray = [1,3,5,7,9];
+      return mascArray[randomNumber(femArray.length)]
+    } else {
+      return randomNumber(10);
+    }
+  };
+  checkMF = callGender();
+  console.log("checkMF: " + checkMF);
+  // randomNumber(10); // # 0 – 9
   checkUnusual = randomNumber(3);
   secondArray = givenName[randomNumber(givenName.length)];
   if (checkMF % 2 === 0) {
@@ -106,8 +150,6 @@ function prenomGen() {
     }
   }
 }
-
-console.log(prenomGen());
 
 const surnameVingt = [
   "Anouilh",
@@ -269,4 +311,4 @@ function fullNameBuilder() {
 
 fullNameBuilder();
 
-FrenchButton.onclick = fullNameBuilder;
+buttonFrench.onclick = fullNameBuilder;
