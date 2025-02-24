@@ -1,10 +1,6 @@
 //  ::  Names
 
 // TODO
-// - Calendar of saints
-// - Revolutionary: Days of the Republican Calendar
-// - Revolutionary: Months of the Republican Year
-// - Chance for first names to be hyphenated.
 // - Chance for diminutives: Masculine: -et, -on, -ot, -ou; as well as Middle
 //   French: -el, -in, -eau in place of -ou
 // - Diminutives: Feminine: -ette, -elle; Middle French: -on, -ine
@@ -121,7 +117,7 @@ function prenomGen() {
     secondArray = givenName[randomNumber(givenName.length)];
   } while (secondArray === givenNameArray); // Continue regenerating if secondArray matches givenNameArray
   console.log("secondArray (after check): " + secondArray);
-  
+
   if (checkMF % 2 === 0) {
     // Piggybacks off "checkMF" as much as possible.
     if (checkUnusual === 0) {
@@ -201,6 +197,7 @@ const surnameMois = [
 ];
 
 const surnameStem = [
+  "baguette",
   "bois",
   "cadavre",
   "chouette",
@@ -268,7 +265,7 @@ function surnameBuilder() {
         stem === "soleil"
       ) {
         return "Le" + stem;
-      } else if (stem == "chouette" || "fille" || "flamme" || "grange") {
+      } else if (stem == "baguette" || "chouette" || "fille" || "flamme" || "grange") {
         return "La" + stem;
       } else {
         return "ERROR";
@@ -287,6 +284,7 @@ function surnameBuilder() {
       } else if (stem === "rue") {
         return "de la " + stemNew;
       } else if (
+        stem === "boulanger" ||
         stem === "cadavre" ||
         stem === "corbeau" ||
         stem === "forgeron" ||
