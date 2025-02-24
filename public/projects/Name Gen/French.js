@@ -68,23 +68,23 @@ console.log(getSelectedRadioButton());
 const givenName = [
   // 21 names
   ["Albin", "Albinon", "Albine", "Albinette"],
-  ["André", "Dédé", "Andrée", "Andrette"],
+  ["Andr&eacute;", "D&eacute;d&eacute;", "Andr&eacute;e", "Andrette"],
   ["Corentin", "Coco", "Corentine", "Coco"],
   ["Dominique", "Dodo", "Dominique", "Dodo"],
   ["Estienne", "Estève", "Estienette", "Tiennette"],
-  ["Stéphane", "Stef", "Stéphanie", "Steffi"],
+  ["St&eacute;phane", "Stef", "St&eacute;phanie", "Steffi"],
   ["Germain", "Germot", "Germaine", "Germainelle"],
   ["Georges", "Georgot", "Georgine", "Georginette"],
-  ["Gérard", "Gerot", "Gérarde", "Gerardine"],
+  ["G&eacute;rard", "Gerot", "G&eacute;rarde", "Gerardine"],
   ["Jacques", "Jacquet", "Jacqueline", "Jacotte"],
   ["Jehan", "Jeannot", "Jehanne", "Jehannette"],
-  ["Joseph", "Jojo", "Josèphe", "Josélaine"],
+  ["Joseph", "Jojo", "Josèphe", "Jos&eacute;laine"],
   ["Louis", "Loulou", "Louise", "Louisette"],
   ["Lucien", "Lulu", "Lucienne", "Lucette"],
   ["Marc", "Marcel", "Marcelle", "Marcelline"],
   ["Nicolas", "Nico", "Nicole", "Nico"],
   ["Pierre", "Pierrot", "Perrette", "Perrelle"],
-  ["René", "Renét", "Renée", "Renétte"],
+  ["Ren&eacute;", "Ren&eacute;t", "Ren&eacute;e", "Ren&eacute;tte"],
   ["Thomas", "Toto", "Thomasse", "Thomine"],
   ["Vespre", "Vesprot", "Vespree", "Vesprette"],
   ["Yves", "Yvon", "Yvette", "Yvonne"],
@@ -178,7 +178,7 @@ const surnameVingt = [
   "Maignen",
   "Ossier",
   "Parcheminier",
-  "Salé",
+  "Sal&eacute;",
   "Terreur",
   "Toussaint",
   "Vautour",
@@ -187,7 +187,7 @@ const surnameVingt = [
 
 const surnameMois = [
   "Janvier",
-  "Février",
+  "F&eacute;vrier",
   "Mars",
   "Avril",
   "Mai",
@@ -208,7 +208,7 @@ const surnameStem = [
   "croix",
   "eau",
   "forgeron",
-  "fée",
+  "f&eacute;e",
   "fils",
   "fille",
   "flamme",
@@ -258,7 +258,7 @@ function surnameBuilder() {
         stem === "cadavre" ||
         stem === "corbeau" ||
         stem === "forgeron" ||
-        stem === "fée" ||
+        stem === "f&eacute;e" ||
         stem === "fils" ||
         stem === "loup" ||
         stem === "maitre" ||
@@ -290,7 +290,7 @@ function surnameBuilder() {
         stem === "cadavre" ||
         stem === "corbeau" ||
         stem === "forgeron" ||
-        stem === "fée" ||
+        stem === "f&eacute;e" ||
         stem === "fils" ||
         stem === "loup" ||
         stem === "maitre" ||
