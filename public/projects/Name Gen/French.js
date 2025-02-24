@@ -43,23 +43,23 @@ function getSelectedRadioButton() {
 
   // Loop through the radio buttons and find the selected one
   for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) {
-          // Return the ID of the selected radio button
-          return radios[i].id;
-      }
+    if (radios[i].checked) {
+      // Return the ID of the selected radio button
+      return radios[i].id;
+    }
   }
   // Return null if no radio button is selected (though this shouldn't happen with your current setup)
   return null;
 }
 
 // Trigger when a radio button is selected
-document.querySelectorAll('input[name="prenomenFrench"]').forEach(function(radio) {
-  radio.addEventListener('change', function() {
-      // Get the selected radio button ID from the function
-      var selectedRadioId = getSelectedRadioButton();
+document.querySelectorAll('input[name="prenomenFrench"]').forEach(function (radio) {
+  radio.addEventListener('change', function () {
+    // Get the selected radio button ID from the function
+    var selectedRadioId = getSelectedRadioButton();
 
-      // You can use the result (selectedRadioId) as needed
-      console.log(selectedRadioId);
+    // You can use the result (selectedRadioId) as needed
+    console.log(selectedRadioId);
   });
 });
 
@@ -97,11 +97,11 @@ function prenomGen() {
   console.log("checkGender: " + checkGender);
   function callGender() {
     if (getSelectedRadioButton() == "feminineFrench") {
-      femArray = [0,2,4,6,8];
+      femArray = [0, 2, 4, 6, 8];
       return femArray[randomNumber(femArray.length)]
     } else if (getSelectedRadioButton() == "masculineFrench") {
-      mascArray = [1,3,5,7,9];
-      return mascArray[randomNumber(femArray.length)]
+      mascArray = [1, 3, 5, 7, 9];
+      return mascArray[randomNumber(mascArray.length)]
     } else {
       return randomNumber(10);
     }
@@ -109,7 +109,8 @@ function prenomGen() {
   checkMF = callGender();
   console.log("checkMF: " + checkMF);
   // randomNumber(10); // # 0 – 9
-  checkUnusual = randomNumber(3);
+  checkUnusual = randomNumber(4);
+  console.log("checkUnusual: " + checkUnusual)
   secondArray = givenName[randomNumber(givenName.length)];
   if (checkMF % 2 === 0) {
     // Piggybacks off "checkMF" as much as possible.
