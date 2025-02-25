@@ -39,3 +39,5 @@ console.log(bottlecapper("green bottle", "white cap"))
 // In document.querySelector, "document" represents the entire HTML document. If querySelector looks for CSS, you need to precede with # (i.e. #Button1).
 
 // If you try to reassign a const, JS will throw an error. 
+
+// "You have repetition in the goTown and goStore functions. Repetition in your code is a sign that you need another function."
