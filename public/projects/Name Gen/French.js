@@ -86,6 +86,10 @@ const givenName = [
   ["Yves", "Yvon", "Yvette", "Yvonne"],
 ];
 
+const calendarWeekdays = [
+  "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"
+]
+
 function prenomGen() {
   givenNameArray = givenName[randomNumber(givenName.length)];
   console.log("givenNameArray: " + givenNameArray)
@@ -195,6 +199,10 @@ const surnameMois = [
   "Novembre",
   "Decembre",
 ];
+
+const surnameMoisRep = [
+  "Pluvi&#244;se", "Vent&#244;se", "Germinal", "Flor&eacute;al", "Prairial", "Messidor", "Thermidor", "Fructidor", "Vend&eacute;miaire", "Brumaire", "Frimaire", "Niv&#244;se"
+]
 
 const surnameStem = [
   "baguette",
