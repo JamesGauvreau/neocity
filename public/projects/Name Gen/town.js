@@ -26,3 +26,5 @@ const suffix = [
 // Barrow's Green, Blackwater, Blackwell in the Peak, Black Dog, Witchampton, Hexton, Gravesend, Barrow Haven, Adderbury, Ashwell, Wednesfield
 
 // -den, Green, -field, -ampton, -sea, -well, -whistle, -field
+
+console.log("test")
