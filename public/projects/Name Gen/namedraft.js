@@ -4,6 +4,32 @@ function randomNumber(number) {
 
 const testArray = "dog"
 
+const nameTemplate = {
+  engMasc: 0,
+  engFem: 0,
+  meaning: 0,
+  defaultDimRoot: 0,
+  engDim: 0,
+  cornMasc: 0,
+  cornFem: 0,
+  cornDim: 0,
+  fraMasc: 0,
+  fraFem: 0,
+  fraDim: 0,
+  ireMasc: 0,
+  ireFem: 0,
+  ireDim: 0,
+  latMasc: 0,
+  latFem: 0,
+  latDim: 0,
+  scotMasc: 0,
+  scotFem: 0,
+  scotDim: 0,
+  welshMasc: 0,
+  welshFem: 0,
+  welshDim: 0,
+}
+
 const nameNormal = {
     englishMasc: testArray,
     englishFem: "Beatrice",
