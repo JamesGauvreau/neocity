@@ -45,6 +45,11 @@ const Albert = {
   scotMasc: "Ailbeart",
 }
 
+const dimObject = {
+  engMasc: "kin", 
+  welshMasc: "cynn"
+}
+
 const nameArray = [Albert]
 
 const dimSuffixArray = ["amin","cock","e","el","ehon"]
