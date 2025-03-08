@@ -87,6 +87,8 @@ function randomNumber(number) {
 }
 
 function goblinNamer() {
+  const checkNorse = randomNumber(10);
+  const checkPostnom = randomNumber(5);
   const genPrenom = prenomNormal[randomNumber(prenomNormal.length)];
   const genSurnameVerb = surnameVerb[randomNumber(surnameVerb.length)];
   const genSurnameNoun = surnameNoun[randomNumber(surnameNoun.length)].toLowerCase();

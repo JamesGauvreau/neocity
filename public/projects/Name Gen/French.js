@@ -178,7 +178,8 @@ const surnameVingt = [
   "Maignen",
   "Ossier",
   "Parcheminier",
-  "Sal&eacute;",
+  "Sal&eacute;", //Salè
+  "Som&eacute;one", // New name. Somèone.
   "Terreur",
   "Toussaint",
   "Vautour",
@@ -187,7 +188,7 @@ const surnameVingt = [
 
 const surnameMois = [
   "Janvier",
-  "F&eacute;vrier",
+  "F&eacute;vrier", // Fèvrier
   "Mars",
   "Avril",
   "Mai",
@@ -213,7 +214,7 @@ const surnameStem = [
   "croix",
   "eau",
   "forgeron",
-  "f&eacute;e",
+  "f&eacute;e", // Fèe
   "fils",
   "fille",
   "flamme",
