@@ -202,7 +202,7 @@ const surnameMois = [
 ];
 
 const surnameMoisRep = [
-  "Pluvi&#244;se", "Vent&#244;se", "Germinal", "Flor&eacute;al", "Prairial", "Messidor", "Thermidor", "Fructidor", "Vend&eacute;miaire", "Brumaire", "Frimaire", "Niv&#244;se"
+  "Pluvi&#244;se" /* Pluviôse */, "Vent&#244;se" /* Ventôse */, "Germinal", "Flor&eacute;al", "Prairial", "Messidor", "Thermidor", "Fructidor", "Vend&eacute;miaire", "Brumaire", "Frimaire", "Niv&#244;se"
 ]
 
 const surnameStem = [
@@ -214,7 +214,7 @@ const surnameStem = [
   "croix",
   "eau",
   "forgeron",
-  "f&eacute;e", // Fèe
+  "f&eacute;e", // fèe
   "fils",
   "fille",
   "flamme",
