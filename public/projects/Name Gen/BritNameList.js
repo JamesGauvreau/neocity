@@ -28,56 +28,16 @@ const nameBarbara = {
     fraMasc: 0, fraFem: ['Barbara'], fraMascDim: 0, fraFemDim: ['Babette', 'Barbe'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Báirbre ', 'Gormladh'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: ['Baibín'], latMasc: 0, latFem: ['Barbara'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: 0, scotMascGae: 0, scotFemGae: ['Barabal', 'Barabel'], scotMascDim: 0, scotFemDim: ['Barberie', 'Barbery', 'Baubie'], scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false,
 }
 
-const nameCassander = {
-    engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Cassandre'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Cassander'], latFem: 0, latMascDim: 0, latFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false,
-}
+const nameCassander = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Cassandre'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Cassander'], latFem: 0, latMascDim: 0, latFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameHelen = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Hélène'], fraMascDim: 0, fraFemDim: ['Léna', 'Nelly'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Aibhilin', 'Eibhlin'], ireMascDim: 0, ireFemDim: ['Eileen', 'Nell', 'Aileen', 'Eily'], ireMascDimGae: 0, ireFemDimGae: ['Neile', 'Léan'], latMasc: 0, latFem: ['Helena', 'Elena', 'Helenora'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Helen', 'Ailie', 'Ellie'], scotMascGae: 0, scotFemGae: ['Eilidh'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, welshMasc: 0, welshFem: ['Ellyn'], welshMascDim: 0, welshFemDim: ['Elen', 'Elin'], isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameSibyl = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: [['Sybille', 1], 'Sibylle'], fraMascDim: 0, fraFemDim: 0, ireMasc: 0, ireFem: ['Sibby'], ireMascGae: 0, ireFemGae: ['Sibéal'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: 0, latMasc: 0, latFem: ['Sibylla', 'Sibilla', 'Sibilia'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Sibella'], scotMascGae: 0, scotFemGae: 0, scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
-const nameHelen = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0, fraFem: ['Hélène'], fraMascDim: 0, fraFemDim: ['Léna', 'Nelly'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Aibhilin', 'Eibhlin'], ireMascDim: 0, ireFemDim: ['Eileen', 'Nell', 'Aileen', 'Eily'], ireMascDimGae: 0, ireFemDimGae: ['Neile', 'Léan'], latMasc: 0, latFem: ['Helena', 'Elena', 'Helenora'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Helen', 'Ailie', 'Ellie'], scotMascGae: 0, scotFemGae: ['Eilidh'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, welshMasc: 0, welshFem: ['Ellyn'], welshMascDim: 0, welshFemDim: ['Elen', 'Elin'], isFlower: false, isPuritan: false, isReligious: false, isUnusual: false,
-}
+console.log(nameSibyl.fraFem[0][0]) // accessing an array inside an array inside a key inside an object. 
 
-const nameSibyl = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Sybille', 'Sibylle'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    ireMasc: 0,
-    ireFem: ['Sibby'],
-    ireMascGae: 0,
-    ireFemGae: ['Sibéal'],
-    ireMascDim: 0,
-    ireFemDim: 0,
-    ireMascDimGae: 0,
-    ireFemDimGae: 0,
-    latMasc: 0,
-    latFem: ['Sibylla', 'Sibilla', 'Sibilia'],
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: ['Sibella'],
-    scotMascGae: 0,
-    scotFemGae: 0,
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: 0,
-    scotFemDimGae: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+// To make this work, you'll first need to decide what types of names are being looked for, e.g. engFem, engFemDim, fraFem.
+// Then take each name, and make a series of new arrays, e.g. const engFemSibyl = nameSibyl.engFem, etc.
+// Roll randomly among the arrays, then roll again among the items in the selected array, then return it. 
+// Bingo presto you've got it. 
 
 
 
