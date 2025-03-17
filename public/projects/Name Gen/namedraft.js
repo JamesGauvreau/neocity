@@ -35,6 +35,9 @@ const nameTemplate = {
   welshFem: 0,
   welshDimMasc: 0,
   welshDimFem: 0,
+  isFlower: false,
+  isPuritan: false,
+  isReligious: false,
 }
 
 const nameHenry = {
