@@ -2,8 +2,6 @@ function randomNumber(number) {
   return Math.floor(Math.random() * number);
 }
 
-const testArray = "dog"
-
 const nameTemplate = {
   engMasc: 0,
   engFem: 0,
@@ -38,6 +36,7 @@ const nameTemplate = {
   isFlower: false,
   isPuritan: false,
   isReligious: false,
+  isUnusual: false,
 }
 
 const nameHenry = {
