@@ -1,3 +1,5 @@
+// When done, go through and remove all but fav names (or minimum of 3 names/dims)
+
 const nameEdith = {
     engMasc: 0,
     engFem: ["Edith", "Edit", "Idith"],
@@ -28,28 +30,25 @@ const nameBarbara = {
     fraMasc: 0, fraFem: ['Barbara'], fraMascDim: 0, fraFemDim: ['Babette', 'Barbe'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Báirbre ', 'Gormladh'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: ['Baibín'], latMasc: 0, latFem: ['Barbara'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: 0, scotMascGae: 0, scotFemGae: ['Barabal', 'Barabel'], scotMascDim: 0, scotFemDim: ['Barberie', 'Barbery', 'Baubie'], scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false,
 }
 
-const nameCassander = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Cassandre'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Cassander'], latFem: 0, latMascDim: 0, latFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
-const nameHelen = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Hélène'], fraMascDim: 0, fraFemDim: ['Léna', 'Nelly'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Aibhilin', 'Eibhlin'], ireMascDim: 0, ireFemDim: ['Eileen', 'Nell', 'Aileen', 'Eily'], ireMascDimGae: 0, ireFemDimGae: ['Neile', 'Léan'], latMasc: 0, latFem: ['Helena', 'Elena', 'Helenora'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Helen', 'Ailie', 'Ellie'], scotMascGae: 0, scotFemGae: ['Eilidh'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, welshMasc: 0, welshFem: ['Ellyn'], welshMascDim: 0, welshFemDim: ['Elen', 'Elin'], isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
-const nameSibyl = { engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: [['Sybille', 1], 'Sibylle'], fraMascDim: 0, fraFemDim: 0, ireMasc: 0, ireFem: ['Sibby'], ireMascGae: 0, ireFemGae: ['Sibéal'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: 0, latMasc: 0, latFem: ['Sibylla', 'Sibilla', 'Sibilia'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Sibella'], scotMascGae: 0, scotFemGae: 0, scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameCassander = { engMasc: 0, engFem: , meaning: "one who shines and excels over men", defaultDimRoot: "Cass", engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Cassandre'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Cassander'], latFem: 0, latMascDim: 0, latFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameHelen = { engMasc: 0, engFem: ['Helen', 'Elaine', 'Elene', 'Elnora', 'Helaine', 'Helenor'], meaning: "corposant, light, torch; shining, warming", defaultDimRoot: ['Hel'], engMascDim: 0, engFemDim: ['Lenore', 'Ellet', 'Hela', 'Lenie', 'Nell', 'Nellen'], fraMasc: 0, fraFem: ['Hélène'], fraMascDim: 0, fraFemDim: ['Léna', 'Nelly'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Aibhilin', 'Eibhlin'], ireMascDim: 0, ireFemDim: ['Eileen', 'Nell', 'Aileen', 'Eily'], ireMascDimGae: 0, ireFemDimGae: ['Neile', 'Léan'], latMasc: 0, latFem: ['Helena', 'Elena', 'Helenora'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Helen', 'Ailie', 'Ellie'], scotMascGae: 0, scotFemGae: ['Eilidh'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, welshMasc: 0, welshFem: ['Ellyn'], welshMascDim: 0, welshFemDim: ['Elen', 'Elin'], isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameSibyl = { engMasc: 0, engFem: ['Sibyl', 'Sibley', 'Cybile', 'Sibilla', 'Sibula'], meaning: "prophetess, sibyl", defaultDimRoot: 'Sib', engMascDim: 0, engFemDim: ['Zabel', 'Sib', 'Sibbie'], fraMasc: 0, fraFem: [['Sybille', 1, 2], 'Sibylle'], fraMascDim: 0, fraFemDim: 0, ireMasc: 0, ireFem: ['Sibby'], ireMascGae: 0, ireFemGae: ['Sibéal'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: 0, latMasc: 0, latFem: ['Sibylla', 'Sibilla', 'Sibilia'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Sibella'], scotMascGae: 0, scotFemGae: 0, scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
 console.log(nameSibyl.fraFem[0][0]) // accessing an array inside an array inside a key inside an object. 
+console.log(nameSibyl.fraFem[0][0].length)
 
 // To make this work, you'll first need to decide what types of names are being looked for, e.g. engFem, engFemDim, fraFem.
 // Then take each name, and make a series of new arrays, e.g. const engFemSibyl = nameSibyl.engFem, etc.
 // Roll randomly among the arrays, then roll again among the items in the selected array, then return it. 
 // Bingo presto you've got it. 
 
-
-
-
-
 const nameJessica = {
     engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
+    engFem: ['Jessica', 'Jessicah', 'Jessika'],
+    meaning: "he will behold(?), he will look for(?)",
+    defaultDimRoot: 'Jess',
     engMascDim: 0,
-    engFemDim: 0,
+    engFemDim: ['Jessie', 'Jessa', 'Jessye'],
     fraMasc: 0,
     fraFem: 0,
     fraMascDim: 0,
@@ -121,72 +120,14 @@ const nameTheodore = {
     isUnusual: false,
 }
 
-const nameLora = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Laura', 'Laure'],
-    fraMascDim: 0,
-    fraFemDim: ['Laurette'],
-    latMasc: ['Laurus'],
-    latFem: ['Laura'],
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: 0,
-    scotMascGae: 0,
-    scotFemGae: ['Labhra'],
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: 0,
-    scotFemDimGae: 0,
-    welshMasc: 0,
-    welshFem: ['Lowry', 'Laurie', 'Loure', 'Lowrie'],
-    welshMascDim: 0,
-    welshFemDim: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameLora = { engMasc: 0, engFem: ['Lora', 'Laurine', 'Laurel', 'Laurelle'], meaning: 'laurel', defaultDimRoot: 'Lor', engMascDim: 0, engFemDim: ['Lore', 'Laurie', 'Lorene', 'Lorelle', 'Lozza'], fraMasc: 0, fraFem: ['Laura', 'Laure'], fraMascDim: 0, fraFemDim: ['Laurette'], latMasc: ['Laurus'], latFem: ['Laura'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: 0, scotMascGae: 0, scotFemGae: ['Labhra'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, welshMasc: 0, welshFem: ['Lowry', 'Laurie', 'Loure', 'Lowrie'], welshMascDim: 0, welshFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
-const nameLettice = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Laetitia'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    latMasc: ['Lætitia'],
-    latFem: 0,
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: ['Leitis'],
-    scotMascGae: 0,
-    scotFemGae: ['Ledicia'],
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: 0,
-    scotFemDimGae: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameLettice = { engMasc: 0, engFem: ['Lettice', 'Leata', 'Leta', 'Letitia', 'Lette', 'Titty'], meaning: 'gladness, joy', defaultDimRoot: 'Lece', engMascDim: 0, engFemDim: ['Lecia', 'Letselina', 'Lette'], fraMasc: 0, fraFem: ['Laetitia'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Lætitia'], latFem: 0, latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Leitis'], scotMascGae: 0, scotFemGae: ['Ledicia'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
 const nameFlorent = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "flourishing, prosperous; blooming, flowery",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -215,7 +156,7 @@ const nameFlorent = {
 const nameIsolde = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "battle(?); fair appearance(?); ice(?)",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -249,114 +190,17 @@ const nameIsolde = {
     isUnusual: false,
 }
 
-const nameMatilda = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Mathilde', 'Maheut', 'Mahault'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    ireMasc: 0,
-    ireFem: ['Maeve'],
-    ireMascGae: 0,
-    ireFemGae: ['Máda', 'Maitilde'],
-    ireMascDim: 0,
-    ireFemDim: 0,
-    ireMascDimGae: 0,
-    ireFemDimGae: 0,
-    latMasc: ['Mactildis'],
-    latFem: 0,
-    latMascDim: 0,
-    latFemDim: 0,
-    welshMasc: 0,
-    welshFem: ['Malit', 'Mallt', 'Mawd'],
-    welshMascDim: 0,
-    welshFemDim: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameMatilda = { engMasc: 0, engFem: ['Matilda', 'Mahalt', 'Mathila', 'Mechtilda'], meaning: 'powerful in battle', defaultDimRoot: 'Madd', engMascDim: 0, engFemDim: ['Maddie', 'Matty', 'Mazelina', 'Molde', 'Motte', 'Tilde', 'Tilly'], fraMasc: 0, fraFem: ['Mathilde', 'Maheut', 'Mahault'], fraMascDim: 0, fraFemDim: 0, ireMasc: 0, ireFem: ['Maeve'], ireMascGae: 0, ireFemGae: ['Máda', 'Maitilde'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: 0, latMasc: ['Mactildis'], latFem: 0, latMascDim: 0, latFemDim: 0, welshMasc: 0, welshFem: ['Malit', 'Mallt', 'Mawd'], welshMascDim: 0, welshFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
+const nameMellany = { engMasc: 0, engFem: ['Mellany', 'Melanie', 'Mellony'], meaning: 'black, dark', defaultDimRoot: 'Mel', engMascDim: 0, engFemDim: ['Malinda', 'Linda', 'Mindy'], fraMasc: 0, fraFem: ['Mélanie, Mélissa'], fraMascDim: ['Missy', 'Lissa', 'Mel'], fraFemDim: 0, latMasc: 0, latFem: ['Melania'], latMascDim: 0, latFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
-const nameMellany = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Mélanie, Mélissa'],
-    fraMascDim: ['Missy', 'Lissa', 'Mel'],
-    fraFemDim: 0,
-    latMasc: 0,
-    latFem: ['Melania'],
-    latMascDim: 0,
-    latFemDim: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameTiffany = { engMasc: 0, engFem: ['Tiffany', 'Tiffanie', 'Tiffiny'], meaning: 'manifestation of God, Epiphany', defaultDimRoot: 'Tiff', engMascDim: 0, engFemDim: 'Tiff', fraMasc: 0, fraFem: ['Tiphaine', 'Tiphanie'], fraMascDim: 0, fraFemDim: 0, latMasc: ['Theophanes'], latFem: ['Theophania'], latMascDim: ['Phanis'], latFemDim: ['Phani'], isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
-const nameTiffany = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Tiphaine', 'Tiphanie'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    latMasc: ['Theophanes'],
-    latFem: ['Theophania'],
-    latMascDim: ['Phanis'],
-    latFemDim: ['Phani'],
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
-
-const nameMartha = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Marthe'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    latMasc: 0,
-    latFem: ['Martha'],
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: ['Marta'],
-    scotMascGae: 0,
-    scotFemGae: ['Moireach'],
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: 0,
-    scotFemDimGae: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameMartha = { engMasc: 0, engFem: ['Martha'], meaning: 'lady, mistress (master)', defaultDimRoot: 0, engMascDim: 0, engFemDim: ['Martie', 'Matty', 'Molly'], /* Make sure the M→P function works. */    fraMasc: 0, fraFem: ['Marthe'], fraMascDim: 0, fraFemDim: 0, latMasc: 0, latFem: ['Martha'], latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Marta'], scotMascGae: 0, scotFemGae: ['Moireach'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
 const nameAmanda = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "beloved, worthy of love",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -374,47 +218,12 @@ const nameAmanda = {
     isUnusual: false,
 }
 
-const nameAlbert = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: ['Aubert'],
-    fraFem: ['Alberte', 'Albertine'],
-    fraMascDim: 0,
-    fraFemDim: 0,
-    ireMasc: 0,
-    ireFem: 0,
-    ireMascGae: ['Ailbe'],
-    ireFemGae: ['Ailbhe'],
-    ireMascDim: 0,
-    ireFemDim: 0,
-    ireMascDimGae: ['Alby'],
-    ireFemDimGae: ['Elva'],
-    latMasc: ['Albertus'],
-    latFem: 0,
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: 0,
-    scotMascGae: ['Ailbeart'],
-    scotFemGae: 0,
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: 0,
-    scotFemDimGae: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameAlbert = { engMasc: 0, engFem: ['Alberta', 'Albertina', 'Albertine'], meaning: "noble and bright", defaultDimRoot: 'Al', engMascDim: ['Ab', 'Alby', 'Bert'], engFemDim: ['Birdie', 'Bertina'], fraMasc: ['Aubert'], fraFem: ['Alberte', 'Albertine'], fraMascDim: 0, fraFemDim: 0, ireMasc: 0, ireFem: 0, ireMascGae: ['Ailbe'], ireFemGae: ['Ailbhe'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: ['Alby'], ireFemDimGae: ['Elva'], latMasc: ['Albertus'], latFem: 0, latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: 0, scotMascGae: ['Ailbeart'], scotFemGae: 0, scotMascDim: 0, scotFemDim: 0, scotMascDimGae: 0, scotFemDimGae: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
 const nameAmi = {
-    engMasc: 0, // Should be "Ami," but I don't want a 1/20 chance of that coming up.
+    engMasc: 0, /* Should be "Ami," but I don't want a 1/20 chance of that coming up. */
     engFem: 0,
-    meaning: 0,
+    meaning: "beloved",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -443,7 +252,7 @@ const nameAmi = {
 const nameAnthony = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "? (meaning unknown)",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -476,7 +285,7 @@ const nameAnthony = {
 const nameAugustine = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "august, consecrated, venerable",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -517,7 +326,7 @@ const nameAugustine = {
 const nameCharles = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "free man",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -558,7 +367,7 @@ const nameCharles = {
 const nameEdmund = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "rich protector",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -599,7 +408,7 @@ const nameEdmund = {
 const nameEugene = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "noble, well-born",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -640,7 +449,7 @@ const nameEugene = {
 const nameFrancis = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "Frank, French(wo)man; free",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -682,7 +491,7 @@ const nameFrederick = {
     engMasc: 0,
     engFem: 0,
     meaning: 0,
-    defaultDimRoot: 0,
+    defaultDimRoot: "peaceful ruler",
     engMascDim: 0,
     engFemDim: 0,
     fraMasc: ['Frédéric'],
@@ -722,7 +531,7 @@ const nameFrederick = {
 const nameGeorge = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "earthworker, farmer",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -767,7 +576,7 @@ const nameGeorge = {
 const nameHenry = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "home ruler",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -808,7 +617,7 @@ const nameHenry = {
 const nameHugh = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "mind, spirit, thought",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -849,7 +658,7 @@ const nameHugh = {
 const nameJocelyn = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "unclear, probably referring to the Gauls or Geats",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -870,7 +679,7 @@ const nameJocelyn = {
 const nameJohn = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "God is gracious",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -915,7 +724,7 @@ const nameJohn = {
 const nameJonathan = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "God's gift",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -945,51 +754,12 @@ const nameJonathan = {
     isUnusual: false,
 }
 
-const nameAllison = {
-    engMasc: 0,
-    engFem: 0,
-    meaning: 0,
-    defaultDimRoot: 0,
-    engMascDim: 0,
-    engFemDim: 0,
-    fraMasc: 0,
-    fraFem: ['Alis', 'Aalis', 'Adelais', 'Alix'],
-    fraMascDim: 0,
-    fraFemDim: ['Alison'],
-    ireMasc: 0,
-    ireFem: 0,
-    ireMascGae: 0,
-    ireFemGae: ['Ailís', 'Ailios', 'Ailse'],
-    ireMascDim: 0,
-    ireFemDim: 0,
-    ireMascDimGae: 0,
-    ireFemDimGae: 0,
-    latMasc: ['Alicia', 'Alitia'],
-    latFem: 0,
-    latMascDim: 0,
-    latFemDim: 0,
-    scotMasc: 0,
-    scotFem: ['Elison'],
-    scotMascGae: 0,
-    scotFemGae: ['Aileas', 'Ailios', 'Ailis'],
-    scotMascDim: 0,
-    scotFemDim: 0,
-    scotMascDimGae: ['Annag', 'Nandag'],
-    scotFemDimGae: 0,
-    welshMasc: 0,
-    welshFem: ['Alis'],
-    welshMascDim: 0,
-    welshFemDim: 0,
-    isFlower: false,
-    isPuritan: false,
-    isReligious: false,
-    isUnusual: false,
-}
+const nameAllison = { engMasc: ['Allison'], engFem: ['Alice', 'Alis', 'Alyce'], meaning: 'nobleness, nobility', defaultDimRoot: 'Al', engMascDim: ['Alex', 'Alec'], engFemDim: ['Alisoune', 'Ally', 'Alot', 'Helisent', 'Helisoune', 'Lissa'], fraMasc: 0, fraFem: ['Alis', 'Aalis', 'Adelais', 'Alix'], fraMascDim: 0, fraFemDim: ['Alison'], ireMasc: 0, ireFem: 0, ireMascGae: 0, ireFemGae: ['Ailís', 'Ailios', 'Ailse'], ireMascDim: 0, ireFemDim: 0, ireMascDimGae: 0, ireFemDimGae: 0, latMasc: ['Alicia', 'Alitia'], latFem: 0, latMascDim: 0, latFemDim: 0, scotMasc: 0, scotFem: ['Elison'], scotMascGae: 0, scotFemGae: ['Aileas', 'Ailios', 'Ailis'], scotMascDim: 0, scotFemDim: 0, scotMascDimGae: ['Annag', 'Nandag'], scotFemDimGae: 0, welshMasc: 0, welshFem: ['Alis'], welshMascDim: 0, welshFemDim: 0, isFlower: false, isPuritan: false, isReligious: false, isUnusual: false, }
 
 const nameLewis = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: 'famous warrior',
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -1030,7 +800,7 @@ const nameLewis = {
 const nameNicholas = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "victory of the people",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -1071,7 +841,7 @@ const nameNicholas = {
 const nameRoger = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "famous spear",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -1104,7 +874,7 @@ const nameRoger = {
 const nameRowland = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "fame of the land",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -1129,7 +899,7 @@ const nameRowland = {
 const nameJerome = {
     engMasc: 0,
     engFem: 0,
-    meaning: 0,
+    meaning: "sacred name",
     defaultDimRoot: 0,
     engMascDim: 0,
     engFemDim: 0,
@@ -1164,7 +934,7 @@ const nameJerome = {
 };
 
 const nameVivian = {
-    engMasc: 0, engFem: 0, meaning: 0, defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Vivienne'], fraMascDim: 0,
+    engMasc: 0, engFem: 0, meaning: "alive", defaultDimRoot: 0, engMascDim: 0, engFemDim: 0, fraMasc: 0, fraFem: ['Vivienne'], fraMascDim: 0,
     fraFemDim: 0,
     ireMasc: 0,
     ireFem: ['Bevin', 'Vivian', 'Vivionn'],
