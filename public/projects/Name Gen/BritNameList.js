@@ -1,4 +1,5 @@
 // When done, go through and remove all but fav names (or minimum of 3 names/dims)
+// It shouldn't be hard to make it possible to have multiple DimRoots; having just one is an artifact of when this was going to be a series of arrays, I think. 
 
 const nameEdith = {
     engMasc: 0,
