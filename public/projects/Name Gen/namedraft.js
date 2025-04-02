@@ -55,7 +55,7 @@ const nameHenry = {
   meaning: "home ruler",
   defaultDimRoot: ["Hal", "Han", "Hen"],
   engMascDim: ["Hank", "Harry", "Herry"],
-  corFemDim 0,
+  corFemDim: 0,
   cornFem: 0,
   cornDim: 0,
   fraMasc: 0,
