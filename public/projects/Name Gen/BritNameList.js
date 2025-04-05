@@ -54,9 +54,9 @@ console.log(portArray[0].meaning);
 export { portArray };
 
 // TODO
-// — export from BritNameList
-// — import to NameGen
-// — confirm import success
+// ✔ export from BritNameList
+// ✔ import to NameGen
+// ✔ confirm import success
 // — basic skeleton, no sifting
 // — connect to html
 // — confirm success
