@@ -46,6 +46,13 @@ console.log(nameX_Sibyl.fraFem[0][0]) // accessing an array inside an array insi
 console.log(nameX_Sibyl.fraFem[0][0].length)
 console.log(nameX_Sibyl.isPuritan)
 
+const portArray = [nameAlbert_Alberta, nameAllison_Alice, nameAmand_Amanda, nameAmi_Amy, nameAntony_Antonie, nameAusten_Austina, nameCassander_Cassandra, nameCharles_Charline, nameEdmund_X, nameEugene_Eugenia, nameFlorent_Florence, nameFrancis_Frances, nameFrederick_Frederica, nameGeorge_Georgene, nameHenry_Henrietta, nameHugh_Hughina, nameIsolda_Isolde, nameJerome_X, nameJessica, nameJocelin_Josceline, nameJohn_Jane, nameJonathan_X, nameLewis_Lowesa, nameNicholas_Nichola, nameRoger_Rogera, nameRowland_X, nameTheodore_Dorothy, nameVivian_Vivien, nameX_Avice, nameX_Barbara, nameX_Edith, nameX_Helen, nameX_Lettice, nameX_Lora, nameX_Martha, nameX_Matilda, nameX_Mellany, nameX_Sibyl, nameX_Tiffany];
+
+console.log(portArray[0].engFem[1]);
+console.log(portArray[0].meaning);
+
+export { portArray };
+
 // TODO
 // — export from BritNameList
 // — import to NameGen
