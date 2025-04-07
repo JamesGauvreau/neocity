@@ -59,9 +59,12 @@ function rollForInnovation() {
     // Loop until innoMMM.value is 6 or greater
     while (Math.max(...allValues) < 6) {
         yearCurrent += 1;  // Increment the year
-        let rolls = [] // ← build something that can keep track of the previous rolls. 
-        // let rolls = [roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6)];
+        // let rolls = [] // ← build something that can keep track of the previous rolls. 
+        let rolls = [roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6)];
         let rollsBad = [roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6), roll1d(6)];
+
+        // NOTE
+        // Really don't need to record the numbers for posterity, just whether the numbers were sufficient for advancement. 
 
         // If the roll is greater than innoMMM.value, increment the value
         for (let i = 0; i < innovations.length; i++) {
