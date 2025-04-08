@@ -4,32 +4,32 @@ const innovations = [
     {
         title: "Miles' Moving Miracles",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "Room to Live",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "A World Without Roads",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "True Polymorph",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "A Peaceful City",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "Conjured Workforce",
         value: 1,
-        disrupted: false,
+        disrupted: true,
     },
     {
         title: "Coal & Iron",
