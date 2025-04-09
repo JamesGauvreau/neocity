@@ -11,7 +11,7 @@ let cussing = [
     },
     {
         eng: "grail",
-        french: "greal",
+        french: "graal",
     },
     {
         eng: "shit",
