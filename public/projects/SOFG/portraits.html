@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <form id="portraitForm">
+        <fieldset>
+            <legend>Portrait Set Options</legend>
+            <p>For each set of portraits, define its name, the number of portraits in the set, and the format that is
+                being used.</p>
+            <div>
+                <label for="setName">Name of the set: </label>
+                <input type="text" id="setName" name="setName" value="test" required>
+            </div>
+            <div>
+                <label for="setCount">Number of portraits in the set: </label>
+                <input type="number" id="setCount" name="setCount" value="1" min="0" required>
+            </div>
+            <div>
+                <span>Image type: </span>
+                <input type="radio" id="jpg" name="imageType" value="jpg" required>
+                <label for="jpg">.jpg</label>
+                <input type="radio" id="png" name="imageType" value="png" checked>
+                <label for="png">.png</label>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <div id="output" style="margin-top: 20px; font-family: monospace;"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('portraitForm');
+            const outputDiv = document.getElementById('output');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const setName = document.getElementById('setName').value.trim();
+                const setCount = parseInt(document.getElementById('setCount').value, 10);
+                const setTypeInput = document.querySelector('input[name="imageType"]:checked');
+                const setType = setTypeInput ? setTypeInput.value : '';
+
+                const outputLines = [];
+
+                for (let i = 1; i <= setCount; i++) {
+                    const line = `${setName}${i}.${setType}`;
+                    outputLines.push(line);
+                }
+
+                // Display output on the page
+                outputDiv.innerHTML = `<pre>${outputLines.join('\n')}</pre>`;
+            });
+        });
+    </script>
+</body>
