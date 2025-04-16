@@ -8,11 +8,17 @@
     <form id="portraitForm">
         <fieldset>
             <legend>Portrait Set Options</legend>
-            <p>For each set of portraits, define its name, the number of portraits in the set, and the format that is
-                being used.</p>
+            <p>To generate a list of portrait assignments, define the name of a set of portraits, the number of portraits in that set, and the format that is
+                being used. For example, choosing <i>elf</i>, <i>3</i>, and <i>.png</i> would generate:</p>
+                <code>
+                    elf1.png<br>
+                    elf2.png<br>
+                    elf3.png<br>
+                </code>
+                <p>I'll pretty this up in the future, but for now it's functional.</p>
             <div>
                 <label for="setName">Name of the set: </label>
-                <input type="text" id="setName" name="setName" value="test" required>
+                <input type="text" id="setName" name="setName" value="elf" required>
             </div>
             <div>
                 <label for="setCount">Number of portraits in the set: </label>
@@ -25,6 +31,7 @@
                 <input type="radio" id="png" name="imageType" value="png" checked>
                 <label for="png">.png</label>
             </div>
+            <br>
             <button type="submit">Submit</button>
         </fieldset>
     </form>
