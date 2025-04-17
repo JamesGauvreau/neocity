@@ -54,13 +54,11 @@
                 const outputLines = [];
 
                 for (let i = 1; i <= setCount; i++) {
-                    // Pad the number to ensure it's always 3 digits
                     const paddedNumber = String(i).padStart(3, '0');
                     const line = `${setName}${paddedNumber}.${setType}`;
                     outputLines.push(line);
                 }
 
-                // Display output on the page
                 outputDiv.innerHTML = `<pre>${outputLines.join('\n')}</pre>`;
             });
         });
