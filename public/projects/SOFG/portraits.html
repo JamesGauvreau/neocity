@@ -1,66 +1,327 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait and Agent Form</title>
+    <style>
+        /* Layout for two columns */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
+        .form-container {
+            width: 48%;
+        }
+
+        .output-container {
+            width: 48%;
+            border-left: 2px solid #ccc;
+            padding-left: 20px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+
+        .checkbox-item {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 5px 10px;
+        }
+
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
-    <form id="portraitForm">
-        <fieldset>
-            <legend>Portrait Set Options</legend>
-            <p>To generate a list of portrait assignments, define the name of a set of portraits, the number of portraits in that set, and the format that is
-                being used. For example, choosing <i>elf</i>, <i>3</i>, and <i>.png</i> would generate:</p>
-                <code>
-                    elf1.png<br>
-                    elf2.png<br>
-                    elf3.png<br>
-                </code>
-                <p>I'll pretty this up in the future, but for now it's functional.</p>
-            <div>
-                <label for="setName">Name of the set: </label>
-                <input type="text" id="setName" name="setName" value="elf" required>
-            </div>
-            <div>
-                <label for="setCount">Number of portraits in the set: </label>
-                <input type="number" id="setCount" name="setCount" value="1" min="0" required>
-            </div>
-            <div>
-                <span>Image type: </span>
-                <input type="radio" id="jpg" name="imageType" value="jpg" required>
-                <label for="jpg">.jpg</label>
-                <input type="radio" id="png" name="imageType" value="png" checked>
-                <label for="png">.png</label>
-            </div>
-            <br>
-            <button type="submit">Submit</button>
-        </fieldset>
-    </form>
+    <div class="container">
+        <!-- Form content -->
+        <div class="form-container">
+            <form id="portraitForm">
+                <fieldset>
+                    <legend>Portrait Set Options</legend>
+                    <p>To generate a list of portrait assignments, define the name of a set of portraits, the number of
+                        portraits in that set, and the format that is being used. For example, choosing <i>elf</i>,
+                        <i>3</i>, and <i>.png</i> would generate:
+                    </p>
+                    <code>
+                        elf1.png<br>
+                        elf2.png<br>
+                        elf3.png<br>
+                    </code>
+                    <p>I'll pretty this up in the future, but for now it's functional.</p>
+                    <div>
+                        <label for="modPrefix">Mod Prefix: </label>
+                        <input type="text" id="modPrefix" name="modPrefix" value="SOFGmod" required>
+                    </div>
+                    <div>
+                        <label for="setReplace">Name of the old set:</label>
+                        <input type="text" id="setReplace" name="setReplace" value="ElfM" required>
+                    </div>
+                    <div>
+                        <label for="setName">Name of the new set: </label>
+                        <input type="text" id="setName" name="setName" value="elf" required>
+                    </div>
+                    <div>
+                        <label for="setCount">Number of portraits in the set: </label>
+                        <input type="number" id="setCount" name="setCount" value="1" min="0" required>
+                    </div>
+                    <div>
+                        <span>Image type: </span>
+                        <input type="radio" id="jpg" name="imageType" value="jpg" required>
+                        <label for="jpg">.jpg</label>
+                        <input type="radio" id="png" name="imageType" value="png" checked>
+                        <label for="png">.png</label>
+                    </div>
+                    <br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
 
-    <div id="output" style="margin-top: 20px; font-family: monospace;"></div>
+            <form id="agentsForm">
+                <fieldset>
+                    <legend>Agent Portraits</legend>
+                    <p>These have been divided into vanilla agents and mod agents.</p>
+                    <fieldset>
+                        <legend>Vanilla Agents</legend>
+                        <div class="checkbox-container">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsAristocrat" name="agentsAristocrat">
+                                <label for="agentsAristocrat">Aristocrat</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsBanditKing" name="agentsBanditKing">
+                                <label for="agentsBanditKing">Bandit King</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsBaroness" name="agentsBaroness">
+                                <label for="agentsBaroness">Baroness</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsBuccaneer" name="agentsBuccaneer">
+                                <label for="agentsBuccaneer">Buccaneer</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsCourtier" name="agentsCourtier">
+                                <label for="agentsCourtier">Courtier</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsCursed" name="agentsCursed">
+                                <label for="agentsCursed">Cursed</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsDissident" name="agentsDissident">
+                                <label for="agentsDissident">Dissident</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsExile" name="agentsExile">
+                                <label for="agentsExile">Exile</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsHarvester" name="agentsHarvester">
+                                <label for="agentsHarvester">Harvester</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsHierophant" name="agentsHierophant">
+                                <label for="agentsHierophant">Hierophant</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsInfectionVictim" name="agentsInfectionVictim">
+                                <label for="agentsInfectionVictim">Late-Stage Infection Victim</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsMonarch" name="agentsMonarch">
+                                <label for="agentsMonarch">Monarch</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsPlagueDoctor" name="agentsPlagueDoctor">
+                                <label for="agentsPlagueDoctor">Plague Doctor</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsSeeker" name="agentsSeeker">
+                                <label for="agentsSeeker">Seeker</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsShaman" name="agentsShaman">
+                                <label for="agentsShaman">Shaman</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsSpellbinder" name="agentsSpellbinder">
+                                <label for="agentsSpellbinder">Spellbinder</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsSupplicant" name="agentsSupplicant">
+                                <label for="agentsSupplicant">Supplicant</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsSurvivor" name="agentsSurvivor">
+                                <label for="agentsSurvivor">Survivor</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsTrickster" name="agentsTrickster">
+                                <label for="agentsTrickster">Trickster</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsWarlock" name="agentsWarlock">
+                                <label for="agentsWarlock">Warlock</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="agentsWarlord" name="agentsWarlord">
+                                <label for="agentsWarlord">Warlord</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Mod Agents</legend>
+                        <div class="checkbox-container">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formCourtesan" name="formCourtesan">
+                                <label for="formCourtesan">Courtesan</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formDuelist" name="formDuelist">
+                                <label for="formDuelist">Duelist</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formFisherman" name="formFisherman">
+                                <label for="formFisherman">Fisherman</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formOrcElder" name="formOrcElder">
+                                <label for="formOrcElder">Orc Elder</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formOrcSpiritcaller" name="formOrcSpiritcaller">
+                                <label for="formOrcSpiritcaller">Orc Spiritcaller</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formOtherworlder" name="formOtherworlder">
+                                <label for="formOtherworlder">Otherworlder</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formRatKing" name="formRatKing">
+                                <label for="formRatKing">Rat King</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formRedeemer" name="formRedeemer">
+                                <label for="formRedeemer">Redeemer</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formRobberBaron" name="formRobberBaron">
+                                <label for="formRobberBaron">Robber Baron</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formWhisperer" name="formWhisperer">
+                                <label for="formWhisperer">Whisperer</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="formZealot" name="formZealot">
+                                <label for="formZealot">Zealot</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Output container -->
+        <div class="output-container">
+            <div id="output" style="margin-top: 20px;"></div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('portraitForm');
+            const portraitForm = document.getElementById('portraitForm');
             const outputDiv = document.getElementById('output');
-
-            form.addEventListener('submit', function (event) {
+    
+            portraitForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-
+    
+                const modPrefix = document.getElementById('modPrefix').value.trim();
+                const setReplace = document.getElementById('setReplace').value.trim();
                 const setName = document.getElementById('setName').value.trim();
                 const setCount = parseInt(document.getElementById('setCount').value, 10);
                 const setTypeInput = document.querySelector('input[name="imageType"]:checked');
                 const setType = setTypeInput ? setTypeInput.value : '';
-
+    
                 const outputLines = [];
-
+    
                 for (let i = 1; i <= setCount; i++) {
                     const paddedNumber = String(i).padStart(3, '0');
-                    const line = `${setName}${paddedNumber}.${setType}`;
+                    const line = `ADD_TO portraits.${setReplace} ${modPrefix}.${setName}${paddedNumber}.${setType}`;
                     outputLines.push(line);
                 }
-
-                outputDiv.innerHTML = `<pre>${outputLines.join('\n')}</pre>`;
+    
+                // Append a line break before new output if there is already content
+                if (outputDiv.innerHTML.trim() !== '') {
+                    outputDiv.innerHTML += '<br>'; // Add one line break before new output
+                }
+    
+                // Append new output to the existing content
+                outputDiv.innerHTML += `<pre>${outputLines.join('\n')}</pre>`;
+            });
+    
+            // Handling agent form submission
+            const agentsForm = document.getElementById('agentsForm');
+    
+            agentsForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+                const modPrefix = document.getElementById('modPrefix').value.trim();
+                const setTypeInput = document.querySelector('input[name="imageType"]:checked');
+                const setType = setTypeInput ? setTypeInput.value.trim() : '';
+    
+                const outputLines = [];
+    
+                const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+    
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                        if (label) {
+                            const agentName = label.textContent.trim().replace(/\s+/g, '');
+                            const line = `REPLACE agent_${agentName} ${modPrefix}.${agentName}.${setType}`;
+                            outputLines.push(line);
+                        }
+                    }
+                });
+    
+                // If no agents are selected, show a message, otherwise append the output
+                if (outputLines.length === 0) {
+                    if (outputDiv.innerHTML.trim() !== '') {
+                        outputDiv.innerHTML += '<br>'; // Add one line break before new message
+                    }
+                    outputDiv.innerHTML += `<p>No agents selected.</p>`;
+                } else {
+                    // Append the new output
+                    if (outputDiv.innerHTML.trim() !== '') {
+                        outputDiv.innerHTML += '<br>'; // Add one line break before new output
+                    }
+                    outputDiv.innerHTML += `<pre>${outputLines.join('\n')}</pre>`;
+                }
             });
         });
     </script>
+    
+    
+    
 </body>
+
+</html>
