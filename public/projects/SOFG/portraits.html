@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portrait and Agent Form</title>
     <style>
-        /* Layout for two columns */
         .container {
             display: flex;
             justify-content: space-between;
@@ -250,48 +249,48 @@
         document.addEventListener('DOMContentLoaded', function () {
             const portraitForm = document.getElementById('portraitForm');
             const outputDiv = document.getElementById('output');
-    
+
             portraitForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-    
+
                 const modPrefix = document.getElementById('modPrefix').value.trim();
                 const setReplace = document.getElementById('setReplace').value.trim();
                 const setName = document.getElementById('setName').value.trim();
                 const setCount = parseInt(document.getElementById('setCount').value, 10);
                 const setTypeInput = document.querySelector('input[name="imageType"]:checked');
                 const setType = setTypeInput ? setTypeInput.value : '';
-    
+
                 const outputLines = [];
-    
+
                 for (let i = 1; i <= setCount; i++) {
                     const paddedNumber = String(i).padStart(3, '0');
                     const line = `ADD_TO portraits.${setReplace} ${modPrefix}.${setName}${paddedNumber}.${setType}`;
                     outputLines.push(line);
                 }
-    
+
                 // Append a line break before new output if there is already content
                 if (outputDiv.innerHTML.trim() !== '') {
                     outputDiv.innerHTML += '<br>'; // Add one line break before new output
                 }
-    
+
                 // Append new output to the existing content
                 outputDiv.innerHTML += `<pre>${outputLines.join('\n')}</pre>`;
             });
-    
+
             // Handling agent form submission
             const agentsForm = document.getElementById('agentsForm');
-    
+
             agentsForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-    
+
                 const modPrefix = document.getElementById('modPrefix').value.trim();
                 const setTypeInput = document.querySelector('input[name="imageType"]:checked');
                 const setType = setTypeInput ? setTypeInput.value.trim() : '';
-    
+
                 const outputLines = [];
-    
+
                 const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
-    
+
                 checkboxes.forEach(checkbox => {
                     if (checkbox.checked) {
                         const label = document.querySelector(`label[for="${checkbox.id}"]`);
@@ -302,7 +301,7 @@
                         }
                     }
                 });
-    
+
                 // If no agents are selected, show a message, otherwise append the output
                 if (outputLines.length === 0) {
                     if (outputDiv.innerHTML.trim() !== '') {
@@ -319,9 +318,9 @@
             });
         });
     </script>
-    
-    
-    
+
+
+
 </body>
 
 </html>
