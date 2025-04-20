@@ -47,7 +47,7 @@
 
 <body>
     <div class="container">
-        <!-- Form content -->
+
         <div class="form-container">
             <form id="portraitForm">
                 <fieldset>
@@ -239,7 +239,6 @@
             </form>
         </div>
 
-        <!-- Output container -->
         <div class="output-container">
             <div id="output" style="margin-top: 20px;"></div>
         </div>
@@ -277,7 +276,6 @@
                 outputDiv.innerHTML += `<pre>${outputLines.join('\n')}</pre>`;
             });
 
-            // Handling agent form submission
             const agentsForm = document.getElementById('agentsForm');
 
             agentsForm.addEventListener('submit', function (event) {
