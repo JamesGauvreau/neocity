@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 
 <head>
-<form>
-    <fieldset>
-        <legend>Team #1</legend>
-        <div>
-            <label for="team1name">Team Name:</label>
-            <input type="text" id="team1name" name="team1name" value="Chudley Cannons" required>
-        </div>
-        <div>
-            <span>Keeper:</span>
-            <input type="radio" id="team1keeper-bad" name="team1keeper" value="bad">
-            <label for="team1keeper">bad</label>
-            <input type="radio" id="team1keeper-bad" name="team1keeper" value="good" checked>
-            <label for="team1keeper">good</label>
-            <input type="radio" id="team1keeper-bad" name="team1keeper" value="superb">
-            <label for="team1keeper">superb</label>
-        </div>
-    </fieldset>
-    <fieldset>
-        <legend>Team #2</legend>
-    </fieldset>
-</form>
+
 </head>
 
 <body>
+    <form id="quidditchForm">
+        <fieldset>
+            <legend>Team #1</legend>
+            <div>
+                <label for="team1name">Team Name:</label>
+                <input type="text" id="team1name" name="team1name" value="Chudley Cannons" required>
+            </div>
+            <div>
+                <span>Keeper:</span>
+                <input type="radio" id="team1keeper-subpar" name="team1keeper" value="bad">
+                <label for="team1keeper-subpar">subpar</label>
+
+                <input type="radio" id="team1keeper-good" name="team1keeper" value="good" checked>
+                <label for="team1keeper-good">good</label>
+
+                <input type="radio" id="team1keeper-superb" name="team1keeper" value="superb">
+                <label for="team1keeper-superb">superb</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Team #2</legend>
+            <!-- Add team 2 inputs here if needed -->
+        </fieldset>
+        <button type="submit">Next Round</button>
+    </form>
+
+    <!-- Add this div to show output -->
+    <div id="output"></div>
+
     <script>
+        function roll(number) {
+            return Math.floor(Math.random() * number)
+        };
+
+        function keeperRoll(score) {
+            if (score == "subpar") {
+                return 8;
+            } else if (score == "good") {
+                return 10;
+            } else if (score == "superb") {
+                return 12;
+            } else {
+                return "error"
+            };
+        }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const quidditchForm = document.getElementById('quidditchForm');
+                const outputDiv = document.getElementById('output');
+
+                quidditchForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const team1Name = document.getElementById('team1name').value;
+                    const team1Keeper = document.querySelector('input[name="team1keeper"]:checked').value;
+                    let keeperResult = keeperRoll(team1Keeper);
+
+                    outputDiv.innerHTML = `<p>${keeperResult}</p>`;
+                });
+            });
+
         // PSEUDO
         // 3 Chasers, 2 Beaters, 1 Keeper, 1 Seeker
         // Each player can be bad, good, or superb. 
         // Beaters can focus on chasers or focus on the seeker. 
-            // What effect do beaters have? 
+        // What effect do beaters have? 
         // Seeker can focus on catching the Snitch or focus on interfering with the other Seeker. 
         // 15 minute intervals. 
         // Seeker rolls d20, success on 16+, if both Seekers roll success then higher number wins, nobody wins on a tie.
-            // If seeker interferes with other seeker, then the opposed seeker gets a level of disadvantage and, if the interferer rolls higher than the opposed seeker, then the opposed seeker doesn't win even on succ.
+        // If seeker interferes with other seeker, then the opposed seeker gets a level of disadvantage and, if the interferer rolls higher than the opposed seeker, then the opposed seeker doesn't win even on succ.
         // Beaters give a level of disadvantage to whichever side they're focusing on.
         // Chasers contribute 1d4, 1d6, or 1d8 to their pool, for 3d4 to 3d8 total.
-        // Keepers deduct 1d8, 1d10, or 1d12 points. 
+        // Keepers deduct 1d8, 1d10, or 1d12 points.  
     </script>
 </body>
