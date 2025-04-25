@@ -263,7 +263,7 @@
 
                 for (let i = 1; i <= setCount; i++) {
                     const paddedNumber = String(i).padStart(3, '0');
-                    const line = `ADD_TO portraits.${setReplace} ${modPrefix}.${setName}${paddedNumber}.${setType}`;
+                    const line = `ADD_TO portraits_${setReplace} ${modPrefix}.${setName}${paddedNumber}.${setType}`;
                     outputLines.push(line);
                 }
 
