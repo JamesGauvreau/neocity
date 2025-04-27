@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- TODO
+    Make sure that the outputs are lowercase (for agents).
+    Trim spaces in between words (for agents).
+    plagueDoctor needs a cap on "D"octor.
+    Harvester needs to be Reaper.
+    Remove modded agents and verify each one at a time. 
+    Mention when last updated.
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -293,9 +302,16 @@
                     if (checkbox.checked) {
                         const label = document.querySelector(`label[for="${checkbox.id}"]`);
                         if (label) {
-                            const agentName = label.textContent.trim().replace(/\s+/g, '');
-                            const line = `REPLACE agent_${agentName} ${modPrefix}.${agentName}.${setType}`;
-                            outputLines.push(line);
+                            if (label === "agentsPlagueDoctor") {
+                                const agentName = "plagueXDoctor";
+                                const line = `REPLACE agent_${agentName} ${modPrefix}.${agentName}.${setType}`;
+                                outputLines.push(line);
+
+                            } else {
+                                const agentName = label.textContent.trim().replace(/\s+/g, '');
+                                const line = `REPLACE agent_${agentName} ${modPrefix}.${agentName}.${setType}`;
+                                outputLines.push(line);
+                            }
                         }
                     }
                 });
