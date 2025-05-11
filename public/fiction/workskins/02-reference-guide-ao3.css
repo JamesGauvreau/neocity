@@ -82,6 +82,20 @@ a:visited.byline {
   border-bottom: 0px;
 } */
 
+/* Specific styling for byline link */
+.preface .byline a {
+  color: #111; /* Set desired byline color */
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Ensure no link color overrides for byline */
+a.byline,
+a:link.byline,
+a:visited.byline {
+  color: inherit; /* Ensure it uses the color from the .preface .byline a */
+}
+
 h3.byline {
   color: #111;
   text-decoration: none;

@@ -17,9 +17,18 @@ const namesRef = [
     { nomen: "Jamin", ref: "Benjamin minus Ben" },
     { nomen: "Edict", ref: "Benedict minus Ben" },
     { nomen: "None", ref: "Nun, father of Joshua" },
-    { nomen: "Samsson", ref: "Sam's Son, Samson" },
+    /* { nomen: "Samsson", ref: "Sam's Son, Samson" }, */ 
     { nomen: "Samwell", ref: "Samuel" },
     { nomen: "Vory", ref: "Voree Plates" },
     { nomen: "Pareen", ref: "Remember Me 3" },
-    { nomen: "Sarteen", ref: "Remember Me 3" }
+    { nomen: "Sarteen", ref: "Remember Me 3" },
+    { nomen: "Farious", ref: "Multifarious"},
+];
+
+const namesDim = [
+    { nomen: "Bram", ref: "Abraham"},
+    { nomen: "Sander", ref: "Alexander"},
+    { nomen: "Drew", ref: "Andrew"},
+    { nomen: "Barney", ref: "Barn"},
+    { nomen: "Tolly", ref: "Bartholomew"},
 ]

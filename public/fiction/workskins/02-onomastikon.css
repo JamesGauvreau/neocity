@@ -74,13 +74,13 @@ h4 {
 /* Still need to fix color of byline in Reference Guide */
 
 /* a.byline,
-  a:link.byline,
-  a:visited.byline {
-    color: #111;
-    text-decoration-line: none;
-    text-decoration-style: none;
-    border-bottom: 0px;
-  } */
+a:link.byline,
+a:visited.byline {
+  color: #111;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  border-bottom: 0px;
+} */
 
 h3.byline {
   color: #111;
@@ -100,14 +100,40 @@ h3.byline {
 }
 
 /* a h3 {
-    color: black;
-    text-decoration-line: none;
-    text-decoration-style: none;
-    border-bottom: 0px;
-  } */
+  color: black;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  border-bottom: 0px;
+} */
 
 .img {
   padding: 1em;
+}
+
+h1.chapter {
+  font-size: 225%;
+  border-bottom: 0;
+  font-weight: bold;
+  text-align: center
+}
+
+hr {
+  border-top: 5px dotted black;
+  border-bottom: 5px dotted black;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5px;
+
+}
+
+h1 a {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.preface .userstuff a {
+  border-bottom: none;
+  text-decoration: none;
 }
 
 /* Renaming chapters */
@@ -115,6 +141,83 @@ h3.byline {
 .chapter.preface .title {
   visibility: hidden;
   line-height: 0;
+}
+
+#chapter-1 .chapter.preface.group .title::after {
+  content: "Table of Contents";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-2 .chapter.preface.group .title::after {
+  content: "Canonical Families";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-3 .chapter.preface.group .title::after {
+  content: "The Sacred Twenty-eight";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-4 .chapter.preface.group .title::after {
+  content: "Surnames for British and Irish Characters";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-5 .chapter.preface.group .title::after {
+  content: "Given Names for British and Irish Characters";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-6 .chapter.preface.group .title::after {
+  content: "Names for Muggle-borns and Some Half-bloods";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-6 .chapter.preface.group .title::after {
+  content: "Constellations, Stars, and Other Celestial Bodies";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-7 .chapter.preface.group .title::after {
+  content: "Weekdays and Months";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-8 .chapter.preface.group .title::after {
+  content: "Given Names Derived from Surnames";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-9 .chapter.preface.group .title::after {
+  content: "Names for French Characters";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
+}
+
+#chapter-10 .chapter.preface.group .title::after {
+  content: "Names for Non-human and Part-human Characters";
+  visibility: visible;
+  line-height: 1em;
+  display: block;
 }
 
 /* Political Party Colors */
