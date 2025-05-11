@@ -39,28 +39,28 @@ a {
 
 h1 {
   font-weight: 500;
-  padding: 0.125em;
+  /* padding: 0.125em; */
   border-bottom: 0.25em double #333;
   text-align: left;
 }
 
 h2 {
   font-weight: 500;
-  padding: 0.125em;
+  margin: 0;
   text-decoration-line: underline;
   text-decoration-style: double;
   border-bottom: 0;
-  text-underline-offset: 2px;
+  /* text-underline-offset: 2px; */
 }
 
 h3,
 h4 {
   font-weight: 500;
-  padding: 0.125em;
+  /* padding: 0.125em; */
   text-decoration-line: underline;
   text-decoration-style: double;
   border-bottom: 0;
-  text-underline-offset: 3px;
+  /* text-underline-offset: 3px; */
 }
 
 .preface h3 {
@@ -185,35 +185,35 @@ h1 a {
   display: block;
 }
 
-#chapter-6 .chapter.preface.group .title::after {
+#chapter-7 .chapter.preface.group .title::after {
   content: "Constellations, Stars, and Other Celestial Bodies";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
-#chapter-7 .chapter.preface.group .title::after {
+#chapter-8 .chapter.preface.group .title::after {
   content: "Weekdays and Months";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
-#chapter-8 .chapter.preface.group .title::after {
+#chapter-9 .chapter.preface.group .title::after {
   content: "Given Names Derived from Surnames";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
-#chapter-9 .chapter.preface.group .title::after {
+#chapter-10 .chapter.preface.group .title::after {
   content: "Names for French Characters";
   visibility: visible;
   line-height: 1em;
   display: block;
 }
 
-#chapter-10 .chapter.preface.group .title::after {
+#chapter-11 .chapter.preface.group .title::after {
   content: "Names for Non-human and Part-human Characters";
   visibility: visible;
   line-height: 1em;
