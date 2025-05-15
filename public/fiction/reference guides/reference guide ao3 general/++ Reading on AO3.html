@@ -23,9 +23,11 @@
 
 <body>
     <h1 style="font-size:40px; border-bottom: 0; background-color: black; color:white; margin: -1%; padding: 2%">Reading
-        on AO3</h1>
-    <h2>Chapter Summary</h2>
-    <p>This chapter has no summary.</p>
+        and Commenting on AO3</h1>
+    <h2><a name="Contents" rel="nofollow" id="Contents"></a>Chapter Summary</h2>
+    <p><a href="#Comfy" rel="nofollow">▼</a> Comfy-fy Your Reading Experience<br>
+        <a href="#R&R" rel="nofollow">▼</a> Please Read and Review!
+    </p>
     <hr>
     <p>If you're having trouble with Archive of Our Own, you can check whether it's a you-problem at AO3 Status on <a
             href="https://bsky.app/profile/status.archiveofourown.org">Bluesky</a>. You can also check with <a
@@ -36,12 +38,14 @@
         of Our Own. If you use an AO3 app, please understand that there are security risks – you are handing out your
         login information to somebody that is not associated with the Archive – and if you encounter technical problems
         then there is nobody that can help you except whoever built the app.</p>
-    <h1>Comfy-fy Your Reading Experience</h1>
+    <a name="Comfy" rel="nofollow" id="Comfy"></a>
+    <h1>Comfy-fy Your Reading Experience <a href="#Contents" rel="nofollow">▲</a></h1>
     <p><b>You are responsible for your own consumption of media.</b> The Archive of Our Own is more modular than many
         other websites: Not only can you read the tags of a work in order to decide whether that work is right for you,
         but you can even use site "skins" to hide works with a given tag so that you don't see these in the first place.
         If the work's creator has properly tagged their work, they are not responsible for any bad feelings that may
         arise as you read or view it.</p>
+    <h2>Caveat Lector</h2>
     <p>But what <i>is</i> "proper tagging," exactly? I'll delve deeper into this more deeply in the Tagging Guide, but
         it's worth noting that there are two kinds of tags that authors are required to observe:</p>
     <ol>
@@ -67,10 +71,21 @@
         is adult material or graphic violence or whatever, this is like chugging a bottle of acetaminophen and then
         blaming the drugstore when your liver pops.</p>
     </p>
+    <h2>Reporting Fics on AO3</h2>
+    <p>The good people who volunteer at Archive of Our Own are, um, volunteers. Every report that you make must be
+        processed by <i>somebody</i>, and if the report is baseless then you've just wasted the time of the good folks
+        on the Polcy & Abuse Team. Here are a few things that people often get mixed up about:</p>
+    <ul>
+        <li>People <b>are not</b> allowed to monetize their works on AO3.</li>
+        <li>People <b>are</b> allowed to link to other websites, and talk about monetization on those websites.</li>
+        <li>People <b>are</b> allowed to write, draw, and discuss things that you think are squicky.</li>
+    </ul>
+
     <h2>Site Skins</h2>
     <p>“<a href="https://archiveofourown.org/works/41589201/chapters/104315178" rel="nofollow">How to Block Tags With
-            Site Skins (And Get Real Specific About It)</a>,” by najio, doesn't let you just block tags, but also
-        highlight them, block stories by particular authors or by the number of tags, and more. <span>There is also a
+            Site Skins (And Get Real Specific About It)</a>,” by najio, doesn't just let you block tags, but also
+        lets you highlight them, block stories by particular authors or by the number of tags, and more. <span>There is
+            also a
             tutorial for using the “Blurbling Hide” skin to </span><a
             href="https://wrangletangle.livejournal.com/12776.html" rel="nofollow"><span>block tag categories that you
                 don't want to see on AO3</span></a><span>.</span></p>
@@ -85,7 +100,7 @@
     <p></p>
     <details>
         <summary>Using Tampermonkey is simple. Click this paragraph for a quick tutorial. </summary>
-        </p> 
+        </p>
         <div style="border-style: solid; border-width: 2px; padding: 1%;">
             <p>After you've added it to your browser, click the extension and then click onto the
                 dashboard, as seen in the images below.</p>
@@ -96,7 +111,8 @@
             <img src="https://archiveofourown.org/images/ao3_logos/logo_42.png">
             <!-- <p>Refer to <code>this section</code> for general guidance on using Tampermonkey.</p> -->
             <p>Adding a script is as easy as clicking the install button.</p>
-            <img src="https://archiveofourown.org/images/ao3_logos/logo_42.png"></div>
+            <img src="https://archiveofourown.org/images/ao3_logos/logo_42.png">
+        </div>
     </details>
     <p>Scripts that I recommend include:</p>
     <ul>
@@ -120,7 +136,8 @@
     </ul>
     <!-- You are largely responsible for your experience on Archive of Our Own. So long as an author tags their work responsibly, it is not their fault if you read a story and have a bad time because of something that was mentioned in the tags. It is also not their fault if you have a bad time because just seeing the tag upset you. -->
 
-    <h1>Please Read and Review!</h1>
+    <a name="R&R" rel="nofollow" id="R&R"></a>
+    <h1>Please Read and Review! <a href="#Contents" rel="nofollow">▲</a></h1>
     <p>Nobody publishes on Archive of Our Own because they don't want people to read what they wrote. <b>Comment on
             other people's works!</b> If nobody commented, then very few people would publish.</p>
     <ul>
@@ -189,12 +206,18 @@
         <li><a href="https://greasyfork.org/en/scripts/427903-ao3-comment-assist" rel="nofollow">AO3 Comment Assist</a>,
             by Van Irie, which prompts you to leave a comment when you hit the kudos button. By default, the extension
             also deposits (in the comment box) a commenting guide for people who haven't commented before, but you can
-            replace this with a short comment prompt or just turn it off. To do so, you'll need to navigate to your
-            Tampermonkey dashboard and select “ao3 Comment Assist.” Below //SETUP// will be a line reading “var
-            assist_type = 1,” and below <em>that</em> is key to explain settings 1, 2, and 3. If you prefer one of the
-            other settings, then change the 1 to a 2 or a 3 and then install (or reinstall) the script. The random
-            comment prompt is determined when the page loads, so if you want a different prompt then you'll need to
-            refresh the page and hit the Kudos button again.</li>
+            replace this with a short comment prompt or just turn it off. To do so:
+            <ol>
+                <li>Navigate to your Tampermonkey dashboard.</li>
+                <li>Select "ao3 Comment Assist.</li>
+                <li>Below //SETUP// will be a line reading “var assist_type = 1.”</li>
+                <li>Below <em>that</em> is key to explain settings 1, 2, and 3.</li>
+                <li>If you prefer one of the other settings, then change the 1 to a 2 or a 3 and then install (or
+                    reinstall) the script.</li>
+            </ol>
+            <p>The random comment prompt is determined when the page loads, so if you want a different prompt then
+                you'll need to refresh the page and hit the Kudos button again.</p>
+        </li>
         <li><a href="https://greasyfork.org/en/scripts/395902-ao3-floating-comment-box" rel="nofollow">AO3 Floating
                 Comment Box</a>, by ScriptMouse, creates a little blue button in the upper-left corner of your screen
             when you're on a fic's page. If you click that button, it creates a box at the bottom of your screen which
@@ -212,10 +235,5 @@
             comments).</li>
     </ul>
 
-    <h1>How-to: Beta Read</h1>
-    <h2>Useful resources:</h2>
-    <ul>
-        <li>“<a href="https://archiveofourown.org/works/30364290/chapters/74854959" rel="nofollow">Guide to Beta Reading
-                (for Authors and Beta Readers)</a>,” by theirprofoundbond.</li>
-    </ul>
+
 </body>

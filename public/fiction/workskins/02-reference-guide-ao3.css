@@ -2,6 +2,7 @@
 Known Issues: 
 + Headers need to be regularized, but without affecting the preface area: notes, summary, etc. 
 + The link coloration affects my username link. 
++ Links successfully robbed of their underlines in h1. 
 
 */
 
@@ -82,20 +83,6 @@ a:visited.byline {
   border-bottom: 0px;
 } */
 
-/* Specific styling for byline link */
-.preface .byline a {
-  color: #111; /* Set desired byline color */
-  text-decoration: none;
-  border-bottom: none;
-}
-
-/* Ensure no link color overrides for byline */
-a.byline,
-a:link.byline,
-a:visited.byline {
-  color: inherit; /* Ensure it uses the color from the .preface .byline a */
-}
-
 h3.byline {
   color: #111;
   text-decoration: none;
@@ -119,6 +106,36 @@ h3.byline {
   text-decoration-style: none;
   border-bottom: 0px;
 } */
+
+.img {
+  padding: 1em;
+}
+
+h1.chapter {
+  font-size: 225%;
+  border-bottom: 0;
+  font-weight: bold;
+  text-align: center
+}
+
+hr {
+  border-top: 5px dotted black;
+  border-bottom: 5px dotted black;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5px;
+
+}
+
+h1 a {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.preface .userstuff a {
+  border-bottom: none;
+  text-decoration: none;
+}
 
 .img {
   padding: 1em;
