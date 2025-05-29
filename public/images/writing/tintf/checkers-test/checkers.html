@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+<style>
+ .tapestrycont {
+   width: 100%;
+   margin: 0;
+   overflow: hidden;
+   height: 4em;
+   border-radius: 1em;
+   border-color: #8B4513;
+   border-style: double;
+   border-width: 0;
+}
+
+.tapestry {
+   height: 4em;
+}
+
+.soundcloud {
+   width: 80vw;
+   max-width: 35em;
+}
+
+.picture {
+   width: 35em;
+   max-width: 80%;
+   border-color: #8B4513;
+   border-style: double;
+   border-width: .5vw;
+}
+
+img.quarter {
+   width: 23.5%;
+   border-radius: .5em;
+}
+
+img.fifth {
+   width: 18.5%;
+}
+
+img.quarter:hover {
+   transform: scale(1.2);
+}
+
+.imgleft {
+   height: 8.4em;
+   float: left;
+   margin-left: .5em;
+   margin-bottom: .2em;
+   border-radius: .5em;
+}
+
+.imgleft2 {
+   width: 4em;
+   max-width: 15vw;
+   float: left;
+   margin-left: .5em;
+   margin-bottom: .2em;
+}
+
+.imgleft3 {
+   width: 7em;
+   max-width: 20vw;
+   float: left;
+   margin-left: .5em;
+   margin-bottom: .2em;
+}
+
+hr {
+   width: 50%;
+}
+
+blockquote {
+   font-family: inherit;
+}
+
+.body {
+   text-align: left;
+}
+
+.book {
+   font-family: "Century Schoolbook", "Century Schoolbook New", Book Antiqua, Century, Palatino, serif;
+   font-size: 110%;
+   text-align: justify;
+   hyphens: auto;
+}
+
+.smallcaps {
+   font-variant: small-caps;
+}
+
+.large {
+   font-size: 130%;
+}
+
+.hide {
+   display: none;
+}
+
+.letter {
+   text-align: left;
+   font-family: "Monotype Corsiva", "Apple Chancery", "Lucida Handwriting";
+   font-style: italic;
+}
+
+.fantasy {
+   font-family: Zapfino, cursive;
+}
+
+.chart {
+   text-indent: -1em;
+   margin-left: 1em;
+}
+
+.news {
+   border-width: 1px;
+   border-style: dotted;
+   padding: 0.5em 1em;
+   font-family: Georgia, serif, Verdana, "Times New Roman", times, courier, serif;
+   font-size: 110%;
+   text-align: justify;
+   font-weight: 500;
+   transform: skewY(-0.5deg) scaleX(.95);
+}
+
+.firstline::first-line {
+   font-weight: 650;
+   text-transform: uppercase;
+}
+
+.firstline::first-letter {
+   float: left;
+   font-family: Georgia, cursive, fantasy;
+   font-size: 75px;
+   font-style: normal;
+   line-height: 60px;
+   margin-right: 5px;
+   padding-top: 4px;
+   padding-left: 3px;
+   padding-right: 3px;
+}
+
+.centerleft {
+   width: max-content;
+   max-width: 100%;
+   margin: 0 auto;
+   text-align: left;
+   hyphens: auto;
+}
+
+.twocolumns {
+   width: max-content;
+   display: inline-block;
+}
+
+table {
+   width: max-content;
+   max-width: 90%;
+}
+
+td,
+th {
+   padding-left: 1em;
+   text-indent: -1em;
+}
+
+.red {
+   color: red;
+}
+
+.blue {
+   color: blue;
+}
+
+.green {
+   color: green;
+}
+
+.chess-container {
+   width: max-content;
+   margin: 0 auto;
+}
+
+.chess-board {
+   position: relative;
+   width: 240px;
+   height: 240px;
+   margin: 0;
+   padding: 0;
+   text-indent: 0;
+   border: none;
+   display: block;
+   background-color: #e5d3b3;
+   background-image: linear-gradient(45deg, #98633b 25%, transparent 25%, transparent 75%, #98633b 75%), linear-gradient(45deg, #98633b 25%, #e5d3b3 25%, #e5d3b3 75%, #98633b 75%);
+   background-size: 60px 60px;
+   background-position: 0 0, 30px 30px;
+}
+
+.at-col-B {
+   left: 30px;
+}
+
+.at-col-C {
+   left: 60px;
+}
+
+.at-col-D {
+   left: 90px;
+}
+
+.at-col-E {
+   left: 120px;
+}
+
+.at-col-F {
+   left: 150px;
+}
+
+.at-col-G {
+   left: 180px;
+}
+
+.at-col-H {
+   left: 210px;
+}
+
+.at-row-7 {
+   top: 30px;
+}
+
+.at-row-6 {
+   top: 60px;
+}
+
+.at-row-5 {
+   top: 90px;
+}
+
+.at-row-4 {
+   top: 120px;
+}
+
+.at-row-3 {
+   top: 150px;
+}
+
+.at-row-2 {
+   top: 180px;
+}
+
+.at-row-1 {
+   top: 210px;
+}
+
+.chess-board-hover {
+   position: absolute;
+   height: 240px;
+   width: 240px;
+   padding: 0;
+   margin: 0;
+   text-indent: 0;
+   z-index: 10;
+}
+
+.move1,
+.move2,
+.move3,
+.move4,
+.move5 {
+   transform: translate(0, 0);
+   transition: 1s;
+}
+
+.chess-board-hover:hover ~ .move1 {
+   transform: translate(120px, 0);
+   transition: 1.3s;
+}
+
+.chess-board-hover:hover ~ .move2 {
+   transform: translate(0, 210px);
+   transition: 1.3s;
+   transition-delay: 1.5s;
+}
+
+.chess-board-hover:hover ~ .move3 {
+   transform: translate(-30px, 0);
+   transition: 1.3s;
+   transition-delay: 3s;
+}
+
+.chess-board-hover:hover ~ .move4 {
+   transform: translate(120px, 120px);
+   transition: 1.3s;
+   transition-delay: 4.5s;
+}
+
+.chess-board-hover:hover ~ .move5 {
+   transform: translate(30px, -60px);
+   transition: 1.3s;
+   transition-delay: 6s;
+}
+
+.white-piece {
+   position: absolute;
+   height: 30px;
+   width: 30px;
+   content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Draughts_ld44.svg/1024px-Draughts_ld44.svg.png");
+   background-size: 100%;
+   padding: auto;
+   margin: auto;
+}
+
+.black-piece {
+   position: absolute;
+   height: 30px;
+   width: 30px;
+   content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Draughts_dd44.svg/1024px-Draughts_dd44.svg.png");
+   background-size: 100%;
+   padding: auto;
+   margin: auto;
+}
+
+</style>
+</head>
+<body>
+     <div class="chess-container">
+
+<p class="chess-board"><a href="?style=creator" class="hide" rel="nofollow"><b>[Click here to reload page with animated chessboards showing.]</b></a>
+<img class="chess-board-hover" />
+<img class="white-piece at-col-A at-row-1 move1" />
+<!-- <img class="white-piece at-col-A at-row-2 move1" /> -->
+<img class="white-piece at-col-E at-row-8 move2" />
+<img class="white-piece at-col-F at-row-1 move3" />
+<img class="black-bishop at-col-C at-row-8 move4" />
+<img class="white-knight at-col-D at-row-2 move5" />
+<img class="black-rook at-col-A at-row-8" />
+<img class="black-knight at-col-F at-row-6" />
+<img class="black-queen at-col-D at-row-8" />
+<img class="black-king at-col-G at-row-8" />
+<img class="black-piece at-col-B at-row-3" />
+<img class="white-piece at-col-F at-row-4" />
+<img class="white-king at-col-G at-row-1" />
+</p></div>
+
+<p class="divider" align="center">* * *</p> 
+</body>
