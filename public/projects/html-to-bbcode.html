@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML to BBCode Converter</title>
+  <style>
+    textarea, input { width: 100%; margin-bottom: 10px; padding: 6px; font-size: 14px; }
+    textarea { height: 150px; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+
+<h2>HTML to BBCode Converter</h2>
+
+<form id="convertForm">
+  <label>Title:</label>
+  <input type="text" id="titleInput">
+
+  <label>Subtitle:</label>
+  <input type="text" id="subtitleInput">
+
+  <label>Quote:</label>
+  <input type="text" id="quoteInput">
+
+  <label>Quote Source:</label>
+  <input type="text" id="quoteSourceInput">
+
+  <label>HTML Content:</label>
+  <textarea id="htmlInput"></textarea>
+
+  <label>BBCode Output:</label>
+  <textarea id="bbcodeOutput" readonly></textarea>
+
+  <button type="submit">Convert</button>
+</form>
+
+<script>
+  document.getElementById("convertForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById("titleInput").value.trim();
+    const subtitle = document.getElementById("subtitleInput").value.trim();
+    const quote = document.getElementById("quoteInput").value.trim();
+    const quoteSource = document.getElementById("quoteSourceInput").value.trim();
+    let html = document.getElementById("htmlInput").value;
+
+    // Convert HTML to BBCode
+    let bbcode = html
+      .replace(/<b>(.*?)<\/b>/gi, '[b]$1[/b]')
+      .replace(/<strong>(.*?)<\/strong>/gi, '[b]$1[/b]')
+      .replace(/<i>(.*?)<\/i>/gi, '[i]$1[/i]')
+      .replace(/<em>(.*?)<\/em>/gi, '[i]$1[/i]')
+      .replace(/<u>(.*?)<\/u>/gi, '[u]$1[/u]')
+      .replace(/<a href="(.*?)".*?>(.*?)<\/a>/gi, '[url=$1]$2[/url]')
+      .replace(/<img.*?src="(.*?)".*?>/gi, '[img]$1[/img]')
+      .replace(/<ul>/gi, '[list]')
+      .replace(/<\/ul>/gi, '[/list]')
+      .replace(/<ol>/gi, '[list=1]')
+      .replace(/<\/ol>/gi, '[/list]')
+      .replace(/<li>(.*?)<\/li>/gi, '[*]$1')
+      .replace(/<blockquote>(.*?)<\/blockquote>/gis, '[quote]$1[/quote]')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/p>\s*<p>/gi, '\n\n')
+      .replace(/<\/?p>/gi, '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+
+    // Build header section
+    let header = '';
+    if (title) header += `[center][h1]${title}[/h1][/center]\n\n`;
+    if (subtitle) header += `[center][h2]${subtitle}[/h2][/center]\n\n`;
+    if (quote) header += `[right]${quote}[/right]\n`;
+    if (quoteSource) header += `[right]— ${quoteSource}[/right]\n\n`;
+
+    document.getElementById("bbcodeOutput").value = header + bbcode;
+  });
+</script>
+
+</body>
+</html>
