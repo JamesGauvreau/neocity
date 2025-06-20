@@ -66,7 +66,7 @@ const attacksBy = [
   "Needle-sharp spikes of glass and ice (1 melee attack, 1d8+2 damage)",
   "Fluorescent whips of liquid (1d6 attacks, 10' range, 1 damage)",
   "Jets of stinking steam (30' cube, 1 damage, blocks line of sight)",
-  "Hideous roaring energy beam (HD×10' line, HD×1d6 damage)",
+  "Hideous roaring energy beam (HD x 10' line, HD x 1d6 damage)",
   "Roll again twice, combing effects",
 ];
 
@@ -112,11 +112,11 @@ const atmosphere = [
 const gravityWeather = [
   "No gravity. Storms of sharp crystals oscillate up and down",
   "No gravity. Harsh unfiltered sunlight",
-  "4× normal gravity. Possible to crawl, nearly impossible to stand or walk",
+  "4x normal gravity. Possible to crawl, nearly impossible to stand or walk",
   "Slightly more than normal gravity. Constant rain of black hydrocarbons",
   "Normal gravity. Warm wind, wisps of high dark grey clouds",
   "Slightly less than normal gravity. Cold mildly acid rain",
-  "2×normal gravity, exhausting to move or jump. Distant lightning storms",
+  "2x normal gravity, exhausting to move or jump. Distant lightning storms",
   "Slightly less than normal gravity. Pockets with no gravity. Swirls of ash",
   "Normal but shifts directions every 1d6 minutes",
   "¾ normal gravity. Cold gusts of wind, streaks of dust.",
@@ -128,7 +128,7 @@ const movingThings = [
   "Drips of molten stone. Wire-thin lava rivers move like snakes",
   "Wounded Elsewhere Creature (1/2 HP) drifts and tumbles",
   "1d6 Elsewhere Creatures cavorting",
-  "1d6 Elsewhere Creatures, at least 10× larger than normal, but in the distance",
+  "1d6 Elsewhere Creatures, at least 10x larger than normal, but in the distance",
   "1 Elsewhere Creature nearby, bathing or covering itself in some sort of fluid",
   "Terrain can crack open to reveal 2d6 Elsewhere Creatures",
   "Streams of bubbles or vacuumpockets",
