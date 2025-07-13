@@ -41,6 +41,17 @@ const namesDim = [
     { nomen: "Tolly", ref: "Bartholomew" },
 ]
 
+const namesEl = [
+    { nomen: "Amabel", ref: "Medieval fem. form of Amabilis."},
+    { nomen: "Aysel", ref: "Turkish, fem, meaning 'moon flood.'"},
+    { nomen: "Breindel", ref: "Yiddish fem, meaning 'brunette.'"},
+    { nomen: "Brochfael", ref: "Med. Welsh masc, meaning 'badger chief.'"},
+    { nomen: "Cadfael", ref: "Welsh masc, meaning 'battle prince.'"},
+    { nomen: "Camiel", ref: "Dutch masc. form of Camille."},
+    { nomen: "Cansel", ref: "Turkish fem, meaning 'soul, life + flood, stream, torrent.'"},
+    { nomen: "", ref: ""},
+]
+
 const namesSayings = [
     { nomen: "Glut-the-Soul-with-Vengeance", ref: "It is a right of nature to glut the soul with vengeance. - Attila the Hun." },
     // Some Puritan virtue names were compound imperatives, such as "Search-the-scriptures" or "Praise-God".[2] An example of the use of "Praise-God" as a name is Praise-God Barebone, whose son Nicholas may have been given the name If-Jesus-Christ-had-not-died-for-thee-thou-hadst-been-damned.[3] In Britain, such Puritan virtue names were particularly common in Kent, Sussex and Northamptonshire.[3] They are sometimes referred to as hortatory names.[4] Virtue names were more commonly given to girls than boys, though not exclusively.[5]
