@@ -26,12 +26,14 @@ const namesRef = [
     { nomen: "Elron", ref: "L. Ron Hubbard" },
     { nomen: "Sarteen", ref: "Remember Me 3" },
     { nomen: "Farious", ref: "Multifarious" },
-    { nomen: "Auraria", ref: "Original name of the city Denver, after Denver Snuffer"},
+    { nomen: "Auraria", ref: "Original name of the city Denver, after Denver Snuffer" },
     { nomen: "Goldstrife", ref: "https://tanadrin.tumblr.com/post/784274649319079936/personally-i-like-names-that-mean-something-not" },
     { nomen: "Glorious", ref: "https://tanadrin.tumblr.com/post/784274649319079936/personally-i-like-names-that-mean-something-not" },
-    { nomen: "Aktiri", ref: "Heroes Die"},
-    { nomen: "Alma", ref: "Feminine name only. Outside BOM, is Latin fem. name."},
-    { nomen: "Nafailim", ref: "Nephilim → Nephi → Nafai → Nafailim."},
+    { nomen: "Aktiri", ref: "Heroes Die" },
+    { nomen: "Alma", ref: "Feminine name only. Outside BOM, is Latin fem. name." },
+    { nomen: "Nafailim", ref: "Nephilim → Nephi → Nafai → Nafailim." },
+    { nomen: "Kit", ref: "? It was in the Morcult document." },
+    { nomen: "Taduki", ref: "https://en.wikipedia.org/wiki/The_Ancient_Allan"},
 ];
 
 const namesDim = [
@@ -40,21 +42,32 @@ const namesDim = [
     { nomen: "Drew", ref: "Andrew" },
     { nomen: "Barney", ref: "Barn" },
     { nomen: "Tolly", ref: "Bartholomew" },
+    { nomen: "Dave", ref: "David" },
+    { nomen: "Josh", ref: "Joshua" },
+    { nomen: "Gail", ref: "Abigail" },
 ]
 
 const namesEl = [
-    { nomen: "Amabel", ref: "Medieval fem. form of Amabilis."},
-    { nomen: "Aysel", ref: "Turkish, fem, meaning 'moon flood.'"},
-    { nomen: "Breindel", ref: "Yiddish fem, meaning 'brunette.'"},
-    { nomen: "Brochfael", ref: "Med. Welsh masc, meaning 'badger chief.'"},
-    { nomen: "Cadfael", ref: "Welsh masc, meaning 'battle prince.'"},
-    { nomen: "Camiel", ref: "Dutch masc. form of Camille."},
-    { nomen: "Cansel", ref: "Turkish fem, meaning 'soul, life + flood, stream, torrent.'"},
+    { nomen: "Amabel", ref: "Medieval fem. form of Amabilis." },
+    { nomen: "Aysel", ref: "Turkish, fem, meaning 'moon flood.'" },
+    { nomen: "Breindel", ref: "Yiddish fem, meaning 'brunette.'" },
+    { nomen: "Brochfael", ref: "Med. Welsh masc, meaning 'badger chief.'" },
+    { nomen: "Cadfael", ref: "Welsh masc, meaning 'battle prince.'" },
+    { nomen: "Camiel", ref: "Dutch masc. form of Camille." },
+    { nomen: "Cansel", ref: "Turkish fem, meaning 'soul, life + flood, stream, torrent.'" },
 ]
 
 const namesExocentricCompounds = [
-    { nomen: "Kindlecoal", ref: ""}, 
+    { nomen: "Kindlecoal", ref: "" },
 ] // https://en.wiktionary.org/wiki/Category:English_exocentric_verb-noun_compounds
+
+const namesIdioms = [
+    { nomen: "Shapelick", ref: "https://en.wiktionary.org/wiki/lick_into_shape" },
+    { nomen: "Lifesworth", ref: "https://en.wiktionary.org/wiki/all_one%27s_life%27s_worth#English" },
+    { nomen: "Windcandle (Candlewind?)", ref: "https://en.wiktionary.org/wiki/candle_in_the_wind#English" },
+    { nomen: "Gracefall", ref: "https://en.wiktionary.org/w/index.php?title=Category:English_idioms&from=FA" },
+    { nomen: "Quenchcoal", ref: "https://en.wiktionary.org/wiki/quenchcoal#English" },
+]
 
 const namesSayings = [
     { nomen: "Glut-the-Soul-with-Vengeance", ref: "It is a right of nature to glut the soul with vengeance. - Attila the Hun." },
