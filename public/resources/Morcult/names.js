@@ -31,6 +31,7 @@ const namesRef = [
     { nomen: "Glorious", ref: "https://tanadrin.tumblr.com/post/784274649319079936/personally-i-like-names-that-mean-something-not" },
     { nomen: "Aktiri", ref: "Heroes Die"},
     { nomen: "Alma", ref: "Feminine name only. Outside BOM, is Latin fem. name."},
+    { nomen: "Nafailim", ref: "Nephilim → Nephi → Nafai → Nafailim."},
 ];
 
 const namesDim = [
@@ -49,8 +50,11 @@ const namesEl = [
     { nomen: "Cadfael", ref: "Welsh masc, meaning 'battle prince.'"},
     { nomen: "Camiel", ref: "Dutch masc. form of Camille."},
     { nomen: "Cansel", ref: "Turkish fem, meaning 'soul, life + flood, stream, torrent.'"},
-    { nomen: "", ref: ""},
 ]
+
+const namesExocentricCompounds = [
+    { nomen: "Kindlecoal", ref: ""}, 
+] // https://en.wiktionary.org/wiki/Category:English_exocentric_verb-noun_compounds
 
 const namesSayings = [
     { nomen: "Glut-the-Soul-with-Vengeance", ref: "It is a right of nature to glut the soul with vengeance. - Attila the Hun." },
