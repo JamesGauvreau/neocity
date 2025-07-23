@@ -10,17 +10,18 @@
 	border: none;
 	outline: none;
 	transition: 0.4s;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
 	background-color: white;
 	color: black;
-	border-left: 5px solid black; 
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
+	border-left: 5px solid black;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
 	padding: 0 18px;
 	background-color: white;
 	max-height: 0;
@@ -28,21 +29,28 @@
 	transition: max-height 0.2s ease-out;
 	/* margin-bottom: 5px; */
 	/* margin-top: 5px; */
-  }
+}
 
-  .accordion:after {
-	content: '\25BC'; /* Unicode character for "plus" sign (+) */
+.panel.open {
+	overflow: hidden;
+}
+
+
+.accordion:after {
+	content: '\25BC';
+	/* Unicode character for "plus" sign (+) */
 	font-size: large;
 	color: #777;
 	float: right;
 	margin-left: 5px;
 	margin-bottom: 5px;
-  }
-  
-  .active:after {
-	content: "\25B2"; /* Unicode character for "minus" sign (-) */
+}
+
+.active:after {
+	content: "\25B2";
+	/* Unicode character for "minus" sign (-) */
 	margin-bottom: 5px;
-  }
+}
 
 #cssportal-grid {
 	display: grid;
@@ -90,22 +98,35 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-  }
-  
-  .flex-items:nth-child(1) {
+}
+
+.flex-items:nth-child(1) {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 1;
 	flex-basis: auto;
 	align-self: auto;
 	order: 0;
-  }
-  
-  .flex-items:nth-child(2) {
+}
+
+.flex-items:nth-child(2) {
 	display: block;
 	flex-grow: 0;
 	flex-shrink: 1;
 	flex-basis: auto;
 	align-self: auto;
 	order: 0;
-  }
+}
+
+/* * Testing */
+
+.project-title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.project-date {
+	/* padding-top: 10%; */
+	font-size: 0.9rem;
+	/* font-style: italic; */
+}
