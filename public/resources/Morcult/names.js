@@ -34,6 +34,7 @@ const namesRef = [
     { nomen: 'Nafailim', ref: 'Nephilim → Nephi → Nafai → Nafailim.' },
     { nomen: 'Kit', ref: '? It was in the Morcult document.' },
     { nomen: 'Taduki', ref: 'https://en.wikipedia.org/wiki/The_Ancient_Allan'},
+    { nomen: 'Henoch', ref: 'Enoch'},
 ];
 
 const namesDim = [
