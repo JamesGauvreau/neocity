@@ -1,0 +1,86 @@
+<header class="site-header">
+  <div class="logo">
+    <img src="images/site/saltlogo_tight.png" alt="Logo" class="site-logo">
+    <a href="index.html" class="site-title">WMB Saltworks</a>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: white;
+    border-bottom: 1px solid #444;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .site-logo {
+    height: 40px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+  }
+
+  .site-title {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .site-title:hover {
+    text-decoration: none;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .main-nav a:hover {
+    border-color: red;
+  }
+
+  @media (max-width: 600px) {
+    .main-nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .logo {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .site-logo {
+      height: 30px;
+    }
+  }
+</style>
