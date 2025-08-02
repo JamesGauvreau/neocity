@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <title>WMB Saltworks on Neocities</title>
-  <!-- <meta name="msapplication-TileColor" content="#2d89ef"> -->
-  <link href="style-draft.css" rel="stylesheet">
-  <!-- <meta name="theme-color" content="#ffffff"> -->
-
-  <!-- <link href="/style.css" rel="stylesheet" type="text/css" media="all"> -->
+  <script src="site/javascript/marginal-injector.js" defer></script>
+  <link href="style.css" rel="stylesheet">
+    <!-- <link href="/style.css" rel="stylesheet" type="text/css" media="all"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
@@ -100,19 +98,6 @@
         </div>
   </main>
   <div id="footer"></div>
-
-  <script>
-    fetch('site/injections/header.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('header').innerHTML = html);
-
-    fetch('site/injections/footer.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('footer').innerHTML = html);
-  </script>
 </body>
 
 </html>
-
-<!-- TODO JS for navbar -->
-<!-- TJ notes: object-fit requires width and height -->
