@@ -46,6 +46,7 @@ const namesDim = [
     { nomen: 'Dave', ref: 'David' },
     { nomen: 'Josh', ref: 'Joshua' },
     { nomen: 'Gail', ref: 'Abigail' },
+    { nomen: 'Zabeth', ref: 'Elizabeth'},
 ]
 
 const namesEl = [
