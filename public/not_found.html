@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Found</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
-    <h1>Page Not Found</h1>
-    <p>The requested page was not found.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Not Found - WMB Saltworks</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #000; /* black background */
+      color: #fff; /* white text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 6rem;
+      margin: 0 0 0.5rem;
+      font-weight: 900;
+      color: #e10600; /* strong red accent */
+      letter-spacing: -2px;
+    }
+    p {
+      font-size: 1.25rem;
+      margin: 0 0 1.5rem;
+      line-height: 1.4;
+      color: #ddd;
+    }
+    a {
+      color: #e10600;
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    a:hover, a:focus {
+      border-color: #e10600;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>404</h1>
+    <p>Sorry, the page you requested was not found.</p>
+    <p><a href="/">Return to homepage</a></p>
+  </main>
+</body>
 </html>
