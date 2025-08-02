@@ -102,11 +102,11 @@
   <div id="footer"></div>
 
   <script>
-    fetch('resources/site/injections/header.html')
+    fetch('site/injections/header.html')
       .then(res => res.text())
       .then(html => document.getElementById('header').innerHTML = html);
 
-    fetch('resources/site/injections/footer.html')
+    fetch('site/injections/footer.html')
       .then(res => res.text())
       .then(html => document.getElementById('footer').innerHTML = html);
   </script>
