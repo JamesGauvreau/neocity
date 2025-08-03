@@ -35,6 +35,9 @@ const namesRef = [
     { nomen: 'Kit', ref: '? It was in the Morcult document.' },
     { nomen: 'Taduki', ref: 'https://en.wikipedia.org/wiki/The_Ancient_Allan'},
     { nomen: 'Henoch', ref: 'Enoch'},
+    { nomen: 'Eld', ref: 'Brigham Young (Old)'},
+    { nomen: 'Pearfield', ref: 'Parley P. Pratt'},
+    { nomen: 'Parlai', ref: 'Parley P. Pratt'},
 ];
 
 const namesDim = [
