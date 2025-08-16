@@ -4,10 +4,8 @@ body {
 }
 
 main, footer {
-  margin: 8px;
-  padding: 8px;
-  list-style-position: inside; 
-  /* * Ne laboras kiam applied to ul { } */
+  margin: 12px;
+  padding: 12px;
 }  
 
 header {
@@ -21,6 +19,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+ul {
+  /* margin-left: -12px; */
+  margin-left: -6px;
 }
 
 nav a {

@@ -3,8 +3,7 @@
 	background-color: black;
 	color: white;
 	cursor: pointer;
-	/* padding: 18px; */
-	padding: 0px 18px 0px 18px;
+	padding: 6px 18px 0px 18px;
 	width: 100%;
 	text-align: left;
 	border: none;
@@ -15,8 +14,8 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .accordion:hover {
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: red;
 	border-left: 5px solid black;
 }
 
@@ -40,7 +39,7 @@
 	content: '\25BC';
 	/* Unicode character for "plus" sign (+) */
 	font-size: large;
-	color: #777;
+	color: white;
 	float: right;
 	margin-left: 5px;
 	margin-bottom: 5px;
