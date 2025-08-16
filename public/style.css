@@ -3,9 +3,9 @@ body {
   padding: 0;
 }
 
-main {
-  margin: 16px;
-  padding: 16px;
+main, footer {
+  margin: 8px;
+  padding: 8px;
   list-style-position: inside; 
   /* * Ne laboras kiam applied to ul { } */
 }  
