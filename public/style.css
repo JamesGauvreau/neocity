@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 16px;
+  padding: 16px;
+  list-style-position: inside; 
+  /* * Ne laboras kiam applied to ul { } */
+}  
+
 header {
   position: sticky;
   top: 0;
@@ -10,6 +22,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 nav a {
   color: white;
   text-decoration: none;

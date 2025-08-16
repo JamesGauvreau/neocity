@@ -33,5 +33,5 @@ const customMap = {
   9: ['i', 'r'], 
 };
 
-console.log(letterToNumber("T3r3z1 Pyrop3", customMap)); 
+console.log(letterToNumber("Terezi", customMap)); 
 // Output: [1, 1, 3, 3, 2, 1, 2]
