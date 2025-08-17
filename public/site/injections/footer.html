@@ -1,23 +1,48 @@
 <footer>
         <p><a href="https://wmbsaltworks.neocities.com">WMB Saltworks</a> © 2025 by <a
                         href="https://creativecommons.org">Callmesalticidae | RDJ Gauvreau</a> is licensed under <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
+                        href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative Commons
+                        Attribution-ShareAlike
                         4.0 International</a></p>
-        <p class="footer-image-bar">
-                <img src="images\site\neocities.png" alt="Neocities badge: Hosted by Neocities">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons"
-                        style="max-width: 2em;max-height:2em;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Attribution"
-                        style="max-width: 2em;max-height:2em;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="ShareAlike"
-                        style="max-width: 2em;max-height:2em;">
-        </p>
+        <div class="footer-icon-bar">
+                <img src="images/site/neocities.png" alt="Neocities badge: Hosted by Neocities">
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+                        <img class="cc-logo" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+                                alt="Creative Commons">
+                        <img class="cc-logo" src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+                                alt="Attribution">
+                        <img class="cc-logo" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+                                alt="ShareAlike"></a>
+        </div>
 </footer>
 
 <style>
-        .footer-image-bar {
+        .footer-icon-bar {
                 display: flex;
                 align-items: center;
                 gap: 1.0em;
+        }
+
+        .cc-logo {
+                max-width: 2em;
+                max-height: 2em;
+        }
+
+        .footer-icon-bar a {
+                display: contents;
+        }
+
+        /* .footer-icon-bar img {
+                opacity: 0.8;
+                transition: opacity 0.2s;
+        }
+
+        .footer-icon-bar img:hover {
+                opacity: 1;
+        } */
+
+        footer {
+                background-color: #eeeeee;
+                border-radius: 0.5em;
         }
 </style>
