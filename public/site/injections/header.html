@@ -1,21 +1,21 @@
 <header class="site-header">
   <div class="logo">
-    <img src="images/site/saltlogo_tight.png" alt="Logo" class="site-logo">
-    <a href="index.html" class="site-title">WMB Saltworks</a>
+    <img src="/images/site/saltlogo_tight.png" alt="Logo" class="site-logo">
+    <a href="/index.html" class="site-title">WMB Saltworks</a>
   </div>
   <nav class="main-nav">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle">Generators ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="projects/NameGen/French.html">French Generator</a></li>
-          <li><a href="images/site/saltlogo_tight.png">Dummy Generator #1</a></li>
-          <li><a href="images/site/saltlogo_tight.png">Dummy Generator #1</a></li>
+          <li><a href="/projects/NameGen/French.html">French Generator</a></li>
+          <li><a href="/images/site/saltlogo_tight.png">Dummy Generator #1</a></li>
+          <li><a href="/images/site/saltlogo_tight.png">Dummy Generator #2</a></li>
         </ul>
       </li>
-      <li><a href="portfolio.html">Dummy Link</a></li>
+      <li><a href="/portfolio.html">Dummy Link</a></li>
     </ul>
   </nav>
 </header>
@@ -24,12 +24,17 @@
   .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    align-items: stretch;
+    /* stretch children to header height */
+    height: 60px;
+    /* fixed header height */
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    /* horizontal padding only */
     background-color: #000;
+    /* kept original black */
     color: white;
+    /* kept original white */
     position: relative;
-    /* make header the positioning context for submenu */
   }
 
   .logo {
@@ -39,7 +44,7 @@
   }
 
   .site-logo {
-    height: 40px;
+    height: 100%;
     width: auto;
     max-width: 100px;
     object-fit: contain;
@@ -50,32 +55,57 @@
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
   }
 
   .site-title:hover {
     text-decoration: none;
+    color: red;
   }
 
-  /* Top-level menu only */
   .main-nav>ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 1.5rem;
+    height: 100%;
+    align-items: stretch;
   }
 
-  .dropdown {
+  .main-nav>ul>li {
     position: relative;
-    /* parent for submenu absolute positioning */
+    display: flex;
+    align-items: center;
   }
 
-  /* Dropdown submenu */
+
+
+  .main-nav>ul>li>a {
+    display: flex;
+    align-items: center;
+    /* vertical center text inside link */
+    padding: 0 0 0 0;
+    /* horizontal padding only */
+    /* height: 100%; */
+    /* remove this */
+    color: white;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav>ul>li>a:hover {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+
   .dropdown-menu {
     display: none;
     position: absolute;
-    top: 250%;
-    /* set equal to header height */
+    top: 100%;
     left: 0;
     background-color: #000;
     padding: 0.5rem 0;
@@ -84,12 +114,10 @@
     z-index: 10;
   }
 
-  /* Show menu when open */
   .dropdown-menu.open {
     display: block;
   }
 
-  /* Submenu links */
   .dropdown-menu li a {
     display: block;
     padding: 0.5rem 1rem;
@@ -98,43 +126,43 @@
   }
 
   .dropdown-menu li a:hover {
-    background-color: #333;
+    color: red;
+    /* kept your submenu hover color */
   }
 
   .dropdown-toggle {
     cursor: pointer;
   }
 
-  /* Top-level links */
-  .main-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.25rem 0;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-
-  .main-nav a:hover {
-    border-color: red;
-  }
-
-  /* Responsive */
   @media (max-width: 600px) {
-    .main-nav ul {
+    .site-header {
       flex-direction: column;
-      gap: 0.5rem;
+      height: auto;
+      padding: 1rem 2rem;
     }
 
     .logo {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .site-logo {
-      height: 30px;
+      height: 40px;
     }
 
-    /* Optional: make dropdown relative to mobile menu items */
+    .main-nav>ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      height: auto;
+    }
+
+    .main-nav>ul>li>a {
+      height: auto;
+      padding: 0.5rem 0;
+    }
+
     .dropdown-menu {
       position: relative;
       top: 0;
