@@ -11,28 +11,37 @@
 
 <body>
     <div id="header"></div>
-    <main>
-        <p>Click to make tea!</p>
-<img src="/images/writing/twine/tea-abstract.png" 
-     style="max-height: 100px; cursor: pointer;" 
-     id="teaImage">
+<main>
+  <p>Click to make tea!</p>
+  <img src="/images/writing/twine/tea-abstract.png" 
+       style="max-height: 100px; cursor: pointer;" 
+       id="teaImage">
+  <p id="tea"></p>
+</main>
 
-<p id="tea"></p>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;   /* stack items vertically */
+    align-items: center;      /* center horizontally */
+    /* justify-content: center;  center vertically if main has height */
+    min-height: 100vh;        /* optional: center in full viewport */
+    text-align: center;       /* center text inside <p> */
+  }
+</style>
 
-<script>
-  let teaCount = 0;
+    <script>
+        let teaCount = 0;
 
-  document.getElementById("teaImage").addEventListener("click", function() {
-    teaCount++;
-    const teaPara = document.getElementById("tea");
+        document.getElementById("teaImage").addEventListener("click", function () {
+            teaCount++;
+            const teaPara = document.getElementById("tea");
 
-    if (teaCount === 1) {
-      teaPara.innerHTML = "Your tea is ready!";
-    } else {
-      teaPara.innerHTML = `Your tea is ready! <br><br>You have made ${teaCount} cups of tea.`;
-    }
-  });
-</script>
-
-    </main>
+            if (teaCount === 1) {
+                teaPara.innerHTML = "Your tea is ready! <br><br>Do you want to try again?";
+            } else {
+                teaPara.innerHTML = `Your tea is ready! <br><br>You have made ${teaCount} cups of tea.<br><br>Do you want to try again?`;
+            }
+        });
+    </script>
 </body>
