@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <title>WMB Saltworks on Neocities</title>
+    <script src="/site/javascript/marginal-injector.js" defer></script>
+    <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <main>
+        <p>Click to make tea!</p>
+<img src="/images/writing/twine/tea-abstract.png" 
+     style="max-height: 100px; cursor: pointer;" 
+     id="teaImage">
+
+<p id="tea"></p>
+
+<script>
+  let teaCount = 0;
+
+  document.getElementById("teaImage").addEventListener("click", function() {
+    teaCount++;
+    const teaPara = document.getElementById("tea");
+
+    if (teaCount === 1) {
+      teaPara.innerHTML = "Your tea is ready!";
+    } else {
+      teaPara.innerHTML = `Your tea is ready! <br><br>You have made ${teaCount} cups of tea.`;
+    }
+  });
+</script>
+
+    </main>
+</body>
