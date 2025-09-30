@@ -7,6 +7,9 @@
     <title>WMB Saltworks on Neocities</title>
     <script src="/site/javascript/marginal-injector.js" defer></script>
     <link href="/style.css" rel="stylesheet">
+    <style>
+        .escafil {font-family: "Escafil", "Ramiz", "Oswald", "Orbital"}
+    </style>
 </head>
 
 <body>
@@ -38,9 +41,9 @@
             const teaPara = document.getElementById("tea");
 
             if (teaCount === 1) {
-                teaPara.innerHTML = "Your tea is ready! <br><br>Do you want to try again?";
+                teaPara.innerHTML = "Your tea is ready! <br><br>Do you want to <a href='https://wmbsaltworks.neocities.org/fiction/alternamorphs-1' class='escafil'>try again?</a>";
             } else {
-                teaPara.innerHTML = `Your tea is ready! <br><br>You have made ${teaCount} cups of tea.<br><br>Do you want to try again?`;
+                teaPara.innerHTML = `Your tea is ready! <br><br>You have made ${teaCount} cups of tea.<br><br>Do you want to <a href='https://wmbsaltworks.neocities.org/fiction/alternamorphs-1' class='escafil'>try again?</a>`;
             }
         });
     </script>
