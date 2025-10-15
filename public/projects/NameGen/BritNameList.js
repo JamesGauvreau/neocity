@@ -128,8 +128,8 @@ function getNameF() {
 }
 
 // console.log(allNames[0])
-console.log("M: " + getNameM() + ", " + getNameM() + ", " + getNameM() + ", " + getNameM() + ", " + getNameM());
-console.log("F: " + getNameF() + ", " + getNameF() + ", " + getNameF() + ", " + getNameF() + ", " + getNameF());
+// console.log("M: " + getNameM() + ", " + getNameM() + ", " + getNameM() + ", " + getNameM() + ", " + getNameM());
+// console.log("F: " + getNameF() + ", " + getNameF() + ", " + getNameF() + ", " + getNameF() + ", " + getNameF());
 // console.log(getName(2));
 
 
@@ -137,12 +137,14 @@ console.log("F: " + getNameF() + ", " + getNameF() + ", " + getNameF() + ", " + 
 // console.log(nameX_Sibyl.fraFem[0][0].length)
 // console.log(nameX_Sibyl.isPuritan)
 
-// const portArray = [nameAlbert_Alberta, nameAllison_Alice, nameAmand_Amanda, nameAmi_Amy, nameAntony_Antonie, nameAusten_Austina, nameCassander_Cassandra, nameCharles_Charline, nameEdmund_X, nameEugene_Eugenia, nameFlorent_Florence, nameFrancis_Frances, nameFrederick_Frederica, nameGeorge_Georgene, nameHenry_Henrietta, nameHugh_Hughina, nameIsolda_Isolde, nameJerome_X, nameJessica, nameJocelin_Josceline, nameJohn_Jane, nameJonathan_X, nameLewis_Lowesa, nameNicholas_Nichola, nameRoger_Rogera, nameRowland_X, nameTheodore_Dorothy, nameVivian_Vivien, nameX_Avice, nameX_Barbara, nameX_Edith, nameX_Helen, nameX_Lettice, nameX_Lora, nameX_Martha, nameX_Matilda, nameX_Mellany, nameX_Sibyl, nameX_Tiffany];
+const portArray = allNames
+
+// const portArray = [nameAlbert_Alberta,nameAmbrose_Ambrosine,nameAngel_Angela,nameBarberus_Barbara,nameBasil_EMPTY,nameEinon_EMPTY,nameEMPTY_Ashwynn,nameEMPTY_Avice,nameEMPTY_Dowsebell,nameEMPTY_Edith,nameAllison_Alice,nameLewis_Louisa,nameAmand_Amanda,nameAmi_Amy,nameAntony_Antonia,nameAusten_Austina,nameCharles_Charline,nameCassander_Cassandra,nameEdmund_EMPTY,nameEugene_Eugenia,nameFlorent_Florence,nameFrancis_Frances,nameFrederick_Frederica,nameGeorge_EMPTY,nameJerome_EMPTY,nameJocelin_Jocelin,nameHenry_Henrietta,nameRoger_Rogera,nameHugh_Hughina,nameEMPTY_Isolde,nameJonathan_EMPTY,nameJohn_Jane,nameNicholas_Nichola,nameRowland_EMPTY,nameTheodore_Dorothy,nameVivian_Vivian,nameEMPTY_Eileen,nameEMPTY_Aislin,nameEMPTY_Bridget,nameEMPTY_Katherine,nameEMPTY_Deirdre,nameEMPTY_Derval,nameEMPTY_Dymphna,nameEMPTY_Eleanor,nameEMPTY_Esther,nameEMPTY_Flora,nameEMPTY_Gobnet,nameEMPTY_Gormley,nameEMPTY_Mary,nameEMPTY_Queenie,nameEMPTY_Rose,nameEMPTY_Glory,nameEMPTY_Goldgift,nameEMPTY_Helen,nameEMPTY_Jessica,nameEMPTY_Letitia,nameEMPTY_Lora,nameEMPTY_Martha,nameEMPTY_Matilda,nameEMPTY_Melanie,nameEMPTY_Sybil,nameEMPTY_Teagan,nameEMPTY_Tiffany,nameHeath_Heather,nameHillary_Hilary,nameLaserian_Lassarina,nameMarmaduke_EMPTY,nameMaximilian_Maxene,nameNarcissus_Narcissa,namePhineas_EMPTY,nameSaul_EMPTY,nameSeaborn_EMPTY,nameSeventh_EMPTY,nameSidney_Sidney,nameSofus_Sofia,nameTobias_EMPTY,nameWyrm_EMPTY,];
 
 // console.log(portArray[0].engFem[1]);
 // console.log(portArray[0].meaning);
 
-// export { portArray };
+export { portArray };
 
 // TODO
 // ✔ export from BritNameList

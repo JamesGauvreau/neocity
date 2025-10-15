@@ -17,7 +17,7 @@ function randomNumber(number) {
 // should check whether there was already an issue, and if there's an issue more than three times, instead return "N/A (recurring error)"
 // For isFlower, etc., use a loop to check each item and pop into a new array if the criteria are fit.
 
-let testArray = portArray[0].engFem;
+let testArray = portArray[randomNumber(100)].english_F;
 let isFlower = false;
 
 function testPush() {
@@ -29,14 +29,14 @@ function testPush() {
     return testArray;
 }
 
-console.log("testArray test: " + portArray[0].engFem[0]);
+console.log("testArray test: " + portArray[0].english_F[0]);
 console.log("testPush test: " + testPush());
 
 function prenomGen() {
-    let prenomArray = portArray[randomNumber(portArray.length)].engFem[0];
+    let prenomArray = portArray[randomNumber(portArray.length)].english_F[0];
     return prenomArray;
 }
 
 console.log(prenomGen());
 console.log(portArray.length);
-console.log(portArray[0].engFem[0]);
+console.log(portArray[0].english_F[0]);
