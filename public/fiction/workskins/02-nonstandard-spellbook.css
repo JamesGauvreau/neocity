@@ -1,0 +1,85 @@
+.mono {
+  font-family: courier new, courier;
+}
+
+.caps {
+  font-variant: small-caps;
+}
+
+/* HEADERS */
+
+h1 {
+  font-weight: 500;
+  padding: 0.125em;
+  border-bottom: 0.25em double #333;
+  text-align: left;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: 500;
+  padding: 0.250em 0 0 0;
+  margin: 0;
+  border-bottom: 0.25em double #333;
+  text-underline-offset: 2px;
+}
+
+h3,
+h4 {
+  font-weight: 500;
+  padding: 0.125em;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  border-bottom: 0;
+  text-underline-offset: 3px;
+}
+
+.preface h3 {
+  font-weight: 500;
+  padding: 0.125em;
+  border-bottom: 1px solid;
+  background: transparent;
+  text-decoration: none;
+}
+
+h3.byline {
+  color: #111;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  border-bottom: 0px solid transparent;
+  font-weight: 500;
+  padding: 0.125em;
+}
+
+.preface h2.title {
+  display: block;
+  border-bottom: 0;
+  clear: right;
+  text-decoration: none;
+}
+
+.img {
+  padding: 1em;
+}
+
+h1.chapter {
+  font-size: 225%;
+  border-bottom: 0;
+  font-weight: bold;
+  text-align: center
+}
+
+hr {
+  border-top: 5px dotted black;
+  border-bottom: 5px dotted black;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5px;
+
+}
+
+.preface .userstuff a {
+  border-bottom: none;
+  text-decoration: none;
+}
