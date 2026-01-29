@@ -37,95 +37,84 @@
 
           <h3 class="landmark heading">Work Header</h3>
 
-          <!-- BEGIN section where work skin applies -->
-          <div id="workskin">
-            <div class="preface group">
-              <h2 class="title heading">
-                Further Nightmares
-              </h2>
-              <h3 class="byline heading">
-                <a rel="author" href="/users/Callmesalticidae/pseuds/Callmesalticidae">Callmesalticidae</a>
-              </h3>
+
+          <div class="preface group">
+            <h2 class="title heading">
+              Chapter Title Goes Here
+            </h2>
+            <h3 class="byline heading">
+              <a rel="author" href="/users/Callmesalticidae/pseuds/Callmesalticidae">Author Name Here</a>
+            </h3>
 
 
-              <div class="summary module">
-                <h3 class="heading">Summary:</h3>
-                <blockquote class="userstuff">
-                  <p>In another universe, The Nightmare Before Christmas was
-                    followed by a series of increasingly niche direct-to-video
-                    sequels about other holidays. This is a collection of capsule
-                    summaries of those videos, arranged in no particular
-                    order.</p>
-                </blockquote>
-              </div>
-
-
+            <div class="summary module">
+              <h3 class="heading">Summary:</h3>
+              <blockquote class="userstuff">
+                <p>The work summary is contained in a <code>blockquote</code> with the class <code>userstuff</code>,
+                  which is contained in a <code>div</code> with the class <code>summary module</code>.</p>
+              </blockquote>
             </div>
 
-            <!--/descriptions-->
-
-            <div id="chapters">
-              <!-- This partial requires local variable 'chapter' -->
-              <div class="chapter" id="chapter-1">
-                <!-- chapter management -->
-
-
-                <div class="chapter preface group">
-                  <h3 class="title">
-                    <a href="/works/64716727/chapters/166273936">Chapter 1</a>:
-                    The Nightmare Before Easter
-                  </h3>
-
-                  <!-- only display byline if different from the main byline -->
-
-                </div>
-
-                <!--main content-->
-                <div class="userstuff module" role="article">
-                  <h3 class="landmark heading" id="work">Chapter Text</h3>
-                  <p>
-                    <span>Jack Skellington, having regained his zest for
-                      Halloween but feeling no less curious about other holidays,
-                      decides to visit Easter Town, whose resident rabbits — all
-                      of them the children, grandchildren, and other relatives of
-                      the Easter Bunny — are just as eager to learn about their
-                      visitor. The first act is largely a comedy of errors and
-                      cultural misunderstandings, all received in good spirit: for
-                      example, when Jack Skellington learns of the Easter
-                      association with resurrection, he calls for Doctor
-                      Finkelstein and a number of body-snatchers
-                      (“resurrectionists”) to demonstrate Halloween Town’s own
-                      talent at raising the dead. </span>
-                  </p>
-                  <p>
-                    <span>Adversity strikes when the Easter Bunny falls
-                      dreadfully ill at a banquet and dies just a few days before
-                      she is due to make her annual delivery of Easter Eggs. Jack
-                      does his best to settle animosities in the succession crisis
-                      that ensues among her many descendants, but disaster is only
-                      averted on the third day, when the Easter Bunny hatches from
-                      one of her own eggs (the “rabbits” of Easter Town are
-                      monotremes). She informs Jack that this happens every year,
-                      actually, but appreciates his efforts nonetheless. </span>
-                  </p>
-                  <p>
-                    <span>When Jack returns to Halloween Town several rabbits go
-                      with him, excited by the opportunity to date somebody that
-                      isn’t their cousin. </span>
-                  </p>
-                </div>
-                <!--/main-->
-
-
-              </div>
-
-              <!-- end of cache -->
-
+            <div class="notes module">
+              <h3 class="heading">Notes:</h3>
+              <blockquote class="userstuff">
+                <p>The beginning notes in a work are contained in a <code>blockquote</code> with the class
+                  <code>userstuff</code>.
+                </p>
+                <p>The <code>blockquote</code> is contained in a <code>div</code> with the class
+                  <code>notes module</code> and an id like <code>chapter_1_endnotes</code>; and that
+                  <code>div</code> is in another one, with the class <code>preface group</code>.
+                </p>
+              </blockquote>
             </div>
-
 
           </div>
-          <!-- END work skin -->
+
+          <!--/descriptions-->
+
+          <div id="chapters">
+            <!-- This partial requires local variable 'chapter' -->
+            <div class="chapter" id="chapter-1">
+              <!-- chapter management -->
+
+
+              <div class="chapter preface group">
+                <h3 class="title"><a href="/works/64716727/chapters/166273936">Chapter 1</a>: The Title of This Chapter</h3>
+              </div>
+
+              <!--main content-->
+              <div class="userstuff module" role="article">
+                <h3 class="landmark heading" id="work">Chapter Text</h3>
+                <p>
+                  <span>Each paragraph or <code>&lt;p&gt; &lt;/p&gt;</code> pair contains at least one <code>&lt;span&gt; &lt;/span&gt;</code> pair, but you can put <code>&lt;span&gt;</code> around a single segment of the paragraph.</span>
+                </p>
+              </div>
+
+              <!--/main-->
+
+              <div class="chapter preface group">
+                <div class="end notes module" id="chapter_1_endnotes">
+                  <h3 class="heading">Notes:</h3>
+                  <blockquote class="userstuff">
+                    <p>The end notes in a chapter are contained in a <code>blockquote</code> with the class
+                      <code>userstuff</code>.
+                    </p>
+                    <p>The <code>blockquote</code> is contained in a <code>div</code> with the class
+                      <code>end notes module</code> and an id like <code>chapter_1_endnotes</code>; and that
+                      <code>div</code> is in another one, with the class <code>chapter preface group</code>.
+                    </p>
+                    <p>The beginning and end notes for works and chapters are basically the same, except that work notes
+                      use the <code>preface group</code> class and chapter notes use the
+                      <code>chapter preface group</code> class.</p>
+                  </blockquote>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- end of cache -->
+
+          </div>
         </div>
         <!-- END work -->
       </div>
