@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+
+  <!-- this is the css file that's been set up for you to test your work skin. -->
+  <link rel="stylesheet" href="workSkin.css" />
+  
+  <!-- stylesheets below this comment (and above the next comment) are from AO3 -->
   <link rel="stylesheet" type="text/css" media="screen"
     href="https://archiveofourown.org/stylesheets/skins/skin_1_default/1_site_screen_.css" />
   <link rel="stylesheet" type="text/css" media="only screen and (max-width:
@@ -12,62 +17,40 @@
     href="https://archiveofourown.org/stylesheets/skins/skin_1_default/6_site_speech_.css" />
   <link rel="stylesheet" type="text/css" media="print"
     href="https://archiveofourown.org/stylesheets/skins/skin_1_default/7_site_print_.css" />
-
-  <!--sandbox for developers  -->
-  <link rel="stylesheet" href="/stylesheets/sandbox.css" />
-
+  <!-- stylesheets above this comment (and below the previous comment) are from AO3 -->
 
 </head>
 
 <body class="logged-out">
   <div id="outer" class="wrapper">
-
     <div id="inner" class="wrapper">
-
       <div id="main" class="chapters-show region" role="main">
-
         <div class="work">
           <p class="landmark"><a name="top">&nbsp;</a></p>
 
           <!--work description, metadata, notes and messages-->
-          <!-- BEGIN navigation -->
-          <h3 class="landmark heading">Actions</h3>
-
-          <!-- END navigation -->
-
-          <h3 class="landmark heading">Work Header</h3>
-
 
           <div class="preface group">
-            <h2 class="title heading">
-              Chapter Title Goes Here
-            </h2>
-            <h3 class="byline heading">
-              <a rel="author" href="/users/Callmesalticidae/pseuds/Callmesalticidae">Author Name Here</a>
-            </h3>
-
+            <h2 class="title heading">Chapter Title Goes Here</h2>
+            <h3 class="byline heading"><a rel="author" href="/users/Callmesalticidae/pseuds/Callmesalticidae">Author Name Here</a></h3>
 
             <div class="summary module">
               <h3 class="heading">Summary:</h3>
               <blockquote class="userstuff">
-                <p>The work summary is contained in a <code>blockquote</code> with the class <code>userstuff</code>,
-                  which is contained in a <code>div</code> with the class <code>summary module</code>.</p>
+                <p>This document approximates the formatting that you'll encounter on AO3. It includes live links to the stylesheets that are used on AO3, in case those are updated, but if there's a big change with HTML then that won't be covered here.</p>
+                <p class="testColor">The topmost stylesheet link is connected to workSkin.css, which currently has one class, "testColor," whose effect you can see here (if this paragraph isn't blue, something is wrong).</p>
+                <p>If you download testFile_extra.html (this page) and workSkin.css, then put them in the same folder, then everything should work right. Again, if the second paragraph of this summary is not blue, then something is wrong.</p>
+                <p>The work summary is contained in a <code>blockquote</code> with the class <code>userstuff</code>, which is contained in a <code>div</code> with the class <code>summary module</code>.</p>
               </blockquote>
             </div>
 
             <div class="notes module">
               <h3 class="heading">Notes:</h3>
               <blockquote class="userstuff">
-                <p>The beginning notes in a work are contained in a <code>blockquote</code> with the class
-                  <code>userstuff</code>.
-                </p>
-                <p>The <code>blockquote</code> is contained in a <code>div</code> with the class
-                  <code>notes module</code> and an id like <code>chapter_1_endnotes</code>; and that
-                  <code>div</code> is in another one, with the class <code>preface group</code>.
-                </p>
+                <p>The beginning notes in a work are contained in a <code>blockquote</code> with the class <code>userstuff</code>.</p>
+                <p>The <code>blockquote</code> is contained in a <code>div</code> with the class <code>notes module</code> and an id like <code>chapter_1_endnotes</code>; and that <code>div</code> is in another one, with the class <code>preface group</code>.</p>
               </blockquote>
             </div>
-
           </div>
 
           <!--/descriptions-->
@@ -77,17 +60,21 @@
             <div class="chapter" id="chapter-1">
               <!-- chapter management -->
 
-
               <div class="chapter preface group">
                 <h3 class="title"><a href="/works/64716727/chapters/166273936">Chapter 1</a>: The Title of This Chapter</h3>
               </div>
 
               <!--main content-->
+
               <div class="userstuff module" role="article">
-                <h3 class="landmark heading" id="work">Chapter Text</h3>
-                <p>
-                  <span>Each paragraph or <code>&lt;p&gt; &lt;/p&gt;</code> pair contains at least one <code>&lt;span&gt; &lt;/span&gt;</code> pair, but you can put <code>&lt;span&gt;</code> around a single segment of the paragraph.</span>
-                </p>
+                <h3 class="landmark heading" id="work">Chapter Text</h3>             
+                  <p>Technically speaking, something like <code>preface group</code> is really two classes, <code>preface</code> and <code>group</code>, but the order of these groups matters (i.e. <code>preface group</code> will not necessarily look the same as <code>group preface</code>), so in some ways it's helpful to think of them as a single class with particular building blocks.</p>
+                <h1>Self-demonstrating Header 1</h1>
+                  <p>There are three types of header here in case you want to experiment with modifying those (I personally dislike how the header types are so different from each other, so I often modify them).</p>
+                <h2>Header 2</h2>
+                  <p>Do you see what I mean about them being too different from each other? If I want to nest them, there's no consistency! Look at that huge gap between Header 2 and this paragraph, which doesn't happen with either Header 1 or Header 2.</p>
+                <h3>Header 3</h3>
+                  <p>Anyway, let me know if you notice any problems with this page, and I'll try to fix them.</p>
               </div>
 
               <!--/main-->
@@ -96,33 +83,18 @@
                 <div class="end notes module" id="chapter_1_endnotes">
                   <h3 class="heading">Notes:</h3>
                   <blockquote class="userstuff">
-                    <p>The end notes in a chapter are contained in a <code>blockquote</code> with the class
-                      <code>userstuff</code>.
-                    </p>
-                    <p>The <code>blockquote</code> is contained in a <code>div</code> with the class
-                      <code>end notes module</code> and an id like <code>chapter_1_endnotes</code>; and that
-                      <code>div</code> is in another one, with the class <code>chapter preface group</code>.
-                    </p>
-                    <p>The beginning and end notes for works and chapters are basically the same, except that work notes
-                      use the <code>preface group</code> class and chapter notes use the
-                      <code>chapter preface group</code> class.</p>
+                    <p>The end notes in a chapter are contained in a <code>blockquote</code> with the class <code>userstuff</code>.</p>
+                    <p>The <code>blockquote</code> is contained in a <code>div</code> with the class <code>end notes module</code> and an id like <code>chapter_1_endnotes</code>; and that <code>div</code> is in another one, with the class <code>chapter preface group</code>.</p>
+                    <p>The beginning and end notes for works and chapters are basically the same, except that work notes use the <code>preface group</code> class and chapter notes use the <code>chapter preface group</code> class.</p>
                   </blockquote>
                 </div>
               </div>
 
             </div>
-
-            <!-- end of cache -->
-
           </div>
         </div>
-        <!-- END work -->
       </div>
     </div>
-
-
   </div>
-
 </body>
-
 </html>
