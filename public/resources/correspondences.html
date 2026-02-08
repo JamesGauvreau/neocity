@@ -20,16 +20,12 @@
             text-align: center;
             padding: 8px;
             width: 170px;
+            height: 60px;
+            scroll-snap-align: start;
         }
 
         td {
             border: 1px solid #f2f2f2
-        }
-
-        .lefthand {
-            background-color: black;
-            color: white;
-            border: 1px solid black
         }
 
         .smaller {
@@ -38,6 +34,48 @@
 
         tr:nth-child(even) {
             background-color: #f2f2f2
+        }
+
+        /* Top header cells */
+        thead th {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background-color: black;
+            color: white;
+        }
+
+        /* Left column cells in body */
+        td.lefthand {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+
+        /* Top-left corner cell */
+        thead th:first-child {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            background-color: black;
+        }
+
+        /* Footer left cell */
+        tfoot th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background-color: black;
+        }
+
+        .corrtable {
+            height: 80vh;
+            overflow: auto;
+            scroll-snap-type: both proximity;
         }
     </style>
 
@@ -50,23 +88,153 @@
 </head>
 
 <body>
-    <h1>The Zodiac</h1>
+    <h1>Humors</h1>
 
-    <div style="overflow-x:auto">
+    <div class="corrtable">
         <table>
             <thead>
                 <tr class="lefthand">
                     <th></th>
-                    <th style="width:170px">Aries</th>
+                    <th>Air</th>
+                    <th>Earth</th>
+                    <th>Fire</th>
+                    <th>Water</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="lefthand">Temperature</td>
+                    <td>Hot</td>
+                    <td>Cold</td>
+                    <td>Hot</td>
+                    <td>Cold</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Humidity</td>
+                    <td>Wet</td>
+                    <td>Dry</td>
+                    <td>Dry</td>
+                    <td>Wet</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Quality</td>
+                    <td>Temperature</td>
+                    <td>Solidity</td>
+                    <td>Motion</td>
+                    <td>Cohesion</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Temperament</td>
+                    <td>Sanguine</td>
+                    <td>Melancholic</td>
+                    <td>Choleric</td>
+                    <td>Phlegmatic</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Fluid</td>
+                    <td>Blood</td>
+                    <td>Black Bile</td>
+                    <td>Yellow Bile</td>
+                    <td>Phlegm</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Organ(s)</td>
+                    <td>Liver</td>
+                    <td>Spleen</td>
+                    <td>Gallbladder</td>
+                    <td>Brain, lungs</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Flavor(s)</td>
+                    <td>Sweet</td>
+                    <td>Sour</td>
+                    <td>Bitter<br>(less often, also salty)</td>
+                    <td>Salty<br>(less often, also insipid and/or fishy)</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Season</td>
+                    <td>Spring:<br><br>Wet, and growing hot</td>
+                    <td>Autumn:<br><br>Dry, and growing cold</td>
+                    <td>Summer:<br><br> Hot, and growing dry</td>
+                    <td>Winter:<br><br>Cold, and growing wet</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Life Stage</td>
+                    <td>Childhood</td>
+                    <td>Maturity<br>(Adulthood)</td>
+                    <td>Adolescence</td>
+                    <td>Senescence<br>(Oldhood, Old Age)</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Platonic Solid</td>
+                    <td>Octohedron (8)</td>
+                    <td>Cube (6)</td>
+                    <td>Tetrahedon (4)</td>
+                    <td>Icosahedron (20)</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Edge</td>
+                    <td>Blunt</td>
+                    <td>Blunt</td>
+                    <td>Sharp</td>
+                    <td>Blunt</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Density</td>
+                    <td>Subtle</td>
+                    <td>Gross</td>
+                    <td>Subtle</td>
+                    <td>Gross</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Mobility</td>
+                    <td>Mobile</td>
+                    <td>Immobile</td>
+                    <td>Mobile</td>
+                    <td>Mobile</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Zodiac Signs</td>
+                    <td>Gemini, Libra, Aquarius</td>
+                    <td>Taurus, Virgo, Cancer</td>
+                    <td>Aries, Leo, Sagittarius</td>
+                    <td>Cancer, Scorpio, Pisces</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Day Ruler</td>
+                    <td>Saturn</td>
+                    <td>Venus</td>
+                    <td>Sun</td>
+                    <td>Venus</td>
+                </tr>
+                <tr>
+                    <td class="lefthand">Night Ruler</td>
+                    <td>Mercury</td>
+                    <td>Moon</td>
+                    <td>Jupiter</td>
+                    <td>Mars</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1>The Zodiac</h1>
+
+    <div class="corrtable">
+        <table>
+            <thead>
+                <tr class="lefthand">
+                    <th></th>
+                    <th>Aries</th>
                     <th>Taurus</th>
                     <th>Gemini</th>
                     <th>Cancer</th>
                     <th>Leo</th>
                     <th>Virgo</th>
                     <th>Libra</th>
-                    <th style="width:170px">Scorpio</th>
-                    <th style="width:170px">Sagittarius</th>
-                    <th style="width:170px">Capricorn</th>
+                    <th>Scorpio</th>
+                    <th>Sagittarius</th>
+                    <th>Capricorn</th>
                     <th>Aquarius</th>
                     <th>Pisces</th>
                 </tr>
@@ -330,7 +498,7 @@
                 <tr>
                     <td class="lefthand">Places</td>
                     <td><small>Newly cultivated land; sandy or hilly ground; places formerly inhabited by thieves;
-                            limekilns; brickworks</td>
+                            limekilns; brickworks</small></td>
                     <td><small>gently rolling countrysides; warm places; stables, cellars & low rooms; markets</td>
                     <td><small>barns and storehouses; city centers; coffers, trunks, & chests; hills & mountains; barren
                             places</td>
@@ -461,6 +629,7 @@
             </tfoot>
         </table>
     </div>
+
     <br>
     <h2>Other useful resources</h2>
     <ul></u>
